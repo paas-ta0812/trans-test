@@ -1,4 +1,4 @@
-# Table of Contents
+# Table of Contents 123
 
 1. [문서 개요](paas-ta-cubrid.md#1)
    * [1.1. 목적](paas-ta-cubrid.md#2)
@@ -31,7 +31,7 @@
 ### 1.3. 시스템 구성도
 
 본 문서의 설치된 시스템 구성도입니다. Cubrid Server, Cubrid 서비스 브로커로 최소사항을 구성하였다.  
-![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/1-3-0-0.png)
+![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/1-3-0-0.png)
 
 | 구분 | 스펙 |
 | :--- | :--- |
@@ -349,11 +349,11 @@ BOSH Deployment manifest 는 components 요소 및 배포의 속성을 정의한
 * Director UUID를 확인한다.
 * BOSH CLI가 배포에 대한 모든 작업을 허용하기위한 현재 대상 BOSH Director의 UUID와 일치해야한다. ‘bosh status’ CLI 을 통해서 현재 BOSH Director 에 target 되어 있는 UUID를 확인할수 있다.
 
-> $ bosh status ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/2-1-0-9.png)
+> $ bosh status ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/2-1-0-9.png)
 
 * Deploy시 사용할 Stemcell을 확인한다.
 
-> $ bosh stemcells ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/2-1-0-10.png)
+> $ bosh stemcells ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/2-1-0-10.png)
 >
 > Stemcell 목록이 존재 하지 않을 경우 BOSH 설치 가이드 문서를 참고 하여 Stemcell 3215.4 버전을 업로드를 해야 한다.
 
@@ -1000,7 +1000,7 @@ Cubrid 서비스팩 배포가 완료 되었으면 Application에서 서비스 �
 
 * 서비스 브로커 목록을 확인한다.
 
-> $ cf service-brokers ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/2-4-0-0.png)
+> $ cf service-brokers ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/2-4-0-0.png)
 
 * Cubrid 서비스 브로커를 등록한다.
 
@@ -1011,15 +1011,15 @@ Cubrid 서비스팩 배포가 완료 되었으면 Application에서 서비스 �
 > * 서비스팩 URL : 서비스팩이 제공하는 API를 사용할 수 있는 URL을 입력한다.  
 >
 > $ cf create-service-broker cubrid-service-broker admin cloudfoundry [http://10.30.60.22:8080](http://10.30.60.22:8080)  
-> ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/2-4-1-0.png)
+> ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/2-4-1-0.png)
 
 * 등록된 Cubrid 서비스 브로커를 확인한다.
 
-> $ cf service-brokers ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/2-4-2-0.png)
+> $ cf service-brokers ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/2-4-2-0.png)
 
 * 접근 가능한 서비스 목록을 확인한다.
 
-> $ cf service-access ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/2-4-3-0.png)
+> $ cf service-access ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/2-4-3-0.png)
 >
 > 서비스 브로커 생성시 디폴트로 접근을 허용하지 않는다.
 
@@ -1027,7 +1027,7 @@ Cubrid 서비스팩 배포가 완료 되었으면 Application에서 서비스 �
 
 > $ cf enable-service-access CubridDB  
 > $ cf service-access  
-> ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/2-4-4-0.png)
+> ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/2-4-4-0.png)
 
 ## 3. Cubrid연동 Sample App 설명
 
@@ -1048,7 +1048,7 @@ Sample Web App 구조는 다음과 같다.
 
 * PaaS-TA-Sample-Apps을 다운로드 받고 Service 폴더안에 있는 Cubrid Sample Web App인 hello-spring-cubrid를 복사한다.
 
-> $ ls -all ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/3-1-0-0.png)
+> $ ls -all ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/3-1-0-0.png)
 
 ### 3.2. PaaS-TA에서 서비스 신청
 
@@ -1056,7 +1056,7 @@ Sample Web App에서 Cubrid 서비스를 사용하기 위해서는 서비스 신
 
 * 먼저 PaaS-TA Marketplace에서 서비스가 있는지 확인을 한다.
 
-> $ cf marketplace ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/3-2-0-0.png)
+> $ cf marketplace ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/3-2-0-0.png)
 
 * Marketplace에서 원하는 서비스가 있으면 서비스 신청\(Provision\)을 한다.
 
@@ -1067,11 +1067,11 @@ Sample Web App에서 Cubrid 서비스를 사용하기 위해서는 서비스 신
 > * 내서비스명 : 내 서비스에서 보여지는 명칭이다. 이 명칭을 기준으로 환경설정정보를 가져온다.  
 >
 > $ cf create-service CubridDB utf8 cubrid-service-instance  
-> ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/3-2-1-0.png)
+> ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/3-2-1-0.png)
 
 * 생성된 Cubrid 서비스 인스턴스를 확인한다.
 
-> $ cf services ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/3-2-2-0.png)
+> $ cf services ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/3-2-2-0.png)
 
 ### 3.3. Sample App에 서비스 바인드 신청 및 App 확인
 
@@ -1099,24 +1099,24 @@ Sample Web App에서 Cubrid 서비스를 사용하기 위해서는 서비스 신
   --no-start: App 배포시 구동은 하지 않는다.
 
 > $ cf push --no-start  
->  ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/3-3-0-0.png)
+>  ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/3-3-0-0.png)
 
 * 배포된 Sample App을 확인하고 로그를 수행한다.
 
 > $ cf apps  
->  ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/3-3-1-0.png)
+>  ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/3-3-1-0.png)
 >
 > $ cf logs {배포된 App명}  
->  $ cf logs hello-spring-cubrid ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/3-3-2-0.png)
+>  $ cf logs hello-spring-cubrid ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/3-3-2-0.png)
 
 * Sample Web App에서 생성한 서비스 인스턴스 바인드 신청을 한다. 
 
-> $ cf bind-service hello-spring-cubrid cubrid-service-instance ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/3-3-3-0.png)
+> $ cf bind-service hello-spring-cubrid cubrid-service-instance ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/3-3-3-0.png)
 
 * 바인드가 적용되기 위해서 App을 재기동한다.
 
-> $ cf restart hello-spring-cubrid ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/3-3-4-0.png)  
-> ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/3-3-4-1.png)
+> $ cf restart hello-spring-cubrid ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/3-3-4-0.png)  
+> ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/3-3-4-1.png)
 
 * \(참고\) 바인드 후 App구동시 Cubrid 서비스 접속 에러로 App 구동이 안될 경우 보안 그룹을 추가한다.
 
@@ -1138,29 +1138,29 @@ Sample Web App에서 Cubrid 서비스를 사용하기 위해서는 서비스 신
 > - 보안 그룹을 생성한다.  
 >
 >
-> $ cf create-security-group CubridDB rule.json ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/3-3-5-0.png)
+> $ cf create-security-group CubridDB rule.json ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/3-3-5-0.png)
 >
 > - 모든 App에 Cubrid 서비스를 사용할수 있도록 생성한 보안 그룹을 적용한다.  
 >
 >
-> $ cf bind-running-security-group CubridDB ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/3-3-6-0.png)
+> $ cf bind-running-security-group CubridDB ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/3-3-6-0.png)
 >
 > - App을 리부팅 한다.  
 >
 >
-> $ cf restart hello-spring-cubrid ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/3-3-7-0.png)
+> $ cf restart hello-spring-cubrid ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/3-3-7-0.png)
 
 * App이 정상적으로 Cubrid 서비스를 사용하는지 확인한다.
 
 > - curl 로 확인   
 >  $ curl hello-spring-cubrid.115.68.46.30.xip.io
 >
-> ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/3-3-8-0.png)
+> ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/3-3-8-0.png)
 >
 > - 브라우져에서 확인  
 >
 >
-> ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/3-3-8-1.png)
+> ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/3-3-8-1.png)
 
 ## 4. Cubrid Client 툴 접속
 
@@ -1170,33 +1170,33 @@ Application에 바인딩된 Cubrid 서비스 연결정보는 Private IP로 구�
 
 Putty 프로그램은 SSH 및 텔넷 접속을 할 수 있는 무료 소프트웨어이다.
 
-* Putty를 다운로드 하기 위해 아래 URL로 이동하여 파일을 다운로드 한다. 별도의 설치과정없이 사용할 수 있다. [http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-1-0-0.png)
-* 다운받은 putty.exe.파일을 더블클릭하여 실행한다. ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-1-1-0.png)
-* Session 탭의 Host name과 Port란에. OpenPaaS 운영 관리자에게 제공받은 SSH 터널링 가능한 서버 정보를 입력한다. ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-1-2-0.png)
-* Connection-&gt;SSH-&gt;Tunnels 탭에서 Source port\(내 로컬에서 접근할 포트\), Destination\(터널링으로 연결할 서버정보\)를 입력하고 Local, Auto를 선택 후 Add를 클릭한다. ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-1-3-0.png) ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-1-3-1.png) 서버 정보는 Application에 바인드되어 있는 서버 정보를 입력한다. cf env  명령어로 이용하여 확인한다. 예\) $ cf env hello-spring-cubrid ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-1-4-0.png)
-* Session 탭에서 Saved Sessions에 저장할 이름을 입력하고 Save를 눌러 저장한 후 Open버튼을 누른다. ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-1-5-0.png)
-* 서버 접속정보를 입력하여 접속하여 터널링을 완료한다. 만약 ssh 인증이 Password방식이 아닌 Key인증 방식일 경우, Connection-&gt;SSH-&gt;인증탭의 '인증 개인키 파일'에 key 파일을 등록하여 인증한다. Key파일의 확장자가 .pem이라면 putty설치시 같이 설치된 puttygen을 사용하여 ppk파일로 변환한뒤 사용한다. ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-1-6-0.png)
+* Putty를 다운로드 하기 위해 아래 URL로 이동하여 파일을 다운로드 한다. 별도의 설치과정없이 사용할 수 있다. [http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-1-0-0.png)
+* 다운받은 putty.exe.파일을 더블클릭하여 실행한다. ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-1-1-0.png)
+* Session 탭의 Host name과 Port란에. OpenPaaS 운영 관리자에게 제공받은 SSH 터널링 가능한 서버 정보를 입력한다. ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-1-2-0.png)
+* Connection-&gt;SSH-&gt;Tunnels 탭에서 Source port\(내 로컬에서 접근할 포트\), Destination\(터널링으로 연결할 서버정보\)를 입력하고 Local, Auto를 선택 후 Add를 클릭한다. ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-1-3-0.png) ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-1-3-1.png) 서버 정보는 Application에 바인드되어 있는 서버 정보를 입력한다. cf env  명령어로 이용하여 확인한다. 예\) $ cf env hello-spring-cubrid ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-1-4-0.png)
+* Session 탭에서 Saved Sessions에 저장할 이름을 입력하고 Save를 눌러 저장한 후 Open버튼을 누른다. ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-1-5-0.png)
+* 서버 접속정보를 입력하여 접속하여 터널링을 완료한다. 만약 ssh 인증이 Password방식이 아닌 Key인증 방식일 경우, Connection-&gt;SSH-&gt;인증탭의 '인증 개인키 파일'에 key 파일을 등록하여 인증한다. Key파일의 확장자가 .pem이라면 putty설치시 같이 설치된 puttygen을 사용하여 ppk파일로 변환한뒤 사용한다. ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-1-6-0.png)
 
 ### 4.2.  Cubrid Manager 설치 & 연결
 
 Cubrid Manager 프로그램은 Cubrid에서 제공하는 무료로 사용할 수 있는 소프트웨어이다.
 
-* Cubrid Manager를 다운로드 하기 위해 아래 URL로 이동하여 설치파일을 다운로드 한다. [http://ftp.cubrid.org/CUBRID\_Tools/CUBRID\_Manager/](http://ftp.cubrid.org/CUBRID_Tools/CUBRID_Manager/) ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-2-0-0.png)
-* 다운받은 파일을 더블클릭하여 실행한다. ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-2-1-0.png)
-* 한국어를 선택하고 OK를 누른다. ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-2-2-0.png)
-* 다음을 눌러 계속 진행한다. ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-2-3-0.png)
-* 동의함을 눌러 계속 진행한다. ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-2-4-0.png)
-* 바로가기 옵션을 선택 후 다음을 눌러 계속 진행한다. ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-2-5-0.png)
-* 설치 경로를 입력하고 설치를 눌러 설치를 시작한다. ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-2-6-0.png)
-* 설치가 완료되면 다음을 눌러 계속 진행한다. ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-2-7-0.png)
-* 마침을 눌러 설치를 완료한다. ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-2-8-0.png)
-* 설치된 Cubrid Manager를 실행하면 처음 나오는 화면이다. Workspace를 선택 후 OK를 눌러 실행한다. 만약 이 창을 다시보기를 원치않는다면 '기본적으로 이것을 사용하고 다시 물어 보지 않기' 옵션을 선택한다. ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-2-9-0.png)
-* 관리 모드, 질의 모드 둘중 목적에 맞게 선택 후 확인을 눌러 실행한다. 여기서는 질의 모드로 실행한다. ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-2-10-0.png)
-* 연결정보를 입력하기 위해서 연결 정보 등록을 누른다. ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-2-11-0.png)
-* Server에 접속하기 위한 Connection 정보를 입력한다. ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-2-12-0.png) 서버 정보는 Application에 바인드되어 있는 서버 정보를 입력한다. cf env  명령어로 이용하여 확인한다. 예\) $ cf env hello-spring-cubrid ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-2-13-0.png)
-* 연결 테스트 버튼을 클릭하여 접속 테스트를 한다. ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-2-14-0.png) 정보가 정상적으로 입력되었다면 '연결이 성공하였습니다.'라는 메시지가 나온다. 확인 버튼을 눌러 창을 닫는다. ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-2-15-0.png)
-* 연결 버튼을 클릭하여 접속한다 ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-2-16-0.png)
-* 접속이 완료되면 좌측에 스키마 정보가 나타난다. ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-2-17-0.png)
-* 질의 편집기 버튼을 클릭하면 오른쪽 창에 query를 입력할 수 있는 창이 열린다. ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-2-18-0.png)
-* 우측 화면에 쿼리 항목에 Query문을 작성한 후 실행 버튼\(삼각형\)을 클릭한다. 쿼리문에 이상이 없다면 정상적으로 결과를 얻을 수 있을 것이다. ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/images/paasta-service/cubrid/4-2-19-0.png)
+* Cubrid Manager를 다운로드 하기 위해 아래 URL로 이동하여 설치파일을 다운로드 한다. [http://ftp.cubrid.org/CUBRID\_Tools/CUBRID\_Manager/](http://ftp.cubrid.org/CUBRID_Tools/CUBRID_Manager/) ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-2-0-0.png)
+* 다운받은 파일을 더블클릭하여 실행한다. ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-2-1-0.png)
+* 한국어를 선택하고 OK를 누른다. ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-2-2-0.png)
+* 다음을 눌러 계속 진행한다. ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-2-3-0.png)
+* 동의함을 눌러 계속 진행한다. ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-2-4-0.png)
+* 바로가기 옵션을 선택 후 다음을 눌러 계속 진행한다. ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-2-5-0.png)
+* 설치 경로를 입력하고 설치를 눌러 설치를 시작한다. ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-2-6-0.png)
+* 설치가 완료되면 다음을 눌러 계속 진행한다. ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-2-7-0.png)
+* 마침을 눌러 설치를 완료한다. ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-2-8-0.png)
+* 설치된 Cubrid Manager를 실행하면 처음 나오는 화면이다. Workspace를 선택 후 OK를 눌러 실행한다. 만약 이 창을 다시보기를 원치않는다면 '기본적으로 이것을 사용하고 다시 물어 보지 않기' 옵션을 선택한다. ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-2-9-0.png)
+* 관리 모드, 질의 모드 둘중 목적에 맞게 선택 후 확인을 눌러 실행한다. 여기서는 질의 모드로 실행한다. ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-2-10-0.png)
+* 연결정보를 입력하기 위해서 연결 정보 등록을 누른다. ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-2-11-0.png)
+* Server에 접속하기 위한 Connection 정보를 입력한다. ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-2-12-0.png) 서버 정보는 Application에 바인드되어 있는 서버 정보를 입력한다. cf env  명령어로 이용하여 확인한다. 예\) $ cf env hello-spring-cubrid ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-2-13-0.png)
+* 연결 테스트 버튼을 클릭하여 접속 테스트를 한다. ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-2-14-0.png) 정보가 정상적으로 입력되었다면 '연결이 성공하였습니다.'라는 메시지가 나온다. 확인 버튼을 눌러 창을 닫는다. ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-2-15-0.png)
+* 연결 버튼을 클릭하여 접속한다 ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-2-16-0.png)
+* 접속이 완료되면 좌측에 스키마 정보가 나타난다. ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-2-17-0.png)
+* 질의 편집기 버튼을 클릭하면 오른쪽 창에 query를 입력할 수 있는 창이 열린다. ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-2-18-0.png)
+* 우측 화면에 쿼리 항목에 Query문을 작성한 후 실행 버튼\(삼각형\)을 클릭한다. 쿼리문에 이상이 없다면 정상적으로 결과를 얻을 수 있을 것이다. ![](https://github.com/jhuhm13579/trans-test/tree/4fcd590011a086170f8b12fc902f71d3d4e564fc/images/paasta-service/cubrid/4-2-19-0.png)
 
