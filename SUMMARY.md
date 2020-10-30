@@ -154,7 +154,7 @@
   * [PaaS\_TA\_PaaS-TA\_Install\_Guide-v4.3](guide-4.0-rotelle/paas_ta_paas-ta_install_guide-v4.3.md)
   * [PaaS\_TA\_PaaS-TA\_Install\_Guide-v4.0](guide-4.0-rotelle/paas_ta_paas-ta_install_guide-v4.0.md)
   * [PaaS\_TA\_4.0\_migration](guide-4.0-rotelle/paas_ta_4.0_migration.md)
-* [PaaS-TA 5.0.3 가이드 문서](guide-4.0-rotelle/README.md)
+* [PaaS-TA 5.0.3 가이드 문서](guide-5.0.3-Ravioli/install-guide/bosh/PAAS-TA_BOSH2_INSTALL_GUIDE_V5.0.md)
   * [PaaS\_TA\_4.0\_paas\_monitoring](guide-5.0.3-Ravioli/install-guide/bosh/PAAS-TA_BOSH2_INSTALL_GUIDE_V5.0.md)
   * [Install-Guide](guide-4.0-rotelle/install-guide/README.md)
     * [monitoring](guide-4.0-rotelle/install-guide/monitoring/README.md)
