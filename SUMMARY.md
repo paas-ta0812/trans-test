@@ -154,7 +154,7 @@
   * [PaaS\_TA\_PaaS-TA\_Install\_Guide-v4.3](guide-4.0-rotelle/paas_ta_paas-ta_install_guide-v4.3.md)
   * [PaaS\_TA\_PaaS-TA\_Install\_Guide-v4.0](guide-4.0-rotelle/paas_ta_paas-ta_install_guide-v4.0.md)
   * [PaaS\_TA\_4.0\_migration](guide-4.0-rotelle/paas_ta_4.0_migration.md)
-*  [PaaS-TA 6.0](guide-2.0-linguine/README.md)
+*  [PaaS-TA 7.0](guide-2.0-linguine/README.md)
   * [Development-Guide](guide-2.0-linguine/development-guide/README.md)
     * [PaaS-TA\_Java\_서비스\_미터링\_개발\_가이드](guide-2.0-linguine/development-guide/paas-ta_java_-_-_-_.md)
     * [PaaS-TA\_Java\_API\_서비스\_미터링\_개발\_가이드](guide-2.0-linguine/development-guide/paas-ta_java_api_-_-_-_.md)
