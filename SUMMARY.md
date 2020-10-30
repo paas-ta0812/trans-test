@@ -1,7 +1,7 @@
 # Table of contents
 
 * [PaaS-TA Guide](README.md)
-* [PaaS-TA 가이드 문서  123 12345 tet](guide-2.0-linguine/README.md)
+* [PaaS-TA 가이드 문서](guide-2.0-linguine/README.md)
   * [Development-Guide](guide-2.0-linguine/development-guide/README.md)
     * [PaaS-TA\_Java\_서비스\_미터링\_개발\_가이드](guide-2.0-linguine/development-guide/paas-ta_java_-_-_-_.md)
     * [PaaS-TA\_Java\_API\_서비스\_미터링\_개발\_가이드](guide-2.0-linguine/development-guide/paas-ta_java_api_-_-_-_.md)
@@ -56,7 +56,7 @@
   * [모니터링 설치 가이드](guide-2.0-linguine/monitoring_page.md)
   * [포털 설치 가이드](guide-2.0-linguine/portal_page.md)
   * [모니터링 설치 가이드](guide-2.0-linguine/test12345.md)
-* [PaaS-TA 4.6 가이드 문서 123](guide-4.0-rotelle/README.md)
+* [PaaS-TA 4.6 가이드 문서](guide-4.0-rotelle/README.md)
   * [PaaS\_TA\_4.0\_paas\_monitoring](guide-4.0-rotelle/paas_ta_4.0_paas_monitoring.md)
   * [Install-Guide](guide-4.0-rotelle/install-guide/README.md)
     * [monitoring](guide-4.0-rotelle/install-guide/monitoring/README.md)
