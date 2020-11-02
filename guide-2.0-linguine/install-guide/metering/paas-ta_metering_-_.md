@@ -2,41 +2,6 @@
 
 ### Table of Contents
 
-1. [개요](paas-ta_metering_-_.md#1)
-   * [문서 개요](paas-ta_metering_-_.md#2)
-     * [목적](paas-ta_metering_-_.md#3)
-     * [범위](paas-ta_metering_-_.md#4)
-     * [참고자료](paas-ta_metering_-_.md#5)
-2. [Abacus 배포](paas-ta_metering_-_.md#6)
-   * [미터링 범위](paas-ta_metering_-_.md#7)
-   * [배포 전제 조건](paas-ta_metering_-_.md#8)
-   * [Node.js 설치](paas-ta_metering_-_.md#9)
-     * [Node.js 설치 순서](paas-ta_metering_-_.md#10)
-   * [pouchdb, couchdb 설치](paas-ta_metering_-_.md#11)
-     * [couchdb 설치](paas-ta_metering_-_.md#12)
-     * [pouchdb 설치\(옵션\)](paas-ta_metering_-_.md#13)
-     * [설치 확인](paas-ta_metering_-_.md#14)
-     * [CouchDB 계정 생성](paas-ta_metering_-_.md#32)
-   * [CF에 abacus UAA 계정 등록](paas-ta_metering_-_.md#15)
-     * [UAA 클라이언트 설치](paas-ta_metering_-_.md#16)
-     * [CF 앱 사용량 수집을 위한 UAA 계정 드록](paas-ta_metering_-_.md#17)
-     * [Secured Abacus를 위한 UAA 계정 등록](paas-ta_metering_-_.md#18)
-   * [cf-abacus 배포](paas-ta_metering_-_.md#19)
-     * [Git을 통해 cf-abacus를 다운받는다.](paas-ta_metering_-_.md#20)
-     * [gradle build를 위한 dependency 추가](paas-ta_metering_-_.md#21)
-     * [Abacus와 연동할 DB 및 Secure 정보 설정](paas-ta_metering_-_.md#22)
-     * [Abacus 빌드](paas-ta_metering_-_.md#23)
-     * [Abacus 배포](paas-ta_metering_-_.md#24)
-     * [Abaus-cf-bridge 배포](paas-ta_metering_-_.md#25)
-3. [PAASTA-USAGE-REPORTION 배포](paas-ta_metering_-_.md#26)
-   * [배포 전제 조건](paas-ta_metering_-_.md#27)
-   * [CF에 UAA 계정 등록](paas-ta_metering_-_.md#28)
-   * [paasta-usage-repoting 배포](paas-ta_metering_-_.md#29)
-   * [다운로드](paas-ta_metering_-_.md#30)
-   * [paasta-usage-reportion 배포](paas-ta_metering_-_.md#31)
-   * [배포 형상](paas-ta_metering_-_.md#32)
-   * [api 호출 예제](paas-ta_metering_-_.md#33)
-
 ## 1.  개요
 
 ### 1.1.  문서 개요
