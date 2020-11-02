@@ -163,4 +163,13 @@
       * [monasca-client](paas-ta-5.0.3/install-guide/monitoring/monasca-client.md)
       * [monasca-server](paas-ta-5.0.3/install-guide/monitoring/monasca-server.md)
       * [PaaS\_TA\_4.0\_iaas\_paas\_monitoring](paas-ta-5.0.3/install-guide/monitoring/paas_ta_4.0_iaas_paas_monitoring.md)
+      * [PaaS-TA 5.0.3 가이드 문서](paas-ta-5.0.3/README.md)
+  * [PaaS\_TA\_4.0\_paas\_monitoring](paas-ta-5.0.3/paas_ta_4.0_paas_monitoring.md)
+  * [Install-Guide](paas-ta-5.0.5/install-guide/README.md)
+    * [monitoring](paas-ta-5.0.5/install-guide/monitoring/README.md)
+      * [PaaS-TA 모니터링 시스템 설치가이드](paas-ta-5.0.5/install-guide/monitoring/paas-ta.md)
+      * [PaaS\_TA\_4.0\_paas\_monitoring](paas-ta-5.0.5/install-guide/monitoring/paas_ta_4.0_paas_monitoring.md)
+      * [monasca-client](paas-ta-5.0.5/install-guide/monitoring/monasca-client.md)
+      * [monasca-server](paas-ta-5.0.5/install-guide/monitoring/monasca-server.md)
+      * [PaaS\_TA\_4.0\_iaas\_paas\_monitoring](paas-ta-5.0.5/install-guide/monitoring/paas_ta_4.0_iaas_paas_monitoring.md)
 
