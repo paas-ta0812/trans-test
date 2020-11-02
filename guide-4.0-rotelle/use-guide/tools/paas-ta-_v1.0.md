@@ -290,7 +290,7 @@ _**※ 관리자는 파이프라인 생성자이므로 기본적으로 생성 �
 
    ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image048.jpg)
 
-**3.2.2.4.1.3. 참여자 상세 정보 조회/수정**
+**3.2.2.4.1.3.    참여자 상세 정보 조회/수정**
 
 1. 참여자 목록에서 정보 조회할 참여자 아이디를 선택한다.
 
@@ -308,7 +308,7 @@ _**※ 관리자는 파이프라인 생성자이므로 기본적으로 생성 �
 
    ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image052.png)
 
-**3.2.2.4.1.4. 참여자 삭제**
+**3.2.2.4.1.4.    참여자 삭제**
 
 1. 참여자 목록에서 삭제할 참여자 아이디를 선택한다.
 
@@ -338,7 +338,7 @@ _**※ 관리자는 파이프라인 생성자이므로 기본적으로 생성 �
 
    ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image057.jpg)
 
-3. 작업 유형을 선택한 후 원하는 저장소를 입력 유형으로 선택한다. 그 후에 선택한 저장소의 아이디와 비밀번호를 입력 후 해당하는 저장소의 경로를 입력하여 “조회” 버튼을 클릭한다. 조회한 Branch를 선택 후 작업 트리거는 각자의 상황에 맞게 선택한다. ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image058.jpg)
+3. 작업 유형을 선택한 후 원하는 저장소를 입력 유형으로 선택한다. 그 후에 선택한 저장소의 아이디와 비밀번호를 입력 후 해당하는 저장소의 경로를 입력하여 “조회” 버튼을 클릭한다. 조회한 Branch를 선택 후 작업 트리거는 각자의 상황에 맞게 선택한다.  ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image058.jpg)
 4. 생성된 빌드 Job 을 파이프라인 상세 페이지에서 확인한다. ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image059.png)
 
 _**※ 빌드 Job 생성은 관리자와 파이프라인 참여자 중 생성 권한을 가진 참여자만 생성이 가능하다.**_
@@ -347,17 +347,18 @@ _**※ 빌드 Job 생성은 관리자와 파이프라인 참여자 중 생성 �
 
 1. 생성된 빌드 Job 의 “구성” 아이콘을 클릭한다.  
 
-![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image060.png)
 
-1. 구성 상세페이지로 이동하여 생성 시 저장해 놓았던 구성 정보들을 조회한다.
+   ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image060.png)
+
+2. 구성 상세페이지로 이동하여 생성 시 저장해 놓았던 구성 정보들을 조회한다.
 
    ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image061.jpg)
 
-2. 수정 시에는 각 입력 폼에 수정할 정보들을 다시 입력한 후 “저장” 버튼을 클릭한다.
+3. 수정 시에는 각 입력 폼에 수정할 정보들을 다시 입력한 후 “저장” 버튼을 클릭한다.
 
    ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image062.png)
 
-3. 구성 상세페이지로 이동하여 수정된 정보들을 확인한다.
+4. 구성 상세페이지로 이동하여 수정된 정보들을 확인한다.
 
    ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image063.jpg)
 
@@ -367,13 +368,14 @@ _**※ 빌드 Job 구성 조회는 파이프라인 참여자이면 모두 조회
 
 1. 파이프라인 상세페이지에서 “실행” 아이콘을 클릭한다.  
 
-![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image064.png)
 
-1. 실행이 될 때 파란색으로 바뀌며 깜빡이는 것을 확인할 수 있다. \(실행 중에 “로그/히스토리” 아이콘을 클릭하여 실시간으로 로그를 조회할 수 있다.\)
+   ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image064.png)
+
+2. 실행이 될 때 파란색으로 바뀌며 깜빡이는 것을 확인할 수 있다. \(실행 중에 “로그/히스토리” 아이콘을 클릭하여 실시간으로 로그를 조회할 수 있다.\)
 
    ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image065.jpg)
 
-2. 실행이 완료되면 초록색으로 바뀌며 작업 부분에 Build\(실행완료\) 로 표시된다.
+3. 실행이 완료되면 초록색으로 바뀌며 작업 부분에 Build\(실행완료\) 로 표시된다.
 
    ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image066.jpg)
 
@@ -391,7 +393,7 @@ _**※ 빌드 Job 실행은 관리자와 파이프라인 참여자 중 생성 �
 
 _**※ 빌드 Job 정지는 관리자와 파이프라인 참여자 중 생성 권한과 실행 권한을 가진 참여자만 가능하다.**_
 
-**3.2.2.4.2.5. 빌드 Job 로그/히스토리**
+**3.2.2.4.2.5.    빌드 Job 로그/히스토리**
 
 1. 빌드 Job 실행이 진행 중일 때 “로그/히스토리” 아이콘을 클릭하여 실시간으로 로그를 조회할 수 있다.
 
@@ -421,19 +423,20 @@ _**※ 빌드 Job 정지는 관리자와 파이프라인 참여자 중 생성 �
 
 _**※ 빌드 Job 로그/히스토리는 관리자와 모든 파이프라인 참여자가 조회 가능하나 실행 및 정지 버튼은 생성 권한과 실행 권한을 가진 참여자만 가능하다.**_
 
-**3.2.2.4.2.6. 빌드 Job 로그 다운로드**
+**3.2.2.4.2.6.    빌드 Job 로그 다운로드**
 
 1. 빌드 Job 실행이 성공하면 로그/히스토리 페이지에서 “다운로드” 버튼이 활성화된다. 활성화된 “다운로드” 버튼을 클릭한다.  
 
-![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image076.png)
 
-1. Build 된 파일\(ex. war, jar, zip 등\)이 다운로드 된다.
+   ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image076.png)
+
+2. Build 된 파일\(ex. war, jar, zip 등\)이 다운로드 된다.
 
    ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image077.png)
 
 _**※ 빌드 Job 로그 다운로드는 관리자와 모든 파이프라인 참여자가 가능하다.**_
 
-**3.2.2.4.2.7. 빌드 Job 추가**
+**3.2.2.4.2.7.    빌드 Job 추가**
 
 1. 파이프라인 상세페이지에서 빌드 Job의 “추가” 버튼을 클릭한다.
 
@@ -447,15 +450,16 @@ _**※ 빌드 Job 로그 다운로드는 관리자와 모든 파이프라인 참
 
    ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image080.jpg)
 
-4. 추가된 빌드 Job 을 확인한다.
+4. 추가된 빌드 Job 을 확인한다.  
 
-![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image081.png)
 
-1. 작업 트리거에서 이 작업\(Job\)을 새 작업 그룹으로 구성을 체크하면 새로운 그룹으로 Job이 추가된다. \(이후에 새 작업 그룹 추가 항목에서 설명하겠습니다.\)
+   ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image081.png)
+
+5. 작업 트리거에서 이 작업\(Job\)을 새 작업 그룹으로 구성을 체크하면 새로운 그룹으로 Job이 추가된다. \(이후에 새 작업 그룹 추가 항목에서 설명하겠습니다.\)
 
 _**※ 빌드 Job 추가는 관리자와 생성 권한을 가진 파이프라인 참여자만 가능하다.**_
 
-**3.2.2.4.2.8. 빌드 Job 복제**
+**3.2.2.4.2.8.    빌드 Job 복제**
 
 1. 파이프라인 상세페이지에서 빌드 Job의 “복제” 버튼을 클릭한다.
 
@@ -467,7 +471,7 @@ _**※ 빌드 Job 추가는 관리자와 생성 권한을 가진 파이프라인
 
 _**※ 빌드 Job 복제는 관리자와 생성 권한을 가진 파이프라인 참여자만 가능하다.**_
 
-**3.2.2.4.2.9. 빌드 Job 삭제**
+**3.2.2.4.2.9.    빌드 Job 삭제**
 
 1. 파이프라인 상세페이지에서 빌드 Job의 “삭제” 버튼을 클릭한다.
 
@@ -517,7 +521,7 @@ _**※ 테스트 Job 생성은 관리자와 파이프라인 참여자 중 생성
 
 _**※ 테스트 Job 구성 조회는 파이프라인 참여자이면 모두 조회가 가능하다. 하지만 수정은 관리자와 파이프라인 참여자 중 생성 권한을 가진 참여자만 수정이 가능하다.**_
 
-**3.2.2.4.3.3. 테스트 Job 실행**
+**3.2.2.4.3.3.    테스트 Job 실행**
 
 1. 파이프라인 상세페이지에서 테스트 Job의 “실행” 아이콘을 클릭한다.
 
@@ -531,7 +535,7 @@ _**※ 테스트 Job 구성 조회는 파이프라인 참여자이면 모두 조
 
 _**※ 테스트 Job 실행은 관리자와 파이프라인 참여자 중 생성 권한과 실행 권한을 가진 참여자만 가능하다.**_
 
-**3.2.2.4.3.4. 테스트 Job 정지**
+**3.2.2.4.3.4.    테스트 Job 정지**
 
 1. 실행 중인 테스트 Job을 정지 및 취소하고 싶을 때 “정지” 아이콘을 클릭한다.
 
@@ -543,7 +547,7 @@ _**※ 테스트 Job 실행은 관리자와 파이프라인 참여자 중 생성
 
 _**※ 테스트 Job 정지는 관리자와 파이프라인 참여자 중 생성 권한과 실행 권한을 가진 참여자만 가능하다.**_
 
-**3.2.2.4.3.5. 테스트 Job 로그/히스토리**
+**3.2.2.4.3.5.    테스트 Job 로그/히스토리**
 
 1. 빌드 Job 실행이 진행 중일 때 “로그/히스토리” 아이콘을 클릭하여 실시간으로 로그를 조회할 수 있다.
 
@@ -561,7 +565,7 @@ _**※ 테스트 Job 정지는 관리자와 파이프라인 참여자 중 생성
 
 _**※ 테스트 Job 로그/히스토리는 관리자와 모든 파이프라인 참여자가 조회 가능하나 실행 및 정지 버튼은 생성 권한과 실행 권한을 가진 참여자만 가능하다.**_
 
-**3.2.2.4.3.6. 테스트 Job 품질 이슈 결과**
+**3.2.2.4.3.6.    테스트 Job 품질 이슈 결과**
 
 1. 테스트 Job의 로그/히스토리 “품질 이슈 결과” 버튼을 누르면 수행된 소스 코드의 오류 해결 여부 및 오류의 수준, 활성화 상태를 관리하는 품질 관리 대시보드로 이동한다.
 
@@ -571,7 +575,7 @@ _**※ 테스트 Job 로그/히스토리는 관리자와 모든 파이프라인 
 
 _**※ 테스트 Job 품질 이슈 결과는 관리자와 모든 파이프라인 참여자가 조회 가능하다.**_
 
-**3.2.2.4.3.7. 테스트 Job 추가**
+**3.2.2.4.3.7.    테스트 Job 추가**
 
 1. 파이프라인 상세페이지에서 테스트 Job의 “추가” 버튼을 클릭한다.
 
@@ -581,7 +585,7 @@ _**※ 테스트 Job 품질 이슈 결과는 관리자와 모든 파이프라인
 
 _**※ 테스트 Job 추가는 관리자와 생성 권한을 가진 파이프라인 참여자만 가능하다.**_
 
-**3.2.2.4.3.8. 테스트 Job 복제**
+**3.2.2.4.3.8.    테스트 Job 복제**
 
 1. 파이프라인 상세페이지에서 테스트 Job의 “복제” 버튼을 클릭한다.
 
@@ -593,7 +597,7 @@ _**※ 테스트 Job 추가는 관리자와 생성 권한을 가진 파이프라
 
 _**※ 테스트 Job 복제는 관리자와 생성 권한을 가진 파이프라인 참여자만 가능하다.**_
 
-**3.2.2.4.3.9. 테스트 Job 삭제**
+**3.2.2.4.3.9.    테스트 Job 삭제**
 
 1. 파이프라인 상세페이지에서 테스트 Job의 “삭제” 버튼을 클릭한다.
 
@@ -605,25 +609,26 @@ _**※ 테스트 Job 복제는 관리자와 생성 권한을 가진 파이프라
 
 _**※ 테스트 Job 삭제는 관리자와 생성 권한을 가진 파이프라인 참여자만 가능하다.**_
 
-**3.2.2.4.4. 배포 Job**
+**3.2.2.4.4.    배포 Job**
 
-**3.2.2.4.4.1. 배포 Job 생성**
+**3.2.2.4.4.1.    배포 Job 생성**
 
 1. Job의 “추가” 버튼을 클릭한다.  
 
-![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image103.png)
 
-1. 구성 페이지로 이동하여 작업 유형을 배포\(Deploy\)로 선택한 후 유형에서 원하는 배포 유형을 선택, 파이프라인 관리에서 저장해 놓은 Cloud Foundry 정보를 선택한다. \(Cloud Foundry 정보를 가져오기 위해서는 선행 과정이 필요하다. 과정은 3.2.3.1. Cloud Foundry 정보 관리 항목을 참고한다\). 그다음 MANIFEST 사용 여부를 체크 후 입력 유형과 작업 트리거를 차례로 입력한다.
+   ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image103.png)
+
+2. 구성 페이지로 이동하여 작업 유형을 배포\(Deploy\)로 선택한 후 유형에서 원하는 배포 유형을 선택, 파이프라인 관리에서 저장해 놓은 Cloud Foundry 정보를 선택한다. \(Cloud Foundry 정보를 가져오기 위해서는 선행 과정이 필요하다. 과정은 3.2.3.1. Cloud Foundry 정보 관리 항목을 참고한다\). 그다음 MANIFEST 사용 여부를 체크 후 입력 유형과 작업 트리거를 차례로 입력한다.
 
    ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image104.jpg)
 
-2. “저장” 버튼을 클릭하고, 파이프라인 상세페이지에서 배포 Job이 생성된 것을 확인한다.
+3. “저장” 버튼을 클릭하고, 파이프라인 상세페이지에서 배포 Job이 생성된 것을 확인한다.
 
    ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image105.png)
 
 _**※ 배포 Job 생성은 관리자와 파이프라인 참여자 중 생성 권한을 가진 참여자만 생성이 가능하다.**_
 
-**3.2.2.4.4.2. 배포 Job 구성 조회/수정**
+**3.2.2.4.4.2.    배포 Job 구성 조회/수정**
 
 1. 생성된 배포 Job 의 “구성” 아이콘을 클릭한다.
 
@@ -641,7 +646,7 @@ _**※ 배포 Job 생성은 관리자와 파이프라인 참여자 중 생성 �
 
 _**※ 배포 Job 구성 조회는 파이프라인 참여자이면 모두 조회가 가능하다. 하지만 수정은 관리자와 파이프라인 참여자 중 생성 권한을 가진 참여자만 수정이 가능하다.**_
 
-**3.2.2.4.4.3. 배포 Job 실행**
+**3.2.2.4.4.3.    배포 Job 실행**
 
 1. 파이프라인 상세페이지에서 배포 Job의 “실행” 아이콘을 클릭한다.
 
@@ -657,7 +662,7 @@ _**※ 배포 Job 구성 조회는 파이프라인 참여자이면 모두 조회
 
 _**※ 배포 Job 실행은 관리자와 파이프라인 참여자 중 생성 권한과 실행 권한을 가진 참여자만 가능하다.**_
 
-**3.2.2.4.4.4. 배포 Job 정지**
+**3.2.2.4.4.4.    배포 Job 정지**
 
 1. 실행 중인 배포 Job을 정지 및 취소하고 싶을 때 “정지” 아이콘을 클릭한다.
 
@@ -669,7 +674,7 @@ _**※ 배포 Job 실행은 관리자와 파이프라인 참여자 중 생성 �
 
 _**※ 배포 Job 정지는 관리자와 파이프라인 참여자 중 생성권한과 실행 권한을 가진 참여자만 가능하다.**_
 
-**3.2.2.4.4.5. 배포 Job 로그/히스토리**
+**3.2.2.4.4.5.    배포 Job 로그/히스토리**
 
 1. 배포 Job 실행이 진행 중일 때 “로그/히스토리” 아이콘을 클릭하여 실시간으로 로그를 조회할 수 있다.
 
@@ -689,7 +694,7 @@ _**※ 배포 Job 정지는 관리자와 파이프라인 참여자 중 생성권
 
 _**※ 배포 Job 로그/히스토리는 관리자와 모든 파이프라인 참여자가 조회 가능하나 실행 및 정지 버튼은 생성권한과 실행 권한을 가진 참여자만 가능하다.**_
 
-**3.2.2.4.4.6. 배포 Job 현재 작업으로 롤백**
+**3.2.2.4.4.6.    배포 Job 현재 작업으로 롤백**
 
 1. 배포 Job 의 로그/히스토리 페이지에서 “현재 작업으로 롤백” 버튼을 클릭한다.
 
@@ -711,7 +716,7 @@ _**※ 배포 Job 로그/히스토리는 관리자와 모든 파이프라인 참
 
 _**※ 배포 Job 현재 작업으로 롤백은 관리자와 생성권한과 실행 권한을 가진 참여자만 가능하다.**_
 
-**3.2.2.4.4.7. 배포 Job 추가**
+**3.2.2.4.4.7.    배포 Job 추가**
 
 1. 파이프라인 상세페이지에서 테스트 Job의 “추가” 버튼을 클릭한다.
 
@@ -721,7 +726,7 @@ _**※ 배포 Job 현재 작업으로 롤백은 관리자와 생성권한과 실
 
 _**※ 배포 Job 추가는 관리자와 생성권한을 가진 파이프라인 참여자만 가능하다.**_
 
-**3.2.2.4.4.8. 배포 Job 복제**
+**3.2.2.4.4.8.    배포 Job 복제**
 
 1. 파이프라인 상세페이지에서 배포 Job의 “복제” 버튼을 클릭한다.
 
@@ -733,7 +738,7 @@ _**※ 배포 Job 추가는 관리자와 생성권한을 가진 파이프라인 
 
 _**※ 배포 Job 복제는 관리자와 생성권한을 가진 파이프라인 참여자만 가능하다.**_
 
-**3.2.2.4.4.9. 배포 Job 삭제**
+**3.2.2.4.4.9.    배포 Job 삭제**
 
 1. 파이프라인 상세페이지에서 배포 Job의 “삭제” 버튼을 클릭한다.
 
@@ -797,23 +802,25 @@ _**※ Job 새 작업 그룹 추가는 관리자와 생성권한을 가진 파�
 
    ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image134.png)
 
-4. URL에는 “URL 관리” 버튼을 클릭한 후 팝업 창이 뜨면 “URL 등록” 버튼을 클릭하여 Cloud Foundry 계정 정보를 등록하도록 한다.
+4. URL에는 “URL 관리” 버튼을 클릭한 후 팝업 창이 뜨면 “URL 등록” 버튼을 클릭하여 Cloud Foundry 계정 정보를 등록하도록 한다.  
 
-![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image135.png)
 
-1. Cloud Foundry API 명\(ex. api\)을 입력하고, Job 배포 계정으로 사용하고자 하는 Cloud Foundry target API URL\(ex. [https://api.115.68.46.186.xip.io](https://api.115.68.46.186.xip.io)\) 을 입력한 후 “URL 저장” 버튼을 클릭한다.
+   ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image135.png)
+
+5. Cloud Foundry API 명\(ex. api\)을 입력하고, Job 배포 계정으로 사용하고자 하는 Cloud Foundry target API URL\(ex. [https://api.115.68.46.186.xip.io](https://api.115.68.46.186.xip.io)\) 을 입력한 후 “URL 저장” 버튼을 클릭한다.
 
    ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image136.png)
 
-2. URL이 등록되었음을 확인한다.
+6. URL이 등록되었음을 확인한다.  
 
-![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image137.png)
 
-1. 다시 계정 등록 화면으로 돌아와 등록한 URL을 선택 후 나머지 값을 입력한다. 마지막으로 “등록” 버튼을 클릭한다.
+   ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image137.png)
+
+7. 다시 계정 등록 화면으로 돌아와 등록한 URL을 선택 후 나머지 값을 입력한다. 마지막으로 “등록” 버튼을 클릭한다.
 
    ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image138.png)
 
-2. Cloud Foundry 정보 관리 대시보드에서 Cloud Foundry 계정 정보가 정상적으로 등록되었음을 확인한다.
+8. Cloud Foundry 정보 관리 대시보드에서 Cloud Foundry 계정 정보가 정상적으로 등록되었음을 확인한다.
 
    ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image139.png)
 
@@ -855,15 +862,16 @@ _**※ Job 새 작업 그룹 추가는 관리자와 생성권한을 가진 파�
 
    ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image145.png)
 
-3. 왼쪽 하단에 품질 프로파일 메뉴에서 이전 단계에서 선택한 Default^Default-QualityProfle 을 클릭하여 추가한 코딩 규칙이 추가되었는지 확인한다.
+3. 왼쪽 하단에 품질 프로파일 메뉴에서 이전 단계에서 선택한 Default^Default-QualityProfle 을 클릭하여 추가한 코딩 규칙이 추가되었는지 확인한다.  
 
-![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image146.png)
 
-1. “프로파일에 제거” 버튼을 클릭한다.
+   ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image146.png)
+
+4. “프로파일에 제거” 버튼을 클릭한다.
 
    ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image147.png)
 
-2. 제거한 코딩 규칙이 품질 프로파일에서 삭제된 것을 확인한다.
+5. 제거한 코딩 규칙이 품질 프로파일에서 삭제된 것을 확인한다.
 
    ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image148.png)
 
@@ -1005,9 +1013,10 @@ _**※ Job 새 작업 그룹 추가는 관리자와 생성권한을 가진 파�
 
 1. 품질 게이트 대시보드에서 연결된 프로젝트 항목을 확인한다. \(첫 번째 사진은 테스트 Job 구성 조회 시 품질 게이트를 test-QualityGate 로 설정한 것이다. 그러므로 두번째 사진에서 연결된 프로젝트에 test2 파이프라인의 테스트 Job 이 보인다.\)  
 
-![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image159.jpg)
 
-1. 품질 게이트도 품질 프로파일과 마찬가지로 품질 게이트 1개당 여러 프로젝트 연결이 가능하다.
+   ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image159.jpg)
+
+2. 품질 게이트도 품질 프로파일과 마찬가지로 품질 게이트 1개당 여러 프로젝트 연결이 가능하다.
 
    ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/pipeline/image177.png)
 

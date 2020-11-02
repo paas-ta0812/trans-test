@@ -45,7 +45,7 @@ Cloudit 클라우드 환경에 PaaS-TA포털을 설치하기 위해서는 인프
 
 | 대상 | 용도 | LB 포트 | 서버 포트 | 비고 |
 | :--- | :--- | :--- | :--- | :--- |
-| HAProxy가 배포된 VM | 포털 | 80 | 30602 |  |
+|  HAProxy가 배포된 VM | 포털 | 80 | 30602 |  |
 | 유레카 | 2221 | 30702 |  |  |
 
 1.2. Cloudit 포탈에 접속한다. 접속 주소: [https://www.cloudit.co.kr](paas-ta_-_-_cloudit_portal_v1.0.md)  
@@ -66,7 +66,7 @@ IP : 로드밸런서의 IP 이며 동일 IP로 여러 개의 Port 설정 가능�
 프로토콜 : TCP 또는 HTTP 프로토콜  
 정책 : 4가지 Load Balancing 정책 중 선택
 
-| **Round Robin** : 순차적으로 세션을 연결하는 정책, 거의 균등한 부하 분산이 가능하나 세션 유지 불가능  **Least Connection** : 세션 요구량이 적은 쪽으로 신규 세션을 연결해주는 정책  **Source Hash** : 출발지의 IP 주소를 기반으로 Hash를 계산하여 항상 같은 목적지로 세션을 연결해주는 정책  **Destination Hash** : 목적지의 IP 주소를 기반으로 Hash를 계산하여 항상 같은 출발지와 세션을 연결해주는 정책 |
+|  **Round Robin** : 순차적으로 세션을 연결하는 정책, 거의 균등한 부하 분산이 가능하나 세션 유지 불가능  **Least Connection** : 세션 요구량이 적은 쪽으로 신규 세션을 연결해주는 정책  **Source Hash** : 출발지의 IP 주소를 기반으로 Hash를 계산하여 항상 같은 목적지로 세션을 연결해주는 정책  **Destination Hash** : 목적지의 IP 주소를 기반으로 Hash를 계산하여 항상 같은 출발지와 세션을 연결해주는 정책 |
 | :--- |
 
 
@@ -92,8 +92,8 @@ Cloudit의 Kubernetes 환경에 배포 가능한 PaaS-TA 버전은 아래와 같
 
 | 릴리즈 | 스템셀 |
 | :--- | :--- |
-| paasta/4.0 | [https://s3.amazonaws.com/bosh-core-stemcells/warden/bosh-stemcell-3468.51-warden-boshlite-ubuntu-trusty-go\_agent.tgz](https://s3.amazonaws.com/bosh-core-stemcells/warden/bosh-stemcell-3468.51-warden-boshlite-ubuntu-trusty-go_agent.tgz) |
-| [https://s3.amazonaws.com/bosh-core-stemcells/warden/bosh-stemcell-3468.21-warden-boshlite-ubuntu-trusty-go\_agent.tgz](https://s3.amazonaws.com/bosh-core-stemcells/warden/bosh-stemcell-3468.21-warden-boshlite-ubuntu-trusty-go_agent.tgz) |  |
+| paasta/4.0 |  https://s3.amazonaws.com/bosh-core-stemcells/warden/bosh-stemcell-3468.51-warden-boshlite-ubuntu-trusty-go\_agent.tgz |
+|  https://s3.amazonaws.com/bosh-core-stemcells/warden/bosh-stemcell-3468.21-warden-boshlite-ubuntu-trusty-go\_agent.tgz |  |
 
 ### 2.3.  **BOOTSTRAP 및 파스타 설치하기**
 
@@ -114,8 +114,8 @@ URL을 통해 bosh-stemcell-3468.51-warden-boshlite-ubuntu-trusty-go\_agent.tgz,
 
 | 인프라 환경 | 참조 사이트 및 참조 Manifest |
 | :--- | :--- |
-| paasta/4.0 | [https://s3.amazonaws.com/bosh-core-stemcells/warden/bosh-stemcell-3468.21-warden-boshlite-ubuntu-trusty-go\_agent.tgz](paas-ta_-_-_cloudit_portal_v1.0.md) |
-| [https://s3.amazonaws.com/bosh-core-stemcells/warden/bosh-stemcell-3468.51-warden-boshlite-ubuntu-trusty-go\_agent.tgz](paas-ta_-_-_cloudit_portal_v1.0.md) |  |
+| paasta/4.0 |  [https://s3.amazonaws.com/bosh-core-stemcells/warden/bosh-stemcell-3468.21-warden-boshlite-ubuntu-trusty-go\_agent.tgz](paas-ta_-_-_cloudit_portal_v1.0.md) |
+|  [https://s3.amazonaws.com/bosh-core-stemcells/warden/bosh-stemcell-3468.51-warden-boshlite-ubuntu-trusty-go\_agent.tgz](paas-ta_-_-_cloudit_portal_v1.0.md) |  |
 
 1.2 스템셀을 다운로드 후 Bosh에 업로드 한다.
 
@@ -141,7 +141,7 @@ $ bosh -e paasta upload-stemcell bosh-stemcell-3468.51-warden-boshlite-ubuntu-tr
 \# 업로드 된 스템셀을 확인한다.
 
 ```text
-$ bosh -e paasta stemcells
+$ bosh -e paasta stemcells 
 ```
 
 #### 2.4.2. **PaaS-TA 사용자 포털 릴리즈 업로드**
@@ -154,8 +154,8 @@ PaaS-TA 사용자 포털 릴리즈를 다운로드 후 bosh에 릴리즈 생성 
 
 | 릴리즈명 | 참조 사이트 및 참조 Manifest |
 | :--- | :--- |
-| paasta/4.0 | [https://github.com/PaaS-TA/PAAS-TA-PORTAL-RELEASE의](https://github.com/PaaS-TA/PAAS-TA-PORTAL-RELEASE의) v4.0-container Branch |
-| 소스를 통해 릴리즈를 생성한다. |  |
+| paasta/4.0 |  https://github.com/PaaS-TA/PAAS-TA-PORTAL-RELEASE의 v4.0-container Branch |
+|  소스를 통해 릴리즈를 생성한다. |  |
 
 1.2. 아래의 Git Repository 경로를 통해 PaaS-TA 사용자 포털 Release for container를 생성하기 위한 소스를 다운로드 받는다.
 
@@ -168,7 +168,7 @@ $ unzip src.zip
 $ rm -rf src.zip
 ```
 
-**2. PaaS-TA 사용자 포털 Release for container 생성**
+**2.    PaaS-TA 사용자 포털 Release for container 생성**
 
 2.1. 릴리즈를 생성한다.  
 \# PaaS-TA 사용자 포털 for Container 릴리즈 생성
@@ -177,7 +177,7 @@ $ rm -rf src.zip
 $ bosh create-release --sha2 --force --tarball ./paasta-portal-release-4.0-container.tgz --name paasta-portal-release --version 4.0-container
 ```
 
-**3. PaaS-TA 사용자 포털 릴리즈 Bosh에 업로드**
+**3.    PaaS-TA 사용자 포털 릴리즈 Bosh에 업로드**
 
 3.1. 준비된 릴리즈를 Bosh에 업로드 한다.
 
@@ -239,7 +239,7 @@ $ kubectl describe service portal-proxy-ingress -n paasta
 
 PaaS-TA 사용자 포털 배포 전 배포되는 릴리즈, IaaS 관련 Network/Storage/VM 관련 설정들을 정의하는 Cloud-Config 등의 Manifest 사전 점검을 한다.
 
-**1. PaaS-TA 사용자 포털 릴리즈 버전 점검**
+**1.    PaaS-TA 사용자 포털 릴리즈 버전 점검**
 
 1.1 PaaS-TA 사용자 포털 Manifest를 확인한다.  
 \# 아래 명령어를 통해 Manifest 내용을 점검한다.
@@ -250,7 +250,7 @@ $ vi ~/workspace/{PaaS-TA-Project}/paasta-portal-4.0-container.yml
 
 ![](../../../.gitbook/assets/kubernetes_verify_container_yaml%20%282%29.png)
 
-**2. Cloud-config의 vm\_extensions 점검**
+**2.    Cloud-config의 vm\_extensions 점검**
 
 2.1 Cloud-config 내용을 확인한다.  
 \# 아래 명령어를 통해 cloud-config의 vm\_extensions 항목의 내용을 확인한다.
@@ -311,7 +311,7 @@ $ uaac token client get portalclient -s portalclient
 
 PaaS-TA 포털을 설치하기 전 배포 관련된 각종 환경들을 스크립트에 설정 후 PaaS-TA 사용자 포털을 설치한다.
 
-**1. Kubernetes Cluster에 PaaS-TA 사용자 포털 배포**
+**1.    Kubernetes Cluster에 PaaS-TA 사용자 포털 배포**
 
 1.1. PaaS-TA 사용자 포털을 배포하기 위한 정의파일과 옵션에 대해 수행 스크립트를 작성한다.
 
@@ -459,7 +459,7 @@ $ ./paasta-portal-deploy-kubernetes.sh
 
 PaaS-TA 사용자 포털 배포를 실행하고 배포 진행 과정에 대해 정상적으로 배포가 수행되는지 로그를 필히 확인한다.
 
-**2. Cloudit 로드밸런싱 설정**
+**2.    Cloudit 로드밸런싱 설정**
 
 2.1. PaaS-TA 사용자 포털 배포 이후 사용자 및 운영자 포털을 접속하기 위해 HAProxy가 배포된 VM을 확인한다.  
 \# bosh를 통해 배포되어 사용중인 VM을 확인한다.
@@ -492,7 +492,7 @@ ingress 정보 확인
 
 ![](../../../.gitbook/assets/kubernetes_verify_proxy_ingress%20%282%29.png)
 
-**3. 최종 포털 사용을 위한 Service 확인**
+**3.    최종 포털 사용을 위한 Service 확인**
 
 3.1. 등록된 Service를 확인한다. 아래 명령어를 통해 등록된 Service가 다음과 같은지 확인한다.
 
@@ -502,7 +502,7 @@ $ kubectl get services -n paasta -o wide
 
 ![](../../../.gitbook/assets/kubernetes_verify_svc%20%282%29.png)
 
-**4. PaaS-TA 사용자 포털 접속**
+**4.    PaaS-TA 사용자 포털 접속**
 
 4.1. PaaS-TA 사용자 포털에 접속한다. 아래 명령어를 통해 배포된 PaaS-TA 사용자 포털에 접속한다. PaaS-TA 사용자 포털 배포 후 등록했던 로드밸런서 IP를 입력하거나 도메인 주소를 입력한다. Public IP와 매핑이 되어 있다면, 브라우저를 통해 Public IP로 접속을 한다
 
@@ -512,7 +512,7 @@ $ curl http://portal-web-user.192.168.x.x.xip.io
 
 ![](../../../.gitbook/assets/kubernetes_verify_portal_connection%20%282%29.png)
 
-**5. PaaS-TA 운영자 포털 접속**
+**5.    PaaS-TA 운영자 포털 접속**
 
 5.1. PaaS-TA 운영자 포털에 접속한다. 아래 명령어를 통해 배포된 PaaS-TA 운영자 포털에 접속한다. PaaS-TA 사용자 포털 배포 후 등록했던 로드밸런서 IP를 입력한다. Public IP와 매핑이 되어 있다면, 브라우저를 통해 Public IP로 접속을 한다
 
@@ -522,7 +522,7 @@ $ curl http://portal-web-admin.192.168.x.x.xip.io
 
 ![](../../../.gitbook/assets/kubernetes_verify_admin_connection%20%282%29.png)
 
-**6. 관리용 Eureka 접속**
+**6.    관리용 Eureka 접속**
 
 6.1. Eureka web에 접속한다. 아래 명령어를 통해 Eureka web에 접속한다. PaaS-TA 사용자 포털 배포 후 등록했던 로드밸런서 IP를 입력한다. Public IP와 매핑이 되어 있다면, 브라우저를 통해 Public IP로 접속을 한다
 

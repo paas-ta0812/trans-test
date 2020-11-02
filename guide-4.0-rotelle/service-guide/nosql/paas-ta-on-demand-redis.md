@@ -40,15 +40,16 @@
 
 ### 1.4. 참고자료
 
-[**http://bosh.io/docs**](http://bosh.io/docs)  
-[**http://docs.cloudfoundry.org/**](http://docs.cloudfoundry.org/)
+[**http://bosh.io/docs**](http://bosh.io/docs)   
+ [**http://docs.cloudfoundry.org/**](http://docs.cloudfoundry.org/)
 
 ## 2. On-Demand Redis 서비스팩 설치
 
 ### 2.1. **설치 전 준비 사항**
 
 본 설치 가이드는 Linux 환경에서 설치하는 것을 기준으로 하였다. 서비스팩 설치를 위해서는 먼저 BOSH CLI v2 가 설치 되어 있어야 하고 BOSH 에 로그인이 되어 있어야 한다.  
-BOSH CLI v2 가 설치 되어 있지 않을 경우 먼저 BOSH2.0 설치 가이드 문서를 참고 하여 BOSH CLI v2를 설치를 하고 사용법을 숙지 해야 한다.
+ BOSH CLI v2 가 설치 되어 있지 않을 경우 먼저 BOSH2.0 설치 가이드 문서를 참고 하여 BOSH CLI v2를 설치를 하고 사용법을 숙지 해야 한다.  
+
 
 * BOSH 2.0 사용자 가이드
 
@@ -1696,7 +1697,8 @@ delete Redis Key ::number
 
 Get Redis Value ::null
 
-\`\`\`
+\`\`\`   
+
 
 ## 4. Portal을 이용한 redis service test
 

@@ -74,55 +74,55 @@
     | Component | Protocol | Port |
     | :--- | :--- | :--- |
 
-| abacus-pouchserver | TCP | 5984 |
-| :--- | :--- | :--- |
+
+    | abacus-pouchserver | TCP | 5984 |
+    | :--- | :--- | :--- |
 
 
-| abacus-usage-collector | 9080 |
-| :--- | :--- |
+    | abacus-usage-collector | 9080 |
+    | :--- | :--- |
 
 
-| abacus-usage-reporting | 9088 |
-| :--- | :--- |
+    | abacus-usage-reporting | 9088 |
+    | :--- | :--- |
 
 
-| abacus-usage-meter | 9100 |
-| :--- | :--- |
+    | abacus-usage-meter | 9100 |
+    | :--- | :--- |
 
 
-| abacus-usage-accumulator | 9200 |
-| :--- | :--- |
+    | abacus-usage-accumulator | 9200 |
+    | :--- | :--- |
 
 
-| abacus-usage-aggregator | 9300 |
-| :--- | :--- |
+    | abacus-usage-aggregator | 9300 |
+    | :--- | :--- |
 
 
-| abacus-cf-bridge | 9500 |
-| :--- | :--- |
+    | abacus-cf-bridge | 9500 |
+    | :--- | :--- |
 
 
-| abacus-cf-renewer | 9501 |
-| :--- | :--- |
+    | abacus-cf-renewer | 9501 |
+    | :--- | :--- |
 
 
-| abacus-provisioning-plugin | 9880 |
-| :--- | :--- |
+    | abacus-provisioning-plugin | 9880 |
+    | :--- | :--- |
 
 
-| abacus-account-plugin | 9881 |
-| :--- | :--- |
+    | abacus-account-plugin | 9881 |
+    | :--- | :--- |
 
 
-| abacus-authserver-plugin | 9882 |
-| :--- | :--- |
+    | abacus-authserver-plugin | 9882 |
+    | :--- | :--- |
 
 
-| abacus-eureka-plugin | 9990 |
-| :--- | :--- |
+    | abacus-eureka-plugin | 9990 |
+    | :--- | :--- |
 
-
-&lt;/table&gt;
+  &lt;/table&gt;
 
 ### 2.3.  Node.js 설치
 

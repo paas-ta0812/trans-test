@@ -79,9 +79,10 @@ paasta-3.5는 bosh2를 기반으로 설치된다. Bosh2를 사용하여 Bosh생�
 #### 3.2.    PaaS-TA Release 파일 다운로드
 
 * [설치 파일 다운로드 받기](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Guide-4.0-ROTELLE/Download_Page.md)
-* 파스타 다운로드 URL에서 \[PaaS-TA 설치 릴리즈\] 파일을 다운로드 받아 ~/workspace/paasta-3.5/release 이하 디렉토리에 압축을 푼다.
 
-  압출을 풀면 아래 그림과 같이 ~/workspace/paasta-3.5/release/paasta 이하 디렉토리가 생성되며 이하에 릴리즈 파일\(tgz\)이 존재한다.
+1. 파스타 다운로드 URL에서 \[PaaS-TA 설치 릴리즈\] 파일을 다운로드 받아 ~/workspace/paasta-3.5/release 이하 디렉토리에 압축을 푼다. 
+
+   압출을 풀면 아래 그림과 같이 ~/workspace/paasta-3.5/release/paasta 이하 디렉토리가 생성되며 이하에 릴리즈 파일\(tgz\)이 존재한다.
 
 !\[PaaSTa\_release\_Image\]
 
@@ -397,7 +398,7 @@ $ bosh –e {director_name} –d paasta deploy {deploy.yml}
 
 설치 option
 
-| -e | BOSH Director anme |
+|  -e | BOSH Director anme |
 | :--- | :--- |
 | -d | Deployment name \(paasta 는 deployment name paasta\) |
 | -o | Paasta 설치시 사용하는 option 파일로 아래 기능을 기본으로 제공한다.\(iaas별속성, haproxy 사용여부 , database 선정 \) |
@@ -415,14 +416,14 @@ $ bosh –e {director_name} –d paasta deploy {deploy.yml}
 | uaa\_database\_password | uaadb database admin pwd |
 | cc\_database\_password | cloud\_controller\(api\) database admin pwd |
 | cert\_days | paasta deploy시 내부 컴포넌트 끼리 통신하기 위한 인증서를 사용한다. 인증서는 Bosh\(credhub\)에서 생성한다. 인증서 유효 기간을 원하는 기간을정의 한다.\(일단위\) |
-| uaa\_login\_logout\_redirect\_parameter\_whitelist | uaa whitelist 추가 [http://portal-web-user.\[User](http://portal-web-user.[User) Portal url\].xip.io 및 [http://portal-web-user.\[User](http://portal-web-user.[User) Portal url\].xip.io/callback 입력\(User Portal url은 앞으로 포탈에 설치할 haproxy의 public ip이다.\) |
+| uaa\_login\_logout\_redirect\_parameter\_whitelist | uaa whitelist 추가 http://portal-web-user.\[User Portal url\].xip.io 및 http://portal-web-user.\[User Portal url\].xip.io/callback 입력\(User Portal url은 앞으로 포탈에 설치할 haproxy의 public ip이다.\) |
 | uaa\_login\_branding\_company\_name | uaa 페이지 타이틀 명 |
 | uaa\_login\_branding\_footer\_legal\_text | uaa 페이지 하단영역 텍스트 |
 | uaa\_login\_branding\_product\_logo | uaa 페이지 로고 이미지\(base64\) |
 | uaa\_login\_branding\_square\_logo | uaa 페이지 타이틀 로고 이미지\(base64\) |
-| uaa\_login\_links\_passwd | \# uaa 페이지에서 reset password 누를시 이동하는 영역 설정 [http://portal-web-user.\[User](http://portal-web-user.[User) Portal url\].xip.io/resetpaawd \(User Portal url은 앞으로 포탈에 설치할 haproxy의 public ip이다.\) |
-| uaa\_login\_links\_signup | uaa 페이지에서 create account 누를시 이동하는 영역 설정 [http://portal-web-user.\[User](http://portal-web-user.[User) Portal url\].xip.io/createuser \(User Portal url은 앞으로 포탈에 설치할 haproxy의 public ip이다.\) |
-| uaa\_clients\_portalclient\_redirect\_uri | uaa 페이지에서 redirect 영역 설정 [http://portal-web-user.\[User](http://portal-web-user.[User) Portal url\].xip.io 및 [http://portal-web-user.\[User](http://portal-web-user.[User) Portal url\].xip.io/callback 입력 \(User Portal url은 앞으로 포탈에 설치할 haproxy의 public ip이다.\) |
+| uaa\_login\_links\_passwd |  \# uaa 페이지에서 reset password 누를시 이동하는 영역 설정 http://portal-web-user.\[User Portal url\].xip.io/resetpaawd \(User Portal url은 앞으로 포탈에 설치할 haproxy의 public ip이다.\) |
+| uaa\_login\_links\_signup | uaa 페이지에서 create account 누를시 이동하는 영역 설정 http://portal-web-user.\[User Portal url\].xip.io/createuser \(User Portal url은 앞으로 포탈에 설치할 haproxy의 public ip이다.\) |
+| uaa\_clients\_portalclient\_redirect\_uri | uaa 페이지에서 redirect 영역 설정 http://portal-web-user.\[User Portal url\].xip.io 및 http://portal-web-user.\[User Portal url\].xip.io/callback 입력 \(User Portal url은 앞으로 포탈에 설치할 haproxy의 public ip이다.\) |
 
 #### 3.5.1. deploy-aws.sh
 

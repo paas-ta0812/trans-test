@@ -38,15 +38,16 @@
 
 ### 1.4. 참고자료
 
-[**http://bosh.io/docs**](http://bosh.io/docs)  
-[**http://docs.cloudfoundry.org/**](http://docs.cloudfoundry.org/)
+[**http://bosh.io/docs**](http://bosh.io/docs)   
+ [**http://docs.cloudfoundry.org/**](http://docs.cloudfoundry.org/)
 
 ## 2. Redis 서비스팩 설치
 
 ### 2.1. 설치 전 준비 사항
 
 본 설치 가이드는 Linux 환경에서 설치하는 것을 기준으로 하였다. 서비스팩 설치를 위해서는 먼저 BOSH CLI v2 가 설치 되어 있어야 하고 BOSH 에 로그인이 되어 있어야 한다.  
-BOSH CLI v2 가 설치 되어 있지 않을 경우 먼저 BOSH2.0 설치 가이드 문서를 참고 하여 BOSH CLI v2를 설치를 하고 사용법을 숙지 해야 한다.
+ BOSH CLI v2 가 설치 되어 있지 않을 경우 먼저 BOSH2.0 설치 가이드 문서를 참고 하여 BOSH CLI v2를 설치를 하고 사용법을 숙지 해야 한다.  
+
 
 * BOSH2.0 사용자 가이드
 
@@ -1413,11 +1414,11 @@ Sample App에서 Redis 서비스를 사용하기 위해서는 서비스 신청(P
 
 applications:
 
-* name: hello- spring-glustefs \# 배포할 App 이름
+* name: hello- spring-glustefs          \# 배포할 App 이름
 
-  memory: 512M \# 배포시 메모리 사이즈
+  memory: 512M                          \# 배포시 메모리 사이즈
 
-  instances: 1 \# 배포 인스턴스 수
+  instances: 1                          \# 배포 인스턴스 수
 
   path: target/hello-spring-glusterfs.war \# 배포하는 App 파일 PATH
 
@@ -1436,7 +1437,7 @@ applications:
 > `$ cf apps`
 >
 > ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Service-Guide/images/redis/redis_image_07.png)
->
+
 > `$ cf logs redis-example-app`
 >
 > ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Service-Guide/images/redis/redis_image_08.png)

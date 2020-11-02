@@ -493,7 +493,7 @@ networks:
 
 * cloud\_properties:
 
-  name: Internal
+    name: Internal
 
   dns:
 
@@ -525,7 +525,7 @@ networks:
 
 * cloud\_properties:
 
-  name: External
+    name: External
 
   dns:
 

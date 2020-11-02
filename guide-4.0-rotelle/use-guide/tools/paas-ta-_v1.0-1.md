@@ -170,7 +170,7 @@
 
 #### 3.1.3.1.6.2. 레파지토리 태그 목록 조회
 
-1. “파일\(file\)”의 하단에 있는 “Tag : “ 를 클릭하면 사용한 Tag의 리스트를 확인할 수 있으며, 빈칸의 검색을 통해 빠르게 조회할 수 있다.
+1. “파일\(file\)”의 하단에 있는  “Tag : “ 를 클릭하면 사용한 Tag의 리스트를 확인할 수 있으며, 빈칸의 검색을 통해 빠르게 조회할 수 있다.
 
    ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Use-Guide/images/source_control/image037.png)
 

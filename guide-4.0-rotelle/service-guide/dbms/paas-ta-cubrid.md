@@ -1163,7 +1163,7 @@ Cubrid 서비스팩 배포가 완료 되었으면 Application에서 서비스 �
 #### 특정 조직에 해당 서비스 접근 허용을 할당하고 접근 서비스 목록을 다시 확인한다. \(전체 조직\)
 
 > `$ cf enable-service-access CubridDB`  
-> `$ cf service-access`
+>  `$ cf service-access`
 >
 > ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Service-Guide/images/cubrid/2-4-4-0.png)
 
@@ -1225,8 +1225,8 @@ Sample Web App에서 Cubrid 서비스를 사용하기 위해서는 서비스 신
 
 #### Sample Web App 디렉토리로 이동하여 manifest 파일을 확인한다.
 
-> `$ cd hello-spring-cubrid`  
-> `$ vi manifest.yml`
+> `$ cd hello-spring-cubrid`   
+>  `$ vi manifest.yml`
 >
 > ```text
 > applications:
@@ -1252,8 +1252,8 @@ Sample Web App에서 Cubrid 서비스를 사용하기 위해서는 서비스 신
 >
 > ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Service-Guide/images/cubrid/3-3-1-0.png)
 >
-> `$ cf logs {배포된 App명}`  
-> `$ cf logs hello-spring-cubrid`
+> `$ cf logs {배포된 App명}`   
+>  `$ cf logs hello-spring-cubrid`
 >
 > ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Service-Guide/images/cubrid/3-3-2-0.png)
 
@@ -1262,7 +1262,7 @@ Sample Web App에서 Cubrid 서비스를 사용하기 위해서는 서비스 신
 > `$ cf bind-service hello-spring-cubrid cubrid-service-instance`
 >
 > ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Service-Guide/images/cubrid/3-3-3-0.png)
->
+
 > `$ cf push --no-start`
 
 #### 바인드가 적용되기 위해서 App을 재기동한다.
@@ -1329,7 +1329,7 @@ Putty 프로그램은 SSH 및 텔넷 접속을 할 수 있는 무료 소프트�
 
 * Putty를 다운로드 하기 위해 아래 URL로 이동하여 파일을 다운로드 한다. 별도의 설치과정없이 사용할 수 있다.
 
-  [http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
+  [http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)  
 
   ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Service-Guide/images/cubrid/4-1-0-0.png)
 
@@ -1345,7 +1345,7 @@ Putty 프로그램은 SSH 및 텔넷 접속을 할 수 있는 무료 소프트�
 
 ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Service-Guide/images/cubrid/4-1-3-0.png)  
 ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Service-Guide/images/cubrid/4-1-3-1.png)  
-서버 정보는 Application에 바인드되어 있는 서버 정보를 입력한다. cf env 명령어로 이용하여 확인한다.  
+서버 정보는 Application에 바인드되어 있는 서버 정보를 입력한다. cf env  명령어로 이용하여 확인한다.  
 예\) $ cf env hello-spring-cubrid
 
 > ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Service-Guide/images/cubrid/4-1-4-0.png)
@@ -1365,9 +1365,9 @@ Key파일의 확장자가 .pem이라면 putty설치시 같이 설치된 puttygen
 
 Cubrid Manager 프로그램은 Cubrid에서 제공하는 무료로 사용할 수 있는 소프트웨어이다.
 
-* Cubrid Manager를 다운로드 하기 위해 아래 URL로 이동하여 설치파일을 다운로드 한다.
+* Cubrid Manager를 다운로드 하기 위해 아래 URL로 이동하여 설치파일을 다운로드 한다.  
 
-  [http://ftp.cubrid.org/CUBRID\_Tools/CUBRID\_Manager/](http://ftp.cubrid.org/CUBRID_Tools/CUBRID_Manager/)
+  [http://ftp.cubrid.org/CUBRID\_Tools/CUBRID\_Manager/](http://ftp.cubrid.org/CUBRID_Tools/CUBRID_Manager/)  
 
   ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Service-Guide/images/cubrid/4-2-0-0.png)
 

@@ -96,7 +96,7 @@ Cloudit 클라우드 환경에 PaaS-TA를 설치하기 위해서는 인프라 �
 
 | 대상 | 용도 | LB 포트 | 서버 포트\(예\) | 비고 |
 | :--- | :--- | :--- | :--- | :--- |
-| Micro-Bosh가 배포된 VM | Director | 25555 | 31274 |  |
+|  Micro-Bosh가 배포된 VM | Director | 25555 | 31274 |  |
 | Blobstore | 25250 | 30482 |  |  |
 | Nats | 4222 | 30428 |  |  |
 | Agent | 6868 | 32614 |  |  |
@@ -121,7 +121,7 @@ IP : 로드밸런서의 IP 이며 동일 IP로 여러 개의 Port 설정 가능�
 
 정책 : 4가지 Load Balancing 정책 중 선택
 
-| **Round Robin** : 순차적으로 세션을 연결하는 정책, 거의 균등한 부하 분산이 가능하나 세션 유지 불가능  **Least Connection** : 세션 요구량이 적은 쪽으로 신규 세션을 연결해주는 정책  **Source Hash** : 출발지의 IP 주소를 기반으로 Hash를 계산하여 항상 같은 목적지로 세션을 연결해주는 정책  **Destination Hash** : 목적지의 IP 주소를 기반으로 Hash를 계산하여 항상 같은 출발지와 세션을 연결해주는 정책 |
+|  **Round Robin** : 순차적으로 세션을 연결하는 정책, 거의 균등한 부하 분산이 가능하나 세션 유지 불가능  **Least Connection** : 세션 요구량이 적은 쪽으로 신규 세션을 연결해주는 정책  **Source Hash** : 출발지의 IP 주소를 기반으로 Hash를 계산하여 항상 같은 목적지로 세션을 연결해주는 정책  **Destination Hash** : 목적지의 IP 주소를 기반으로 Hash를 계산하여 항상 같은 출발지와 세션을 연결해주는 정책 |
 | :--- |
 
 
@@ -149,7 +149,7 @@ IP : 로드밸런서의 IP 이며 동일 IP로 여러 개의 Port 설정 가능�
 
 | 대상 | 용도 | LB 포트 | 서버 포트\(예\) | 비고 |
 | :--- | :--- | :--- | :--- | :--- |
-| CF의 Router 또는 HAProxy가 배포된 VM | HTTP | 80 | 30274 |  |
+|  CF의 Router 또는 HAProxy가 배포된 VM | HTTP | 80 | 30274 |  |
 | HTTPS | 443 | 30732 |  |  |
 
 5.2. Cloudit 포탈에 접속한다. 접속 주소: [https://www.cloudit.co.kr/](paas-ta_-_-_cloudit_v1.0.md)
@@ -172,7 +172,7 @@ IP : 로드밸런서의 IP 이며 동일 IP로 여러 개의 Port 설정 가능�
 
 정책 : 4가지 Load Balancing 정책 중 선택
 
-| **Round Robin** : 순차적으로 세션을 연결하는 정책, 거의 균등한 부하 분산이 가능하나 세션 유지 불가능  **Least Connection** : 세션 요구량이 적은 쪽으로 신규 세션을 연결해주는 정책  **Source Hash** : 출발지의 IP 주소를 기반으로 Hash를 계산하여 항상 같은 목적지로 세션을 연결해주는 정책  **Destination Hash** : 목적지의 IP 주소를 기반으로 Hash를 계산하여 항상 같은 출발지와 세션을 연결해주는 정책 |
+|  **Round Robin** : 순차적으로 세션을 연결하는 정책, 거의 균등한 부하 분산이 가능하나 세션 유지 불가능  **Least Connection** : 세션 요구량이 적은 쪽으로 신규 세션을 연결해주는 정책  **Source Hash** : 출발지의 IP 주소를 기반으로 Hash를 계산하여 항상 같은 목적지로 세션을 연결해주는 정책  **Destination Hash** : 목적지의 IP 주소를 기반으로 Hash를 계산하여 항상 같은 출발지와 세션을 연결해주는 정책 |
 | :--- |
 
 
@@ -202,7 +202,7 @@ Cloudit의 Kubernetes 환경에 배포 가능한 BOOTSTRAP 버전은 아래와 �
 
 | BOSH 릴리즈 | CPI 릴리즈 | BPM | 스템셀 |
 | :--- | :--- | :--- | :--- |
-| bosh/269.0.1 | bosh-kubernetes-cpi/version | bpm/1.0.4 | bosh-stemcell-315.22-warden-boshlite-ubuntu-xenial-go\_agent/315.22 |
+| bosh/269.0.1 | bosh-kubernetes-cpi/version | bpm/1.0.4 |  bosh-stemcell-315.22-warden-boshlite-ubuntu-xenial-go\_agent/315.22 |
 
 #### 2.2.1. **CF 스템셀**
 
@@ -210,7 +210,7 @@ Cloudit의 Kubernetes 환경에 배포 가능한 CF-Deployment 버전은 아래�
 
 | 릴리즈 | 스템셀 |
 | :--- | :--- |
-| paasta/4.0 | bosh-cloudit-kvm-ubuntu-xenial-go\_agent/97.28 |
+| paasta/4.0 |  bosh-cloudit-kvm-ubuntu-xenial-go\_agent/97.28 |
 
 ### 2.3.  **BOOTSTRAP 설치하기**
 
@@ -220,36 +220,36 @@ Cloudit의 Kubernetes 환경에 배포 가능한 CF-Deployment 버전은 아래�
 
 스템셀에 대한 원본 파일은 다음의 참조 사이트에서 다운로드가 가능하다. 로컬에서 다운로드 후 Inception에 업로드하여 Bosh Manifest에 포함시킬 수 있으며 Bosh Manifest에 URL 형태로도 지정 가능하다.
 
-**1. BOSH 스템셀**
+**1.    BOSH 스템셀**
 
 1.1. BOSH 스템셀 참조 사이트
 
 | 인프라 환경 | 참조 사이트 및 참조 Manifest |
 | :--- | :--- |
-| Cloudit | [https://s3.amazonaws.com/bosh-core-stemcells/315.22/bosh-stemcell-315.22-warden-boshlite-ubuntu-xenial-go\_agent.tgz](paas-ta_-_-_cloudit_v1.0.md) |
-| {PaaS-TA-Project}/kubernetes/cpi.yml에 스템셀이 url 형태로 지정되어 있으며 해당 Manifest는 프로젝트에 포함되어 있음 |  |
+|  Cloudit |  [https://s3.amazonaws.com/bosh-core-stemcells/315.22/bosh-stemcell-315.22-warden-boshlite-ubuntu-xenial-go\_agent.tgz](paas-ta_-_-_cloudit_v1.0.md) |
+|  {PaaS-TA-Project}/kubernetes/cpi.yml에 스템셀이 url 형태로 지정되어 있으며 해당 Manifest는 프로젝트에 포함되어 있음 |  |
 
 #### 2.3.2. **릴리즈 다운로드**
 
 BOOTSTRAP을 설치하기 위해서는 BOSH 릴리즈와 BOSH CPI릴리즈 2개의 릴리즈가 필요하다. 릴리즈 다운로드 유형은 총 3가지이며 로컬에서 다운로드 후 Inception에 업로드하여 Bosh Manifest에 포함시킬 수 있으며 Bosh Manifest에 URL 형태로도 지정이 가능하다.
 
-**1. BOSH 릴리즈**
+**1.    BOSH 릴리즈**
 
 1.1. BOSH 릴리즈
 
 | 릴리즈명 | 참조 사이트 및 참조 Manifest |
 | :--- | :--- |
-| Bosh | [https://s3.amazonaws.com/bosh-core-stemcells/315.22/bosh-stemcell-315.22-warden-boshlite-ubuntu-xenial-go\_agent.tgz](paas-ta_-_-_cloudit_v1.0.md) |
-| {PaaS-TA-Project}/kubernetes/cpi.yml에 스템셀이 url 형태로 지정되어 있으며 해당 Manifest는 프로젝트에 포함되어 있음 |  |
+|  Bosh |  [https://s3.amazonaws.com/bosh-core-stemcells/315.22/bosh-stemcell-315.22-warden-boshlite-ubuntu-xenial-go\_agent.tgz](paas-ta_-_-_cloudit_v1.0.md) |
+|  {PaaS-TA-Project}/kubernetes/cpi.yml에 스템셀이 url 형태로 지정되어 있으며 해당 Manifest는 프로젝트에 포함되어 있음 |  |
 
-**2. BOSH-Kubernetes CPI 릴리즈**
+**2.    BOSH-Kubernetes CPI 릴리즈**
 
 2.1. BOSH-Kubernetes CPI 릴리즈 참조 사이트
 
 | 릴리즈명 | 참조 사이트 및 참조 Manifest |
 | :--- | :--- |
-| Bosh-Kubernetes-CPI | [https://github.com/bosh-cpis/bosh-kubernetes-cpi-release](https://github.com/bosh-cpis/bosh-kubernetes-cpi-release) |
-| {PaaS-TA\_Project}/Kubernetes/cpi.yml에 릴리즈 url이 file 형태로 지정되어 있으며 해당 Manifest는 프로젝트에 포함되어 있음 |  |
+|  Bosh-Kubernetes-CPI |  https://github.com/bosh-cpis/bosh-kubernetes-cpi-release |
+|  {PaaS-TA\_Project}/Kubernetes/cpi.yml에 릴리즈 url이 file 형태로 지정되어 있으며 해당 Manifest는 프로젝트에 포함되어 있음 |  |
 
 2.2. bosh-kubernetes-cpi 릴리즈 생성
 
@@ -262,20 +262,20 @@ $ bosh create-release --sha2 --force --tarball ./bosh-kubernetes-cpi.tgz --name 
 $ cp bosh-kubernetes-cpi.tgz ~/workspace/{PaaS-TA_Project}/releases/
 ```
 
-**3. BPM 릴리즈**
+**3.    BPM 릴리즈**
 
 3.1. BPM 릴리즈 참조 사이트
 
 | 릴리즈명 | 참조 사이트 및 참조 Manifest |
 | :--- | :--- |
-| BPM | [https://s3.amazonaws.com/bosh-compiled-release-tarballs/bpm-1.0.4-ubuntu-xenial-315.22-20190514-221122-71304512-20190514221136.tgz](paas-ta_-_-_cloudit_v1.0.md) |
-| {PaaS-TA-Project}/bosh-deployment/bosh.yml 의 releases name : bpm 항목에 지정되어 있으며 해당 Manifest는 프로젝트에 포함되어 있음 |  |
+|  BPM |  [https://s3.amazonaws.com/bosh-compiled-release-tarballs/bpm-1.0.4-ubuntu-xenial-315.22-20190514-221122-71304512-20190514221136.tgz](paas-ta_-_-_cloudit_v1.0.md) |
+|  {PaaS-TA-Project}/bosh-deployment/bosh.yml 의 releases name : bpm 항목에 지정되어 있으며 해당 Manifest는 프로젝트에 포함되어 있음 |  |
 
 #### 2.3.3. **BOOTSTRAP 설치 전 사전 작업**
 
 BOOTSTRAP 및 CF 배포를 진행하기 위해서는 Inception 서버에 아래 항목에 대한 사전작업을 해야 한다. ※ Inception 서버에 사전 설치 필요 목록
 
-| - [kubectl](paas-ta_-_-_cloudit_v1.0.md)  - [DockerHub-Account](paas-ta_-_-_cloudit_v1.0.md)  - [Uaac-CLI](paas-ta_-_-_cloudit_v1.0.md)  - [Bosh-CLI](paas-ta_-_-_cloudit_v1.0.md)  - [CF-CLI](paas-ta_-_-_cloudit_v1.0.md) |
+|  - [kubectl](paas-ta_-_-_cloudit_v1.0.md)  - [DockerHub-Account](paas-ta_-_-_cloudit_v1.0.md)  - [Uaac-CLI](paas-ta_-_-_cloudit_v1.0.md)  - [Bosh-CLI](paas-ta_-_-_cloudit_v1.0.md)  - [CF-CLI](paas-ta_-_-_cloudit_v1.0.md)  |
 | :--- |
 
 
@@ -314,7 +314,7 @@ $ ssh root@kubernetes-master-ip
 $ /etc/kubernetes/admin.conf root@Inception-server-ip:~/.kube/config
 ```
 
-**2. Inception에서 Cloudit의 Kubernetes Cluster 정보 확인**
+**2.    Inception에서 Cloudit의 Kubernetes Cluster 정보 확인**
 
 2.1. Inception 서버에서 아래 명령으로 Kubernetes cluster의 정보가 출력되는지 확인한다.
 
@@ -342,7 +342,7 @@ $ kubectl get storageclass
 
 ![](../../../.gitbook/assets/kubernetes_verify_storageclass%20%282%29.png)
 
-**3. CLOUDit deployment files 다운로드**
+**3.    CLOUDit deployment files 다운로드**
 
 3.1. 아래의 Git Repository 경로를 통해 CLOUDit deployment files 다운로드 받는다.
 
@@ -353,7 +353,7 @@ $ git clone https://github.com/PaaS-TA/Guide-4.0-ROTELLE.git
 $ cp -r ./Guide-4.0-ROTELLE/Use-Guide/platform/CLOUDit  {PaaS-TA-Project}
 ```
 
-**4. Micro-Bosh에 배포할 Kubernetes Assets 생성**
+**4.    Micro-Bosh에 배포할 Kubernetes Assets 생성**
 
 Assets 대상 : namespace, CPI-RBAC, bosh-external, Docker-registry-secret 4.1. Namespace를 생성한다.
 
@@ -657,7 +657,7 @@ $ bosh runtime-config -e paasta
 
 CF Deployment 설치하기 전 Routing Service 및 CF에 대한 각종 환경들을 설정 후 CF Deployment를 설치한다.
 
-**1. Routing Service인 CF-External 생성**
+**1.    Routing Service인 CF-External 생성**
 
 1.1. CF-External Service를 생성한다. \# CF API에 login하기 위한 Routing Service에 대한 cf-external.yaml 파일 확인
 
@@ -687,7 +687,7 @@ $ kubectl get service cf-ingress -n paasta
 
 $ kubectl describe service cf-ingress -n paasta ![](../../../.gitbook/assets/kubernetes_verify_cfexternal_2%20%282%29.png)
 
-**2. CF-Deployment 배포 정보 설정**
+**2.    CF-Deployment 배포 정보 설정**
 
 2.1. CF-Deployment 배포 정보를 설정한다.
 
@@ -701,7 +701,7 @@ $ cd ~/workspace/{PaaS-TA-Project}/cf-deployment/
 $ vi cf-deployment.yml
 ```
 
-**3. Kubernetes Cluster에 CF-Deployment\(PaaS-TA Core\) 배포**
+**3.    Kubernetes Cluster에 CF-Deployment\(PaaS-TA Core\) 배포**
 
 3.1. CF를 Deploy하기 위한 manifest 파일과 옵션에 대해 수행 스크립트를 작성한다.
 
@@ -776,7 +776,7 @@ $ cd ~/workspace/{PaaS-TA-Project}
 $ ./cf-deploy-kubernetes.sh
 ```
 
-**4. Cloudit 로드밸런싱 설정**
+**4.    Cloudit 로드밸런싱 설정**
 
 4.1. CF 배포 이후 CF Login을 하기 위해 Router\(또는 HAProxy\)가 배포된 VM을 확인한다.  
 \# bosh를 통해 배포되어 사용중인 VM을 확인한다.
@@ -814,7 +814,7 @@ $ kubectl get svc cf-ingress -n paasta
 
 ![](../../../.gitbook/assets/kubernetes_verify_nodeport%20%285%29.png)
 
-**5. CF Login**
+**5.    CF Login**
 
 5.1. CF에 로그인한다. \# 아래 명령어를 통해 배포된 CF에 로그인을 한다.  
 \# cf login시 -p 옵션에 해당하는 cf\_admin\_password는 아래의 경로에서 확인 가능하다.
@@ -833,7 +833,7 @@ $ cf login -a https://api.192.168.x.x.xip.io -u admin -p cf_admin_passsword --sk
 
 ![](../../../.gitbook/assets/kubernetes_login_cf_url%20%282%29.png)
 
-**6. CF Space 생성**
+**6.    CF Space 생성**
 
 6.1. CF의 Org를 확인한다. \# 아래 명령어를 통해 배포된 CF에 org를 확인한다.
 
@@ -863,7 +863,7 @@ $ cf target -s cf-test-01
 
 CF Deployment 배포 이후 App Push 테스트를 진행한다.
 
-**1. CF Push app**
+**1.    CF Push app**
 
 1.1. 샘플 App을 다운로드 한다.
 

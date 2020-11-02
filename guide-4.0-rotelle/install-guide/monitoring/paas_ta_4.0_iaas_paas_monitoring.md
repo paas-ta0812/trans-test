@@ -94,11 +94,11 @@ IaaS/PaaS 통합 모니터링 환경을 구성하기 위해서는 IaaS에서는 
 
 Monasca는 Server와 Client로 구성되어 있다. Openstack controller/compute Node에 Monasca-Client\(Agent\)를 설치 하여 Monasca 상태정보를 Monasca-Server에 전송한다. 수집된 Data를 기반으로 IaaS 모니터링을 수행한다. Monasca-Server는 Openstack에서 VM을 수동 생성하여 설치를 진행한다.
 
-**3.2.1.1. Monasca Server 설치**
+**3.2.1.1.    Monasca Server 설치**
 
 > [**Monasca - Server**](monasca-server.md)
 
-**3.2.1.2. Monasca Client\(agent\) 설치**
+**3.2.1.2.    Monasca Client\(agent\) 설치**
 
 > [**Monasca - Client**](monasca-client.md)
 
@@ -110,7 +110,7 @@ Paasta-4.0 설치한 Inception\(설치환경\)에서 PaaS-TA VM Log수집을 하
 $ cd ~/workspace/paasta-4.0/deployment/service-deployment/logsearch
 ```
 
-**3.2.2.1. logsearch-deployment.yml**
+**3.2.2.1.    logsearch-deployment.yml**
 
 logsearch-deployment.yml에는 ls-router, cluster-monitor, elasticsearch\_data, elastic\_master, kibana, mainternance 의 명세가 정의되어 있다.
 
@@ -488,7 +488,7 @@ PaaS-TA VM 에서 발생되는 MetricData 저장소인 InfluxDB와 통합 Loging
 $ cd ~/workspace/paasta-4.0/deployment/service-deployment/paasta-influxdb-redis
 ```
 
-**3.2.3.1. redis-influxdb.yml**
+**3.2.3.1.    redis-influxdb.yml**
 
 redis-influxdb.yml에는 influxdb와 redis vm의 명세가 정의되어 있다.
 
@@ -635,7 +635,7 @@ $ bosh -e {director_name} -d redis-influxdb vms
 
   > [**golang 설치 참고 URL**](https://medium.com/@patdhlk/how-to-install-go-1-9-1-on-ubuntu-16-04-ee64c073cd79)
 
-**3.2.4.1 PaaS Database 생성**
+**3.2.4.1    PaaS Database 생성**
 
 위에서 구성한 Monasca-Server가 정상적으로 설치 되어 있다면 설치된 Monasca-Server에 접속하여 PaastaMonitoring Database를 생성한다.
 
@@ -644,7 +644,7 @@ $ mysql –u root –p    # mysql 로그인
 $ CREATE DATABASE IF NOT EXISTS PaastaMonitoring CHARACTER SET utf8 COLLATE utf8_general_ci;
 ```
 
-**3.2.4.2 소스 다운로드**
+**3.2.4.2    소스 다운로드**
 
 위에서 구성한 Monasca Server에서 IaaS-PaaS-Monitoring 소스를 다운 받는다.
 
@@ -660,7 +660,7 @@ $ cd ~/workspace/PaaS-TA-Monitoring/paasta-monitoring-batch
 $ ./install.sh
 ```
 
-**3.2.4.3. paasta-monitoring-batch 설치 및 실행**
+**3.2.4.3.    paasta-monitoring-batch 설치 및 실행**
 
 paasta-monitoring batch는 Bosh, PaaS-TA VM, container 모니터링 및 PaaS-TA Application Container Autoscaling을 수행한다. paasta-monitoring-batch config정보를 시스템 상황에 맞게 수정한다.
 
@@ -741,7 +741,7 @@ $ cd ~/workspace/PaaS-TA-Monitoring/paasta-monitoring-batch
 $ nohup ./batch_run.sh &
 ```
 
-**3.2.4.4. iaas-paas-monitoring-web 설치 및 실행**
+**3.2.4.4.    iaas-paas-monitoring-web 설치 및 실행**
 
 iaas-paas-monitoring-management는 IaaS/PaaS 통함 모니터링 Dashboard 및 알람정책 설정, 알람 관리등의 기능을 제공한다.
 

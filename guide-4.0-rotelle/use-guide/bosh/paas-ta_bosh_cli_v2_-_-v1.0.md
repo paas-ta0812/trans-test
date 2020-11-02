@@ -123,7 +123,7 @@ CLI는 BOSH 배포와 Release를 관리하기 위해 도움을 주는 커맨드 
     $ bosh [<options>] <command> [<args>]
   ```
 
-  bosh 명령어에 대괄호로 묶인 인자인 과 는 명령어에 따라 선택적으로 사용되고, 인자는 필수 인자이다.
+  bosh 명령어에 대괄호로 묶인 인자인 과 는 명령어에 따라 선택적으로 사용되고,  인자는 필수 인자이다.
 
 * **Options**
 
@@ -341,7 +341,7 @@ CLI는 BOSH 배포와 Release를 관리하기 위해 도움을 주는 커맨드 
 * **기본 Syntax**
 
   ```text
-    $ bosh -e [my-env] log-out
+    $ bosh -e [my-env] log-out 
   ```
 
 * **설명**
@@ -1670,7 +1670,7 @@ CLI는 BOSH 배포와 Release를 관리하기 위해 도움을 주는 커맨드 
 * **사용 예시**
 
   ```text
-    $ bosh -e vnps -d cf disks
+    $ bosh -e vnps -d cf disks  
   ```
 
 ### _**bosh attach-disk**_

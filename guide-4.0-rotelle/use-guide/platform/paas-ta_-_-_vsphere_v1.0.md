@@ -190,7 +190,7 @@ BOOTSTRAP을 설치하기 위해서는 BOSH 릴리즈와 BOSH CPI 릴리즈, BPM
 
 | 인프라 환경 | 참조 사이트 |
 | :--- | :--- |
-| vSphere | [https://bosh.io/releases/github.com/cloudfoundry-incubator/bosh-vsphere-cpi-release?all=1](https://bosh.io/releases/github.com/cloudfoundry-incubator/bosh-vsphere-cpi-release?all=1) |
+| vSphere | https://bosh.io/releases/github.com/cloudfoundry-incubator/bosh-vsphere-cpi-release?all=1 |
 
 ![](../../../.gitbook/assets/bosh_cpi_release_add%20%282%29.png)
 
@@ -203,7 +203,7 @@ BOOTSTRAP을 설치하기 위해서는 BOSH 릴리즈와 BOSH CPI 릴리즈, BPM
 
 | 릴리즈 명 | 참조 사이트 |
 | :--- | :--- |
-| BPM | [https://bosh.io/releases/github.com/cloudfoundry-incubator/bpm-release?all=1](https://bosh.io/releases/github.com/cloudfoundry-incubator/bpm-release?all=1) |
+| BPM | https://bosh.io/releases/github.com/cloudfoundry-incubator/bpm-release?all=1 |
 
 ![](../../../.gitbook/assets/bpm_release_add%20%2814%29.png)
 
@@ -216,7 +216,7 @@ BOOTSTRAP을 설치하기 위해서는 BOSH 릴리즈와 BOSH CPI 릴리즈, BPM
 
 | 릴리즈 명 | 참조 사이트 |
 | :--- | :--- |
-| OS CONF | [https://bosh.io/releases/github.com/cloudfoundry/os-conf-release?all=1](https://bosh.io/releases/github.com/cloudfoundry/os-conf-release?all=1) |
+| OS CONF | https://bosh.io/releases/github.com/cloudfoundry/os-conf-release?all=1 |
 
 ![](../../../.gitbook/assets/os_release_add%20%2814%29.png)
 
@@ -382,7 +382,7 @@ BOSH를 설치하고 플랫폼 설치 자동화의 디렉터로 설정이 완료
 
      ex\) $ unzip {릴리즈 압축 파일 명} \# 릴리즈 파일 확장자가 zip인 경우
 
-     1.3. 아래는 릴리즈 디렉토리의 PaaS-TA 릴리즈 형상 예시 그림이다.
+     1.3.    아래는 릴리즈 디렉토리의 PaaS-TA 릴리즈 형상 예시 그림이다.
 
 ![](../../../.gitbook/assets/paasta_release_4.6%20%2814%29.png)
 
@@ -390,7 +390,7 @@ BOSH를 설치하고 플랫폼 설치 자동화의 디렉터로 설정이 완료
 
 CF-Deployment를 설치하기 위해 플랫폼 설치 자동화 웹 화면에서 “플랫폼 설치” -&gt; “CF-Deployment설치” 메뉴로 이동 후 상단의 “설치” 버튼을 클릭한다.
 
-**1. CF-Deployment설치 – 기본 정보 입력**
+**1.    CF-Deployment설치 – 기본 정보 입력**
 
 1. 배포에 필요한 기본정보와 도메인 / 로그인 비밀번호를 입력 후 “다음” 버튼을 클릭한다.
 
@@ -410,7 +410,7 @@ CF-Deployment를 설치하기 위해 플랫폼 설치 자동화 웹 화면에서
 * PaaS-TA 모니터링 정보: PaaS-TA 모니터링을 이용하려면 paasta/4.6을 선택하고 PaaS-TA 모니터링 사용을 선택한다.
 * Portal 도메인: PaaS-TA 포털을 설치할 때 사용할 도메인을 입력한다.
 
-**2. CF-Deployment설치 – 클라우드 환경 별 네트워크 정보 등록**
+**2.    CF-Deployment설치 – 클라우드 환경 별 네트워크 정보 등록**
 
 1. vSphere의 네트워크 정보 입력 후 “다음” 버튼을 클릭한다.
 2. 추가” 버튼을 클릭하여 네트워크를 추가하여 AZ를 분산 배치할 수 있다.
@@ -431,7 +431,7 @@ CF-Deployment를 설치하기 위해 플랫폼 설치 자동화 웹 화면에서
 * IP 할당 제외 대역: CF Deployment VM을 배치하지 않을 IP 주소 시작/끝 입력
 * IP 할당 대역: CF Deployment VM을 배치할 IP 주소 시작/끝 입력
 
-**3. CF-Deployment설치 – Key 생성**
+**3.    CF-Deployment설치 – Key 생성**
 
 1. Key 생성 정보 입력 후 “Key 생성” 버튼을 클릭한다.
 2. Key 생성 확인 후 “다음” 버튼을 클릭한다.
@@ -448,7 +448,7 @@ CF-Deployment를 설치하기 위해 플랫폼 설치 자동화 웹 화면에서
 * 부서명: 부서 명 입력
 * Email: 이메일 주소 입력
 
-**4. CF-Deployment설치 – 리소스 정보**
+**4.    CF-Deployment설치 – 리소스 정보**
 
 1. CF-Deployment 설치에 필요한 리소스 정보를 입력 후 “다음” 버튼을 클릭한다.
 
@@ -467,7 +467,7 @@ CF-Deployment를 설치하기 위해 플랫폼 설치 자동화 웹 화면에서
 * Large Type Disk: Large Type의 Disk 할당량
 * Large Type: Cpu: Large Type의 Cpu 할당량
 
-**5. CF-Deployment설치 – 인스턴스 정보**
+**5.    CF-Deployment설치 – 인스턴스 정보**
 
 1. 인스턴스 정보를 입력 후 “다음” 버튼을 클릭한다.
 2. 인스턴스 수가 늘어나게 되면 해당 수만큼 네트워크 대역이 필요해 네트워크 할당 대역을 늘려줄 필요가 있다.
@@ -478,7 +478,7 @@ CF-Deployment를 설치하기 위해 플랫폼 설치 자동화 웹 화면에서
 
 * 인스턴스 수: VM에 할당할 인스턴스 수
 
-**6. CF-Deployment설치 – 설치**
+**6.    CF-Deployment설치 – 설치**
 
 1. 생성된 배포 Manifest파일 정보를 이용하여 CF-Deployment설치를 실행하고 설치 진행 과정에 대한 로그를 확인한다.
 
@@ -510,13 +510,13 @@ Manifest를 업로드 하기 위해 플랫폼 설치 자동화 웹 화면에서 
 
 서비스팩을 설치하기 위해 플랫폼 설치 자동화 웹 화면에서 “플랫폼 설치” -&gt; “서비스팩 설치” 메뉴로 이동 후 상단의 “설치” 버튼을 클릭한다.
 
-**1. 서비스팩 설치 – Manifest 등록**
+**1.    서비스팩 설치 – Manifest 등록**
 
 1. 배포에 필요한 Manifest 파일을 선택하고 “설치” 버튼을 클릭 한다
 
 ![](../../../.gitbook/assets/manifest_add%20%2814%29.png)
 
-**2. 서비스팩 설치 – 설치**
+**2.    서비스팩 설치 – 설치**
 
 1. 생성된 배포 Manifest파일 정보를 이용하여 서비스팩 설치를 실행하고 설치 진행 과정에 대한 로그를 확인한다.
 

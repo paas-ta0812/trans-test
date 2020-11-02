@@ -46,7 +46,8 @@
 ### 2.1. 설치전 준비사항
 
 본 설치 가이드는 Linux 환경에서 설치하는 것을 기준으로 하였다. 서비스팩 설치를 위해서는 먼저 BOSH CLI v2 가 설치 되어 있어야 하고 BOSH 에 로그인이 되어 있어야 한다.  
-BOSH CLI v2 가 설치 되어 있지 않을 경우 먼저 BOSH2.0 설치 가이드 문서를 참고 하여 BOSH CLI v2를 설치를 하고 사용법을 숙지 해야 한다.
+ BOSH CLI v2 가 설치 되어 있지 않을 경우 먼저 BOSH2.0 설치 가이드 문서를 참고 하여 BOSH CLI v2를 설치를 하고 사용법을 숙지 해야 한다.  
+
 
 * BOSH2.0 사용자 가이드
 
@@ -1254,8 +1255,8 @@ RabbitMQ 서비스팩 배포가 완료 되었으면 Application에서 서비스 
 > `$ cf create-service-broker {서비스팩 이름} {서비스팩 사용자ID} {서비스팩 사용자비밀번호} http://{서비스팩 URL(IP)}`
 
 **서비스팩 이름** : 서비스 팩 관리를 위해 PaaS-TA에서 보여지는 명칭이다. 서비스 Marketplace에서는 각각의 API 서비스 명이 보여지니 여기서 명칭은 서비스팩 리스트의 명칭이다.  
-**서비스팩 사용자ID** / 비밀번호 : 서비스팩에 접근할 수 있는 사용자 ID입니다. 서비스팩도 하나의 API 서버이기 때문에 아무나 접근을 허용할 수 없어 접근이 가능한 ID/비밀번호를 입력한다.  
-**서비스팩 URL** : 서비스팩이 제공하는 API를 사용할 수 있는 URL을 입력한다.
+ **서비스팩 사용자ID** / 비밀번호 : 서비스팩에 접근할 수 있는 사용자 ID입니다. 서비스팩도 하나의 API 서버이기 때문에 아무나 접근을 허용할 수 없어 접근이 가능한 ID/비밀번호를 입력한다.  
+ **서비스팩 URL** : 서비스팩이 제공하는 API를 사용할 수 있는 URL을 입력한다.
 
 > `$ cf create-service-broker rabbitmq-service-broker admin admin http://10.30.107.191:4567}`
 >
@@ -1278,11 +1279,11 @@ RabbitMQ 서비스팩 배포가 완료 되었으면 Application에서 서비스 
 #### 특정 조직에 해당 서비스 접근 허용을 할당하고 접근 서비스 목록을 다시 확인한다. \(전체 조직\)
 
 > `$ cf enable-service-access p-rabbitmq`  
-> `$ cf service-access`
+>  `$ cf service-access`
 >
 > ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Service-Guide/images/rabbitmq/rabbitmq_image_06.png)
 
-\# 3. RabbitMQ 연동 Sample App 설명 본 Sample App은 PaaS-TA에 배포되며 RabbitMQ의 서비스를 Provision과 Bind를 한 상태에서 사용이 가능하다.
+ \# 3. RabbitMQ 연동 Sample App 설명 본 Sample App은 PaaS-TA에 배포되며 RabbitMQ의 서비스를 Provision과 Bind를 한 상태에서 사용이 가능하다.
 
 ### 3.1. PaaS-TA에서 서비스 신청
 
@@ -1326,16 +1327,18 @@ Sample App에서 RabbitMQ 서비스를 사용하기 위해서는 서비스 신�
 
 --no-start: App 배포시 구동은 하지 않는다.
 
-> `$cd rabbit-example-app`
+> `$cd rabbit-example-app`  
 >
-> `$cf push test-app --no-start`
+>
+> `$cf push test-app --no-start`  
+>
 >
 > ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Service-Guide/images/rabbitmq/rabbitmq_image_11.png)
 
 #### Sample App에서 생성한 서비스 인스턴스 바인드 신청을 한다.
 
 > `cf bind-service test-app my_rabbitmq_service`
->
+
 > \(참고\) 바인드 후 App구동시 Mysql 서비스 접속 에러로 App 구동이 안될 경우 보안 그룹을 추가한다.
 
 **rule.json 화일을 만들고 아래와 같이 내용을 넣는다.**

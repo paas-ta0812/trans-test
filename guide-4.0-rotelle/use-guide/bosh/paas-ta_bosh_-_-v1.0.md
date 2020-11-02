@@ -161,10 +161,10 @@ BOSH 설치를 위해 다운로드 할 스템셀은 다음과 같다. 설치 할
 
 | 인프라 환경 | 참조 사이트 | 버전 |
 | :--- | :--- | :--- |
-| AWS | [http://bosh.io/stemcells/bosh-aws-xen-hvm-ubuntu-trusty-go\_agent](http://bosh.io/stemcells/bosh-aws-xen-hvm-ubuntu-trusty-go_agent) | 3445.2 |
-| Openstack | [http://bosh.io/stemcells/bosh-openstack-kvm-ubuntu-trusty-go\_agent](http://bosh.io/stemcells/bosh-openstack-kvm-ubuntu-trusty-go_agent) | 3445.2 |
-| vSphere | [http://bosh.io/stemcells/bosh-vsphere-esxi-ubuntu-trusty-go\_agent](http://bosh.io/stemcells/bosh-vsphere-esxi-ubuntu-trusty-go_agent) | 3445.2 |
-| Google | [http://bosh.io/stemcells/bosh-vsphere-esxi-ubuntu-trusty-go\_agent](http://bosh.io/stemcells/bosh-vsphere-esxi-ubuntu-trusty-go_agent) | 3312 |
+| AWS | http://bosh.io/stemcells/bosh-aws-xen-hvm-ubuntu-trusty-go\_agent | 3445.2 |
+| Openstack | http://bosh.io/stemcells/bosh-openstack-kvm-ubuntu-trusty-go\_agent | 3445.2 |
+| vSphere | http://bosh.io/stemcells/bosh-vsphere-esxi-ubuntu-trusty-go\_agent | 3445.2 |
+| Google | http://bosh.io/stemcells/bosh-vsphere-esxi-ubuntu-trusty-go\_agent | 3312 |
 
 ※ Command Line 스템셀 이미지 다운로드 방법
 
@@ -209,11 +209,11 @@ BOSH 설치를 위해 다운로드 할 릴리즈는 다음과 같다. BOSH-Relea
 
 | 릴리즈 명 | 참조 사이트 | 버전 |
 | :--- | :--- | :--- |
-| BOSH | [http://bosh.io/releases/github.com/cloudfoundry/bosh?all=1](http://bosh.io/releases/github.com/cloudfoundry/bosh?all=1) | 261 |
-| BOSH-AWS-CPI | [http://bosh.io/releases/github.com/cloudfoundry-incubator/bosh-aws-cpi-release?all=1](http://bosh.io/releases/github.com/cloudfoundry-incubator/bosh-aws-cpi-release?all=1) | 50 |
-| BOSH-Openstack-CPI | [http://bosh.io/releases/github.com/cloudfoundry-incubator/bosh-openstack-cpi-release?all=1](http://bosh.io/releases/github.com/cloudfoundry-incubator/bosh-openstack-cpi-release?all=1) | 30 |
-| vSphere | [http://bosh.io/releases/github.com/cloudfoundry-incubator/bosh-vsphere-cpi-release?all=1](http://bosh.io/releases/github.com/cloudfoundry-incubator/bosh-vsphere-cpi-release?all=1) | 27 |
-| Google | [http://bosh.io/releases/github.com/cloudfoundry-incubator/bosh-google-cpi-release?all=1](http://bosh.io/releases/github.com/cloudfoundry-incubator/bosh-google-cpi-release?all=1) | 25.0.0 |
+| BOSH | http://bosh.io/releases/github.com/cloudfoundry/bosh?all=1 | 261 |
+| BOSH-AWS-CPI | http://bosh.io/releases/github.com/cloudfoundry-incubator/bosh-aws-cpi-release?all=1 | 50 |
+| BOSH-Openstack-CPI | http://bosh.io/releases/github.com/cloudfoundry-incubator/bosh-openstack-cpi-release?all=1 | 30 |
+| vSphere | http://bosh.io/releases/github.com/cloudfoundry-incubator/bosh-vsphere-cpi-release?all=1 | 27 |
+| Google | http://bosh.io/releases/github.com/cloudfoundry-incubator/bosh-google-cpi-release?all=1 | 25.0.0 |
 
 ※ Command Line 릴리즈 다운로드 방법
 

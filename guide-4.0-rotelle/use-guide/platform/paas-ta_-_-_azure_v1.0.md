@@ -91,15 +91,15 @@ BOOTSTRAP & PaaS-TA를 설치하기 위해서는 사전에 인프라 환경 구�
 2. “인프라 환경 관리” -&gt; Azure 관리 화면으로 이동한다.
 3. 아래는 Opensack 관리 화면에서 실제 PaaS-TA 설치에 필요한 Azure 리소스의 환경이다.
 
-| 인프라 환경 | 메뉴 |
+|  인프라 환경 |  메뉴 |
 | :--- | :--- |
-| Azure 리소스 관리 | Resource Group |
-| Virtual Network & Subnet |  |
-| Storage Accout |  |
-| Public IP |  |
-| Key Pair |  |
-| Security Group |  |
-| Route Table |  |
+|  Azure 리소스 관리 |  Resource Group |
+|  Virtual Network & Subnet |  |
+|  Storage Accout |  |
+|  Public IP |  |
+|  Key Pair |  |
+|  Security Group |  |
+|  Route Table |  |
 
 ![](../../../.gitbook/assets/azure_mgnt%20%282%29.png)
 
@@ -134,9 +134,10 @@ BOOTSTRAP & PaaS-TA를 설치하기 위해서는 사전에 인프라 환경 구�
 * Subnet Name: 네트워크에 할당할 기본 서브넷 명
 * Subnet 주소 범위: 네트워크의 주소 공간에 할당할 기본 서브넷의 주소 범위
 * Subscription: Azure 기본 계정의 Subscription의 명칭\(자동 입력\)
-* PaaS-TA 및 기타 서비스를 설치 하기위해 Subnet을 추가할 경우 아래의 절차를 반복한다.
-* 생성 한 네트워크를 선택하고 “서브넷 추가” 버튼을 클릭한다.
-* 서브넷 생성 팝업화면에서 정보를 입력 후 “확인” 버튼을 클릭한다.
+
+1. PaaS-TA 및 기타 서비스를 설치 하기위해 Subnet을 추가할 경우 아래의 절차를 반복한다.
+2. 생성 한 네트워크를 선택하고 “서브넷 추가” 버튼을 클릭한다.
+3. 서브넷 생성 팝업화면에서 정보를 입력 후 “확인” 버튼을 클릭한다.
 
 ![](../../../.gitbook/assets/subnet_Add%20%282%29.png)
 
@@ -160,10 +161,11 @@ BOOTSTRAP & PaaS-TA를 설치하기 위해서는 사전에 인프라 환경 구�
 * Location: 선택 한 Resource Group의 Location\(자동 입력\)
 * Performance: Azure Storage Account의 Performance Type\(자동 입력\)
 * Subscription: Azure 기본 계정의 Subscription의 명칭\(자동 입력\)
-* PaaS-TA Instance 정보와 Stemcell 메타 데이터 정보를 저장하기 위해 Blob을 추가해야 한다.
-* 생성한 Storage Account를 선택하고 “Blob 생성” 버튼을 클릭한다.
-* Blob 생성 팝업화면에서 정보 입력 후 “확인” 버튼을 클릭한다.
-* 아래 화면에서 Private/Blob Access Level의 blob 2개를 생성한다.
+
+1. PaaS-TA Instance 정보와 Stemcell 메타 데이터 정보를 저장하기 위해 Blob을 추가해야 한다.
+2. 생성한 Storage Account를 선택하고 “Blob 생성” 버튼을 클릭한다.
+3. Blob 생성 팝업화면에서 정보 입력 후 “확인” 버튼을 클릭한다.
+4. 아래 화면에서 Private/Blob Access Level의 blob 2개를 생성한다.
 
 ![](../../../.gitbook/assets/storage_blob_add%20%282%29.png)
 
@@ -171,9 +173,10 @@ BOOTSTRAP & PaaS-TA를 설치하기 위해서는 사전에 인프라 환경 구�
 
 * Public Access Level: Blob Access Level, Private는 Bosh 인스턴스 정보 저장 관련 Blob이고 Blob은 스템셀 메타데이터 정보 관련 Blob
 * Blob Name: Blob Level에 따른 Blob Name \(자동 입력\)
-* PaaS-TA Stemcell 정보를 저장하기 위해 Table을 추가해야 한다.
-* 생성한 Storage Account를 선택하고 “Table 생성” 버튼을 클릭한다.
-* Table 생성 팝업 화면에서 정보 입력 후 “확인” 버튼을 클릭한다.
+
+1. PaaS-TA Stemcell 정보를 저장하기 위해 Table을 추가해야 한다.
+2. 생성한 Storage Account를 선택하고 “Table 생성” 버튼을 클릭한다.
+3. Table 생성 팝업 화면에서 정보 입력 후 “확인” 버튼을 클릭한다.
 
 ![](../../../.gitbook/assets/storage_table_add%20%282%29.png)
 
@@ -241,9 +244,10 @@ BOOTSTRAP & PaaS-TA를 설치하기 위해서는 사전에 인프라 환경 구�
 * Resource Group: 어느 Resource Group에 Router Table을 생성할 것인지 선택
 * Location: 선택 한 Resource Group의 Location\(자동 입력\)
 * Subscription: Azure 기본 계정의 Subscription의 명칭\(자동 입력\)
-* Router Table에 서브넷을 연결하기 위해 생성한 Router Table을 선택하고 “Subnet 연결” 버튼을 클릭한다.
-* Subnet 연결 팝업화면에서 네트워크와 서브넷을 선택하고 ”확인” 버튼을 클릭한다.
-* 생성한 Router Table에 Network의 Subnet을 모두 연결한다.
+
+1. Router Table에 서브넷을 연결하기 위해 생성한 Router Table을 선택하고 “Subnet 연결” 버튼을 클릭한다.
+2. Subnet 연결 팝업화면에서 네트워크와 서브넷을 선택하고 ”확인” 버튼을 클릭한다.
+3. 생성한 Router Table에 Network의 Subnet을 모두 연결한다.
 
 ![](../../../.gitbook/assets/router_subnet_add%20%282%29.png)
 
@@ -348,7 +352,7 @@ BOOTSTRAP을 설치하기 위해서는 BOSH 릴리즈와 BOSH CPI릴리즈 2개�
 
 | 인프라 환경 | 참조 사이트 |
 | :--- | :--- |
-| Azure | [https://bosh.io/releases/github.com/cloudfoundry/bosh-azure-cpi-release?all=1](https://bosh.io/releases/github.com/cloudfoundry/bosh-azure-cpi-release?all=1) |
+| Azure | https://bosh.io/releases/github.com/cloudfoundry/bosh-azure-cpi-release?all=1 |
 
 ![](../../../.gitbook/assets/cpi_release_add%20%287%29.png)
 
@@ -528,7 +532,7 @@ BOSH를 설치하고 플랫폼 설치 자동화의 디렉터로 설정이 완료
 
      ex\) $ unzip {릴리즈 압축 파일 명} \# 릴리즈 파일 확장자가 zip인 경우
 
-     1.3. 아래는 릴리즈 디렉토리의 PaaS-TA 릴리즈 형상 예시 그림이다.
+     1.3.    아래는 릴리즈 디렉토리의 PaaS-TA 릴리즈 형상 예시 그림이다.
 
 ![](../../../.gitbook/assets/paasta_release_4.6%20%2811%29.png)
 
@@ -536,7 +540,7 @@ BOSH를 설치하고 플랫폼 설치 자동화의 디렉터로 설정이 완료
 
 CF-Deployment를 설치하기 위해 플랫폼 설치 자동화 웹 화면에서 “플랫폼 설치” -&gt; “CF-Deployment설치” 메뉴로 이동 후 상단의 “설치” 버튼을 클릭한다.
 
-**1. CF-Deployment설치 – 기본 정보 등록**
+**1.    CF-Deployment설치 – 기본 정보 등록**
 
 1. 배포에 필요한 기본정보와 도메인 / 로그인 비밀번호를 입력 후 “다음” 버튼을 클릭한다.
 
@@ -556,7 +560,7 @@ CF-Deployment를 설치하기 위해 플랫폼 설치 자동화 웹 화면에서
 * Portal 도메인: Portal을 설치 및 접속할 도메인 주소를 입력한다. Portal을 설치하지 않고 CF-Deployment를 실행할 경우 해당 값을 입력하지 않는다.
 * PaaS-TA 모니터링 정보: PaaS-TA 모니터링을 이용하려면 paasta/4.6을 선택하고 PaaS-TA 모니터링 사용을 선택한다.
 
-**2. CF-Deployment설치 – 네트워크 정보 등록**
+**2.    CF-Deployment설치 – 네트워크 정보 등록**
 
 1. Azure의 네트워크 정보 입력 후 “다음” 버튼을 클릭한다.
 2. “추가” 버튼을 클릭하여 네트워크를 추가하여 AZ를 분산 배치할 수 있다.
@@ -574,7 +578,7 @@ CF-Deployment를 설치하기 위해 플랫폼 설치 자동화 웹 화면에서
 * IP 할당 제외 대역: CF Deployment VM을 배치하지 않을 IP 주소 시작/끝 입력
 * IP 할당 대역: CF Deployment VM을 배치할 IP 주소 시작/끝 입력
 
-**3. CF-Deployment설치 – Key 생성 및 정보 등록**
+**3.    CF-Deployment설치 – Key 생성 및 정보 등록**
 
 1. Key 생성 정보 입력 후 “Key 생성” 버튼을 클릭한다.
 2. Key 생성 확인 후 “다음” 버튼을 클릭한다.
@@ -591,7 +595,7 @@ CF-Deployment를 설치하기 위해 플랫폼 설치 자동화 웹 화면에서
 * 부서명: 부서 명 입력
 * Email: 이메일 주소 입력
 
-**4. CF-Deployment설치 – 리소스 정보 등록**
+**4.    CF-Deployment설치 – 리소스 정보 등록**
 
 1. CF-Deployment 설치에 필요한 리소스 정보를 입력 후 “다음” 버튼을 클릭한다.
 2. Azure 인프라 환경에서 Windows Stemcell을 사용할 경우 “스템셀 관리” 화면에서 Windows 용 스템셀 등록 “스템셀 업로드” 화면에서 해당 Windows 용 스템셀을 업로드 시켜 사용한다.
@@ -606,7 +610,7 @@ CF-Deployment를 설치하기 위해 플랫폼 설치 자동화 웹 화면에서
 * Medium Resource Type: Azure 환경의 Medium Instance Type
 * Large Resource Type: Azure 환경의 Large Instance Type
 
-**5. CF-Deployment설치 – 인스턴스 정보 등록**
+**5.    CF-Deployment설치 – 인스턴스 정보 등록**
 
 1. Azure 환경일 경우 아래의 정보를 입력 후 “다음” 버튼을 클릭한다.
 2. 인스턴스 수가 늘어나게 되면 해당 수만큼 네트워크 대역이 필요해 네트워크 할당 대역을 늘려줄 필요가 있다.
@@ -617,7 +621,7 @@ CF-Deployment를 설치하기 위해 플랫폼 설치 자동화 웹 화면에서
 
 * 인스턴스 수: VM에 할당할 인스턴스 수
 
-**6. CF-Deployment설치 – 설치**
+**6.    CF-Deployment설치 – 설치**
 
 1. 생성된 배포 Manifest파일 정보를 이용하여 CF-Deployment설치를 실행하고 설치 진행 과정에 대한 로그를 확인한다.
 
@@ -649,13 +653,13 @@ Manifest를 업로드 하기 위해 플랫폼 설치 자동화 웹 화면에서 
 
 서비스팩을 설치하기 위해 플랫폼 설치 자동화 웹 화면에서 “플랫폼 설치” -&gt; “서비스팩 설치” 메뉴로 이동 후 상단의 “설치” 버튼을 클릭한다.
 
-**1. 서비스팩 설치 – Manifest 등록**
+**1.    서비스팩 설치 – Manifest 등록**
 
 1. 배포에 필요한 Manifest 파일을 선택하고 “설치” 버튼을 클릭 한다
 
 ![](../../../.gitbook/assets/manifest_add%20%2811%29.png)
 
-**2. 서비스팩 설치 – 설치**
+**2.    서비스팩 설치 – 설치**
 
 1. 생성된 배포 Manifest파일 정보를 이용하여 서비스팩 설치를 실행하고 설치 진행 과정에 대한 로그를 확인한다.
 

@@ -1414,9 +1414,9 @@ Context: admin, from client admin
 ```
 
 * Logging 서비스 계정을 생성 한다. $ uaac client add  -s  --redirect\_uri  --scope &lt;퍼미션 범위&gt; --authorized\_grant\_types &lt;권한 타입&gt; --authorities=&lt;권한 퍼미션&gt; --autoapprove=&lt;자동승인권한&gt;
-  * : uaac 클라이언트 id
-  * : uaac 클라이언트 secret
-  * : 성공적으로 리다이렉션 할 Logging 서비스 접근 URL \(router public IP\)
+  *  : uaac 클라이언트 id
+  *  : uaac 클라이언트 secret
+  *  : 성공적으로 리다이렉션 할 Logging 서비스 접근 URL \(router public IP\)
   * &lt;퍼미션 범위&gt; : 클라이언트가 사용자를 대신하여 얻을 수있는 허용 범위 목록
   * &lt;권한 타입&gt; : 서비스가 제공하는 API를 사용할 수 있는 권한 목록
   * &lt;권한 퍼미션&gt; : 클라이언트에 부여 된 권한 목록
@@ -1450,16 +1450,16 @@ laasclient
 * 운영관리의 코드관리 메뉴로 이동하여 다음과 같이 코드를 등록한다.
 
 > ※ Group Table  
-> 코드 ID : LAAS  
-> 코드 이름 : Logging Service  
-> ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Service-Guide/images/logging_service/image003.png)
+>  코드 ID : LAAS  
+>  코드 이름 : Logging Service  
+>  ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Service-Guide/images/logging_service/image003.png)
 >
 > ※ Detail Table  
-> Key : laas\_base\_url  
-> Value : [http:///app/laas](http:///app/laas)  
-> 요약 : Logging Service Base URL  
-> 사용 : Y  
-> ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Service-Guide/images/logging_service/image004.png)
+>  Key : laas\_base\_url  
+>  Value : http:///app/laas  
+>  요약 : Logging Service Base URL  
+>  사용 : Y  
+>  ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Service-Guide/images/logging_service/image004.png)
 
 ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Service-Guide/images/logging_service/image005.png)
 
