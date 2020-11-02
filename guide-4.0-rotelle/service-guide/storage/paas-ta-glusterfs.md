@@ -42,14 +42,13 @@
 | paasta-glusterfs-broke | minimal | 1vCPU / 1GB RAM / 8GB Disk |
 | mysql | minimal | 1vCPU / 1GB RAM / 8GB Disk |
 
- \#\#\# 1.4. 참고자료 \[\*\*http://bosh.io/docs\*\*\]\(http://bosh.io/docs\)  
- \[\*\*http://docs.cloudfoundry.org/\*\*\]\(http://docs.cloudfoundry.org/\) \#2. GlusterFS 서비스팩 설치
+\#\#\# 1.4. 참고자료 \[\*\*[http://bosh.io/docs\*\*\]\(http://bosh.io/docs\](http://bosh.io/docs**]%28http://bosh.io/docs\)\)  
+\[\*\*[http://docs.cloudfoundry.org/\*\*\]\(http://docs.cloudfoundry.org/\](http://docs.cloudfoundry.org/**]%28http://docs.cloudfoundry.org/\)\) \#2. GlusterFS 서비스팩 설치
 
 ### 2.1. 설치전 준비사항
 
 본 설치 가이드는 Linux 환경에서 설치하는 것을 기준으로 하였다. 서비스팩 설치를 위해서는 먼저 BOSH CLI v2 가 설치 되어 있어야 하고 BOSH 에 로그인이 되어 있어야 한다.  
- BOSH CLI v2 가 설치 되어 있지 않을 경우 먼저 BOSH2.0 설치 가이드 문서를 참고 하여 BOSH CLI v2를 설치를 하고 사용법을 숙지 해야 한다.  
-
+BOSH CLI v2 가 설치 되어 있지 않을 경우 먼저 BOSH2.0 설치 가이드 문서를 참고 하여 BOSH CLI v2를 설치를 하고 사용법을 숙지 해야 한다.
 
 * PaaS-TA에서 제공하는 압축된 릴리즈 파일들을 다운받는다. \(PaaSTA-Deployment.zip, PaaSTA-Sample-Apps.zip, PaaSTA-Services.zip\)
 * 설치 파일 다운로드 위치
@@ -1190,14 +1189,13 @@ GlusterFS 서비스팩 배포가 완료 되었으면 Application에서 서비스
 
 #### 특정 조직에 해당 서비스 접근 허용을 할당하고 접근 서비스 목록을 다시 확인한다. \(전체 조직\)
 
-> `$ cf enable-service-access glusterfs`   
->
+> `$ cf enable-service-access glusterfs`
 >
 > `$ cf service-access`
 >
 > ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Service-Guide/images/glusterfs/glusterfs_image_06.png)
 
- \# 3. GlusterFS 연동 Sample App 설명 본 Sample Web App은 PaaS-TA에 배포되며 GlusterFS의 서비스를 Provision과 Bind를 한 상태에서 사용이 가능하다.
+\# 3. GlusterFS 연동 Sample App 설명 본 Sample Web App은 PaaS-TA에 배포되며 GlusterFS의 서비스를 Provision과 Bind를 한 상태에서 사용이 가능하다.
 
 ### 3.1. Sample App 구조
 
@@ -1218,10 +1216,9 @@ Sample App 구조는 다음과 같다.
 >
 > ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Service-Guide/images/glusterfs/glusterfs_image_07.png)
 
- \#\#\# 3.2. PaaS-TA에서 서비스 신청 Sample App에서 GlusterFS 서비스를 사용하기 위해서는 서비스 신청\(Provision\)을 해야 한다. \*참고: 서비스 신청시 PaaS-TA에서 서비스를 신청 할 수 있는 사용자로 로그인이 되어 있어야 한다. \#\#\#\#\# 먼저 PaaS-TA Marketplace에서 서비스가 있는지 확인을 한다. &gt;\`$ cf marketplace\` &gt;!\[glusterfs\_image\_08\]  
- \#\#\#\#\# Marketplace에서 원하는 서비스가 있으면 서비스 신청\(Provision\)을 한다. &gt;\`$ cf create-service {서비스명} {서비스 플랜} {내 서비스명}\` - \*\*서비스명\*\* : p-rabbitmq로 Marketplace에서 보여지는 서비스 명칭이다. - \*\*서비스플랜\*\* : 서비스에 대한 정책으로 plans에 있는 정보 중 하나를 선택한다. RabbitMQ 서비스는 standard plan만 지원한다. - \*\*내 서비스명\*\* : 내 서비스에서 보여지는 명칭이다. 이 명칭을 기준으로 환경 설정 정보를 가져온다. &gt;\`$ cf create-service glusterfs glusterfs-1000Mb glusterfs-service-instance\` &gt;!\[glusterfs\_image\_09\]  
- \#\#\#\#\# 생성된 GlusterFS 서비스 인스턴스를 확인한다. &gt;\`$ cf services\` &gt;!\[glusterfs\_image\_10\]  
-
+\#\#\# 3.2. PaaS-TA에서 서비스 신청 Sample App에서 GlusterFS 서비스를 사용하기 위해서는 서비스 신청\(Provision\)을 해야 한다. \*참고: 서비스 신청시 PaaS-TA에서 서비스를 신청 할 수 있는 사용자로 로그인이 되어 있어야 한다. \#\#\#\#\# 먼저 PaaS-TA Marketplace에서 서비스가 있는지 확인을 한다. &gt;\`$ cf marketplace\` &gt;!\[glusterfs\_image\_08\]  
+\#\#\#\#\# Marketplace에서 원하는 서비스가 있으면 서비스 신청\(Provision\)을 한다. &gt;\`$ cf create-service {서비스명} {서비스 플랜} {내 서비스명}\` - \*\*서비스명\*\* : p-rabbitmq로 Marketplace에서 보여지는 서비스 명칭이다. - \*\*서비스플랜\*\* : 서비스에 대한 정책으로 plans에 있는 정보 중 하나를 선택한다. RabbitMQ 서비스는 standard plan만 지원한다. - \*\*내 서비스명\*\* : 내 서비스에서 보여지는 명칭이다. 이 명칭을 기준으로 환경 설정 정보를 가져온다. &gt;\`$ cf create-service glusterfs glusterfs-1000Mb glusterfs-service-instance\` &gt;!\[glusterfs\_image\_09\]  
+\#\#\#\#\# 생성된 GlusterFS 서비스 인스턴스를 확인한다. &gt;\`$ cf services\` &gt;!\[glusterfs\_image\_10\]
 
 ### 3.3. Sample App에 서비스 바인드 신청 및 App 확인
 
@@ -1237,11 +1234,11 @@ Sample App 구조는 다음과 같다.
 
 applications:
 
-* name: hello- spring-glustefs          \# 배포할 App 이름
+* name: hello- spring-glustefs \# 배포할 App 이름
 
-  memory: 512M                          \# 배포시 메모리 사이즈
+  memory: 512M \# 배포시 메모리 사이즈
 
-  instances: 1                          \# 배포 인스턴스 수
+  instances: 1 \# 배포 인스턴스 수
 
   path: target/hello-spring-glusterfs.war \# 배포하는 App 파일 PATH
 
@@ -1260,8 +1257,8 @@ applications:
 > `$ cf apps`
 >
 > ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Service-Guide/images/glusterfs/glusterfs_image_12.png)
-
-> `$ cf logs hello-spring-glusterfs` **//cf logs {배포된 App명}** 
+>
+> `$ cf logs hello-spring-glusterfs` **//cf logs {배포된 App명}**
 >
 > ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Service-Guide/images/glusterfs/glusterfs_image_13.png)
 

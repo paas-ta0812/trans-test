@@ -54,8 +54,7 @@
 ### 2.1. 설치전 준비사항
 
 본 설치 가이드는 Linux 환경에서 설치하는 것을 기준으로 하였다. 서비스팩 설치를 위해서는 먼저 BOSH CLI v2 가 설치 되어 있어야 하고 BOSH 에 로그인이 되어 있어야 한다.  
- BOSH CLI v2 가 설치 되어 있지 않을 경우 먼저 BOSH2.0 설치 가이드 문서를 참고 하여 BOSH CLI v2를 설치를 하고 사용법을 숙지 해야 한다.  
-
+BOSH CLI v2 가 설치 되어 있지 않을 경우 먼저 BOSH2.0 설치 가이드 문서를 참고 하여 BOSH CLI v2를 설치를 하고 사용법을 숙지 해야 한다.
 
 * BOSH2.0 사용자 가이드
 
@@ -1114,8 +1113,7 @@ Enabling access to all plans of service Pinpoint for all orgs as admin...
 OK
 ```
 
-  
- 서비스 접근 허용을 확인한다.
+서비스 접근 허용을 확인한다.
 
 ```text
 $ cf service-access

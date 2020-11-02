@@ -39,7 +39,7 @@ PaaS-TA 3.5 버전부터는 Bosh 2.0 기반으로 배포\(deploy\)를 진행한�
 | :--- | :--- | :--- | :--- | :--- |
 | master | 1 | 1 | 4G | Root 4G + 영구디스크 20G |
 | worker | N | 8 | 16G | Root 4G + 영구디스크 50G |
-| container-service-api  | N | 1 | 1G | Root 4G |
+| container-service-api | N | 1 | 1G | Root 4G |
 | container-service-common-api | N | 1 | 1G | Root 4G |
 | container-service-broker | N | 1 | 1G | Root 4G |
 | container-service-dashboard | 1 | 1 | 1G | Root 4G |
@@ -55,8 +55,7 @@ PaaS-TA 3.5 버전부터는 Bosh 2.0 기반으로 배포\(deploy\)를 진행한�
 ### 2.1. 설치 전 준비사항
 
 본 설치 가이드는 Linux 환경에서 설치하는 것을 기준으로 하였다. 서비스팩 설치를 위해서는 먼저 BOSH CLI v2가 설치되어 있어야 하고 BOSH에 로그인이 되어 있어야 한다.  
- BOSH CLI v2가 설치 되어 있지 않을 경우, 먼저 BOSH 2.0 설치 가이드 문서를 참고하여 BOSH CLI v2를 설치를 하고 사용법을 숙지해야한다.  
-
+BOSH CLI v2가 설치 되어 있지 않을 경우, 먼저 BOSH 2.0 설치 가이드 문서를 참고하여 BOSH CLI v2를 설치를 하고 사용법을 숙지해야한다.
 
 * Container 서비스팩 설치 전 Bosh 2.0 배포 주의사항
 
@@ -83,11 +82,11 @@ Container 서비스 설치에 필요한 Deployment 및 릴리즈 파일을 다�
 > Release 파일
 >
 > > bosh-dns-release-1.5.0.tgz  
-> >  bpm-release-0.6.0.tgz  
-> >  cfcr-etcd-release-1.3.tgz  
-> >  docker-32.0.0.tgz  
-> >  kubo-release.tgz  
-> >  paasta-container-service-projects-release.tgz
+> > bpm-release-0.6.0.tgz  
+> > cfcr-etcd-release-1.3.tgz  
+> > docker-32.0.0.tgz  
+> > kubo-release.tgz  
+> > paasta-container-service-projects-release.tgz
 
 ```text
 - Deployment 다운로드 파일 위치 경로 생성
@@ -661,7 +660,7 @@ caas\_projects\_release\_name: "paasta-container-service-projects-release" caas\
 
 ## IAAS
 
-auth\_url: 'http://:5000/v3' openstack\_domain: '' openstack\_username: '' openstack\_password: '' openstack\_project\_id: '' region: '' ignore-volume-az: true
+auth\_url: '[http://:5000/v3](http://:5000/v3)' openstack\_domain: '' openstack\_username: '' openstack\_password: '' openstack\_project\_id: '' region: '' ignore-volume-az: true
 
 ## STEMCELL
 
@@ -740,7 +739,7 @@ export CAAS\_DEPLOYMENT\_NAME='paasta-container-service' export CAAS\_BOSH2\_NAM
 
 ## DEPLOY
 
-bosh -e ${CAAS\_BOSH2\_NAME} -n -d ${CAAS\_DEPLOYMENT\_NAME} deploy --no-redact manifests/paasta-container-service-deployment.yml  -l manifests/paasta-container-service-vsphere-vars.yml  -o manifests/ops-files/paasta-container-service/vsphere-network.yml  -o manifests/ops-files/paasta-container-service/use-compiled-releases.yml  -o manifests/ops-files/iaas/vsphere/cloud-provider.yml  -o manifests/ops-files/iaas/vsphere/set-working-dir-no-rp.yml  -o manifests/ops-files/rename.yml  -o manifests/ops-files/misc/single-master.yml  -o manifests/ops-files/misc/first-time-deploy.yml  -v director\_uuid=${CAAS\_BOSH2\_UUID}  -v director\_name=${CAAS\_BOSH2\_NAME}  -v deployment\_name=${CAAS\_DEPLOYMENT\_NAME}
+bosh -e ${CAAS\_BOSH2\_NAME} -n -d ${CAAS\_DEPLOYMENT\_NAME} deploy --no-redact manifests/paasta-container-service-deployment.yml -l manifests/paasta-container-service-vsphere-vars.yml -o manifests/ops-files/paasta-container-service/vsphere-network.yml -o manifests/ops-files/paasta-container-service/use-compiled-releases.yml -o manifests/ops-files/iaas/vsphere/cloud-provider.yml -o manifests/ops-files/iaas/vsphere/set-working-dir-no-rp.yml -o manifests/ops-files/rename.yml -o manifests/ops-files/misc/single-master.yml -o manifests/ops-files/misc/first-time-deploy.yml -v director\_uuid=${CAAS\_BOSH2\_UUID} -v director\_name=${CAAS\_BOSH2\_NAME} -v deployment\_name=${CAAS\_DEPLOYMENT\_NAME}
 
 ```text
 **※    Private Image Repository 를 사용할 경우**
@@ -2096,10 +2095,9 @@ Context: uaa_admin, from client uaa_admin
 
 * URL을 변경하고 싶을 경우 아래와 같이 입력하여 변경 가능하다.   
 
-
-  ```text
+```text
   uaac target https://uaa.<DOMAIN>
-  ```
+```
 
 * UAAC 로그인을 한다.
 

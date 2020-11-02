@@ -76,13 +76,13 @@ BOOTSTRAP & PaaS-TA를 설치하기 위해서는 사전에 인프라 환경 구�
 
 **2. Google 프로젝트 관리**
 
-**2.1    Google Console에 접속한다. 접속 주소: https://console.cloud.google.com**
+**2.1 Google Console에 접속한다. 접속 주소:** [https://console.cloud.google.com](https://console.cloud.google.com)
 
-**2.2    프로젝트를 클릭한다.**
+**2.2 프로젝트를 클릭한다.**
 
-**2.3    프로젝트 팝업화면에서 “NEW PROJECT” 버튼을 클릭한다.**
+**2.3 프로젝트 팝업화면에서 “NEW PROJECT” 버튼을 클릭한다.**
 
-**2.4    프로젝트 생성 화면에서 정보 입력 후 생성 버튼을 클릭한다.**
+**2.4 프로젝트 생성 화면에서 정보 입력 후 생성 버튼을 클릭한다.**
 
 ![](../../../.gitbook/assets/project_add%20%282%29.png)
 
@@ -91,28 +91,28 @@ BOOTSTRAP & PaaS-TA를 설치하기 위해서는 사전에 인프라 환경 구�
 * Project Name: 생성할 Project 명
 * Location: 조직 명
 
-**2.5    프로젝트에 대한 API Service를 Enable 시켜준다.   
+**2.5 프로젝트에 대한 API Service를 Enable 시켜준다.  
 Enable API 설정 목록은 GCE\(Compute Engine\) API, IAM API, Cloud Resource Manager API 3가지이다.**
 
-**2.6    Console 화면에서 “APIs & Services” 버튼을 클릭한다.**
+**2.6 Console 화면에서 “APIs & Services” 버튼을 클릭한다.**
 
-**2.7    APIs & Services 화면에서 “ENABLE APIS AND SERVICES” 버튼을 클릭한다.**
+**2.7 APIs & Services 화면에서 “ENABLE APIS AND SERVICES” 버튼을 클릭한다.**
 
-**2.8    ENABLE APIS AND SERVICES 화면에서 위에 언급한 3가지의 API를 검색하여 Enable 시켜준다.**
+**2.8 ENABLE APIS AND SERVICES 화면에서 위에 언급한 3가지의 API를 검색하여 Enable 시켜준다.**
 
 ![](../../../.gitbook/assets/APIs&Service_Enable%20%282%29.png)
 
-**3    Google Service Account 생성**
+**3 Google Service Account 생성**
 
-**3.1    Console 화면에서 “IAM&admin”의 “Service Accounts” 메뉴를 클릭한다.**
+**3.1 Console 화면에서 “IAM&admin”의 “Service Accounts” 메뉴를 클릭한다.**
 
-**3.2    “CREATE SERVICE ACCOUNT” 버튼을 클릭한다.**
+**3.2 “CREATE SERVICE ACCOUNT” 버튼을 클릭한다.**
 
-**3.3    Service Account 생성 화면에서 정보를 입력 후 “CREATE” 버튼을 클릭한다.**
+**3.3 Service Account 생성 화면에서 정보를 입력 후 “CREATE” 버튼을 클릭한다.**
 
-**3.4    Service Account의 Permissions을 Project의 Owner로 지정한다.**
+**3.4 Service Account의 Permissions을 Project의 Owner로 지정한다.**
 
-**3.5    “CREATE KEY” 버튼을 클릭하고 JSON 타입의 Key를 생성한다.**
+**3.5 “CREATE KEY” 버튼을 클릭하고 JSON 타입의 Key를 생성한다.**
 
 ![](../../../.gitbook/assets/service_account%20%282%29.png)
 
@@ -126,15 +126,15 @@ Enable API 설정 목록은 GCE\(Compute Engine\) API, IAM API, Cloud Resource M
 * Role: 해당 프로젝트에 대한 Service Account의 권한
 * JSON Service Account Key: Google API를 이용하기 위한 Endpoint 집합 Key
 
-**4    Google VPC Network생성**
+**4 Google VPC Network생성**
 
-**4.1    Console 화면에서 “VPC Network” 메뉴를 클릭한다.**
+**4.1 Console 화면에서 “VPC Network” 메뉴를 클릭한다.**
 
-**4.2    VPC Network 화면에서 “CREATE VPC NETWORK” 버튼을 클릭한다.**
+**4.2 VPC Network 화면에서 “CREATE VPC NETWORK” 버튼을 클릭한다.**
 
-**4.3    VPC 생성화면에서 VPC 정보를 입력하고 “Create” 버튼을 클릭한다.**
+**4.3 VPC 생성화면에서 VPC 정보를 입력하고 “Create” 버튼을 클릭한다.**
 
-**4.4    CF-Deployment/Service 등을 다른 대역의 서브넷에 설치하려면 “Add Subnet” 버튼을 통해 서브넷을 추가시킨다.**
+**4.4 CF-Deployment/Service 등을 다른 대역의 서브넷에 설치하려면 “Add Subnet” 버튼을 통해 서브넷을 추가시킨다.**
 
 ![](../../../.gitbook/assets/network_add%20%285%29.png)
 
@@ -146,15 +146,15 @@ Enable API 설정 목록은 GCE\(Compute Engine\) API, IAM API, Cloud Resource M
 * Region: Google Cloud의 Region 선택
 * Subnet IP Address Range: 생성할 Subnet의 주소 범위
 
-**5    Google External IP 할당**
+**5 Google External IP 할당**
 
-**5.1    Console 화면에서 “VPC Network” 메뉴의 “External IP”를 선택한다.**
+**5.1 Console 화면에서 “VPC Network” 메뉴의 “External IP”를 선택한다.**
 
-**5.2    “Reserve Static Address” 버튼을 클릭한다.**
+**5.2 “Reserve Static Address” 버튼을 클릭한다.**
 
-**5.3    External IP 생성 화면에서 정보 입력 후 “Reserve” 버튼을 클릭한다.**
+**5.3 External IP 생성 화면에서 정보 입력 후 “Reserve” 버튼을 클릭한다.**
 
-**5.4    PaaS-TA Portal까지 설치 시 총 3개의 External IP가 필요하다.**
+**5.4 PaaS-TA Portal까지 설치 시 총 3개의 External IP가 필요하다.**
 
 ![](../../../.gitbook/assets/external_ip_Add%20%282%29.png)
 
@@ -164,15 +164,15 @@ Enable API 설정 목록은 GCE\(Compute Engine\) API, IAM API, Cloud Resource M
 * Description: 할당할 External IP의 설명
 * Region: Google Region 선택
 
-**6    Google Firewall Rule 설정**
+**6 Google Firewall Rule 설정**
 
-**6.1    Console 화면에서 “VPC Network” 메뉴의 “Firewall Rules”를 선택한다.**
+**6.1 Console 화면에서 “VPC Network” 메뉴의 “Firewall Rules”를 선택한다.**
 
-**6.2    “CREATE FIREWALL RULE” 버튼을 클릭한다.**
+**6.2 “CREATE FIREWALL RULE” 버튼을 클릭한다.**
 
-**6.3    Firewall Rule화면에서 정보를 입력하고 “Create” 버튼을 클릭한다.**
+**6.3 Firewall Rule화면에서 정보를 입력하고 “Create” 버튼을 클릭한다.**
 
-**6.4    아래 예시 값은 모든 Firewall Port를 열어준 예시이다.**
+**6.4 아래 예시 값은 모든 Firewall Port를 열어준 예시이다.**
 
 ![](../../../.gitbook/assets/fire_wall_rules_add%20%282%29.png)
 
@@ -183,21 +183,21 @@ Enable API 설정 목록은 GCE\(Compute Engine\) API, IAM API, Cloud Resource M
 * Network: 생성한 Network 선택
 * Priority: 해당 Firewall의 우선 순위 선택
 
-**7    Google Key Pair 생성**
+**7 Google Key Pair 생성**
 
-**7.1    Ubuntu의 SSH Keygen 명령어를 사용하여 Key Pair를 생성한다.**
+**7.1 Ubuntu의 SSH Keygen 명령어를 사용하여 Key Pair를 생성한다.**
 
-**7.2    $ ssh-keygen -t rsa -f ~/.ssh/vcap -C vcap**
+**7.2 $ ssh-keygen -t rsa -f ~/.ssh/vcap -C vcap**
 
-**8    Google 계정 등록**
+**8 Google 계정 등록**
 
-**8.1    플랫폼 설치 자동화 웹화면의 “인프라 환경 관리” -&gt; “인프라 계정 관리” 화면으로 이동한다.**
+**8.1 플랫폼 설치 자동화 웹화면의 “인프라 환경 관리” -&gt; “인프라 계정 관리” 화면으로 이동한다.**
 
-**8.2    전체 인프라 계정 관리 화면에서 “Google 계정 관리” 화면으로 이동한다.**
+**8.2 전체 인프라 계정 관리 화면에서 “Google 계정 관리” 화면으로 이동한다.**
 
-**8.3    Google 계정 관리화면에서 “등록” 버튼을 클릭한다.**
+**8.3 Google 계정 관리화면에서 “등록” 버튼을 클릭한다.**
 
-**8.4    Google 계정 등록 팝업화면에서 플랫폼 설치에 필요한 인프라 계정 정보를 입력하고 “확인” 버튼을 클릭한다.**
+**8.4 Google 계정 등록 팝업화면에서 플랫폼 설치에 필요한 인프라 계정 정보를 입력하고 “확인” 버튼을 클릭한다.**
 
 ![](../../../.gitbook/assets/go_google_infra%20%282%29.png)
 
@@ -246,11 +246,11 @@ BOOTSTRAP을 설치하기 위해서는 설치할 인프라의 환경 설정 정�
 
 환경 설정 관리 화면 이동 컨테이너를 클릭하여 플랫폼 설치에 필요한 각 계정 정보를 등록한다.
 
-**1.    Google 환경 설정 등록**
+**1. Google 환경 설정 등록**
 
-**1.1.    Google 환경 설정 관리 화면에서는 “등록” 버튼을 클릭한다.**
+**1.1. Google 환경 설정 관리 화면에서는 “등록” 버튼을 클릭한다.**
 
-**1.2.    Google 환경 설정 등록 팝업 화면에서 플랫폼 설치에 필요한 인프라 환경 설정 정보를 입력하고 “확인” 버튼을 클릭한다.**
+**1.2. Google 환경 설정 등록 팝업 화면에서 플랫폼 설치에 필요한 인프라 환경 설정 정보를 입력하고 “확인” 버튼을 클릭한다.**
 
 ![](../../../.gitbook/assets/google_config_add%20%282%29.png)
 
@@ -287,11 +287,11 @@ https://bosh.io/stemcells/bosh-google-kvm-ubuntu-xenial-go_agent
 
 BOOTSTRAP을 설치하기 위해서는 BOSH 릴리즈와 BOSH CPI릴리즈 2개의 릴리즈가 필요하며 릴리즈를 다운로드하기 위해 플랫폼 설치 자동화 웹 화면에서 “환경설정 및 관리” -&gt; “릴리즈 관리” 메뉴로 이동 후 상단에 위치한 “등록” 버튼을 클릭하고, 릴리즈 등록 팝업 화면에서 릴리즈 정보 입력 후 “등록” 버튼을 클릭한다. 릴리즈 다운로드 유형은 총 3가지이며 Version유형으로 다운로드가 안될 경우 로컬에서 다운로드 후 로컬에서 선택 유형/릴리즈 다운로드 URL을 통해 다운로드 받는 유형을 이용한다.
 
-**1.    BOSH 릴리즈**
+**1. BOSH 릴리즈**
 
-**1.1.    릴리즈 등록 팝업 화면에서BOSH 릴리즈 정보를 입력하고, “등록” 버튼 클릭한다.**
+**1.1. 릴리즈 등록 팝업 화면에서BOSH 릴리즈 정보를 입력하고, “등록” 버튼 클릭한다.**
 
-**1.2.    BOSH 릴리즈 참조 사이트**
+**1.2. BOSH 릴리즈 참조 사이트**
 
 ```text
 http://bosh.io/releases/github.com/cloudfoundry/bosh?all=1
@@ -308,11 +308,11 @@ http://bosh.io/releases/github.com/cloudfoundry/bosh?all=1
 * IaaS 유형: PaaS-TA 설치 인프라를 선택
 * 릴리즈 다운 유형: 다운로드 유형 선택
 
-**2.    BOSH CPI 릴리즈**
+**2. BOSH CPI 릴리즈**
 
-**2.1.    릴리즈 등록 팝업화면에서 BOSH CPI릴리즈 정보를 입력하고, “등록” 버튼 클릭한다.**
+**2.1. 릴리즈 등록 팝업화면에서 BOSH CPI릴리즈 정보를 입력하고, “등록” 버튼 클릭한다.**
 
-**2.2.    BOSH-CPI 릴리즈 참조 사이트**
+**2.2. BOSH-CPI 릴리즈 참조 사이트**
 
 ```text
 https://bosh.io/releases/github.com/cloudfoundry-incubator/bosh-google-cpi-release?all=1
@@ -322,13 +322,13 @@ https://bosh.io/releases/github.com/cloudfoundry-incubator/bosh-google-cpi-relea
 
 ※ **본 가이드에서는 v29.0.1을 다운로드 하였다.**
 
-**3.    BPM 릴리즈**
+**3. BPM 릴리즈**
 
-**3.1.    BOSH 릴리즈 266 이상부터 BOSH를 설치할 경우 BPM릴리즈가 필요하다.**
+**3.1. BOSH 릴리즈 266 이상부터 BOSH를 설치할 경우 BPM릴리즈가 필요하다.**
 
-**3.2.    릴리즈 등록 팝업화면에서 BPM 릴리즈 정보를 입력하고, “등록” 버튼 클릭한다.**
+**3.2. 릴리즈 등록 팝업화면에서 BPM 릴리즈 정보를 입력하고, “등록” 버튼 클릭한다.**
 
-**3.3.    BPM 릴리즈 참조 사이트**
+**3.3. BPM 릴리즈 참조 사이트**
 
 ```text
 https://bosh.io/releases/github.com/cloudfoundry-incubator/bpm-release?all=1
@@ -338,11 +338,11 @@ https://bosh.io/releases/github.com/cloudfoundry-incubator/bpm-release?all=1
 
 ※ **본 가이드에서는 v1.1.0을 다운로드 하였다.**
 
-**4.    OS CONF 릴리즈**
+**4. OS CONF 릴리즈**
 
-**4.1.    릴리즈 등록 팝업화면에서 OS CONF 릴리즈 정보를 입력하고, “등록” 버튼 클릭한다.**
+**4.1. 릴리즈 등록 팝업화면에서 OS CONF 릴리즈 정보를 입력하고, “등록” 버튼 클릭한다.**
 
-**4.2.    OS-CON 릴리즈 참조 사이트**
+**4.2. OS-CON 릴리즈 참조 사이트**
 
 ```text
 https://bosh.io/releases/github.com/cloudfoundry/os-conf-release?all=1
@@ -369,15 +369,15 @@ BOOTSTRAP을 설치하기 위해서는 Nats/Director 컴포넌트를 사용하�
 
 BOOTSTRAP 설치하기 위해 플랫폼 설치 자동화 웹 화면에서 “플랫폼 설치” -&gt; “BOOTSTRAP 설치” 메뉴로 이동 후 상단에 위치한 “설치” 버튼을 클릭한다.
 
-**1    클라우드 환경 선택**
+**1 클라우드 환경 선택**
 
-**1.1    설치할 클라우드 환경을 선택하는 팝업화면에서 Google 환경을 선택한다.**
+**1.1 설치할 클라우드 환경을 선택하는 팝업화면에서 Google 환경을 선택한다.**
 
 ![](../../../.gitbook/assets/bootstrap_select_iaas%20%282%29.png)
 
-**2    BOOTSTRAP 설치 – 선택한 클라우드 환경 정보**
+**2 BOOTSTRAP 설치 – 선택한 클라우드 환경 정보**
 
-**2.1    Google 정보 화면에서 인프라 환경 별칭을 선택 후 “다음” 버튼을 클릭한다.**
+**2.1 Google 정보 화면에서 인프라 환경 별칭을 선택 후 “다음” 버튼을 클릭한다.**
 
 ![](../../../.gitbook/assets/bootstrap_google%20%282%29.png)
 
@@ -390,9 +390,9 @@ BOOTSTRAP 설치하기 위해 플랫폼 설치 자동화 웹 화면에서 “플
 * SSH Public Key: 인프라 환경 설정의 Public Key 정보 \(자동 입력\)
 * Private Key File: 인프라 환경 설정의 Private Key File 정보\(자동 입력\)
 
-**3    BOOTSTRAP 설치 – 기본 정보**
+**3 BOOTSTRAP 설치 – 기본 정보**
 
-**3.1    아래의 기본 정보 입력 후 “다음” 버튼을 클릭한다.**
+**3.1 아래의 기본 정보 입력 후 “다음” 버튼을 클릭한다.**
 
 ![](../../../.gitbook/assets/bootstrap_default%20%2810%29.png)
 
@@ -411,9 +411,9 @@ BOOTSTRAP 설치하기 위해 플랫폼 설치 자동화 웹 화면에서 “플
 
 ※ **BOOTSTRAP 릴리즈 Name Tag의 “?” 아이콘을 통해 현재 플랫폼 설치 자동화에서 설치 가능한 BOSH의 버전을 확인한다.**
 
-**4    BOOTSTRAP 설치 – 네트워크 정보**
+**4 BOOTSTRAP 설치 – 네트워크 정보**
 
-**4.1    Google 네트워크 정보 입력 후 “다음” 버튼을 클릭한다.**
+**4.1 Google 네트워크 정보 입력 후 “다음” 버튼을 클릭한다.**
 
 ![](../../../.gitbook/assets/bootstrap_network%20%2812%29.png)
 
@@ -427,9 +427,9 @@ BOOTSTRAP 설치하기 위해 플랫폼 설치 자동화 웹 화면에서 “플
 * 게이트웨이: 인프라 설정에서 생성한 Google Subnet의 게이트웨이 주소\(default로는 1번 주소\)
 * DNS: 도메인 네임 서버
 
-**5    BOOTSTRAP 설치 – 리소스 정보**
+**5 BOOTSTRAP 설치 – 리소스 정보**
 
-**5.1    Google 리소스 정보 입력 후 “다음” 버튼을 클릭한다.**
+**5.1 Google 리소스 정보 입력 후 “다음” 버튼을 클릭한다.**
 
 ![](../../../.gitbook/assets/bootstrap_resource_4.6%20%2812%29.png)
 
@@ -438,11 +438,11 @@ BOOTSTRAP 설치하기 위해 플랫폼 설치 자동화 웹 화면에서 “플
 * 스템셀: 스템셀 관리에서 다운로드 한 스템셀 선택
 * 인스턴스 유형: Google 환경의 machine type
 
-**6    BOOTSTRAP 설치 - 설치**
+**6 BOOTSTRAP 설치 - 설치**
 
-**6.1    생성된 배포 Manifest파일 정보를 이용하여 Google 환경의 BOOTSTRAP설치를 실행하고 설치 진행 과정에 대한 로그를 확인한다.**
+**6.1 생성된 배포 Manifest파일 정보를 이용하여 Google 환경의 BOOTSTRAP설치를 실행하고 설치 진행 과정에 대한 로그를 확인한다.**
 
-**6.2    설치가 완료되면 “닫기” 버튼을 클릭한다.**
+**6.2 설치가 완료되면 “닫기” 버튼을 클릭한다.**
 
 ![](../../../.gitbook/assets/bootstrap_install%20%2812%29.png)
 
@@ -499,7 +499,7 @@ BOSH를 설치하고 플랫폼 설치 자동화의 설치 관리자로 설정이
 
      ex\) $ unzip {릴리즈 압축 파일 명} \# 릴리즈 파일 확장자가 zip인 경우
 
-     1.3.    아래는 릴리즈 디렉토리의 PaaS-TA 릴리즈 형상 예시 그림이다.
+     1.3. 아래는 릴리즈 디렉토리의 PaaS-TA 릴리즈 형상 예시 그림이다.
 
 ![](../../../.gitbook/assets/paasta_release_4.6%20%2812%29.png)
 
@@ -507,9 +507,9 @@ BOSH를 설치하고 플랫폼 설치 자동화의 설치 관리자로 설정이
 
 CF Deployment설치하기 위해 플랫폼 설치 자동화 웹 화면에서 “플랫폼 설치” -&gt; “CF Deployment설치” 메뉴로 이동 후 상단의 “설치” 버튼을 클릭한다.
 
-**1.    CF-Deployment 설치 – 기본정보 입력**
+**1. CF-Deployment 설치 – 기본정보 입력**
 
-**1.1.    배포에 필요한 기본정보와 도메인 / 로그인 비밀번호를 입력 후 “다음” 버튼을 클릭한다.**
+**1.1. 배포에 필요한 기본정보와 도메인 / 로그인 비밀번호를 입력 후 “다음” 버튼을 클릭한다.**
 
 ![](../../../.gitbook/assets/cf_default_4.6%20%2812%29.png)
 
@@ -527,11 +527,11 @@ CF Deployment설치하기 위해 플랫폼 설치 자동화 웹 화면에서 “
 * Portal 도메인: Portal을 설치 및 접속할 도메인 주소를 입력한다. Portal을 설치하지 않고 CF-Deployment를 실행할 경우 해당 값을 입력하지 않는다.
 * PaaS-TA 모니터링 정보: PaaS-TA 모니터링을 이용하려면 paasta/4.6을 선택하고 PaaS-TA 모니터링 사용을 선택한다.
 
-**2.    CF-Deployment 설치 – 클라우드 환경 별 네트워크 정보**
+**2. CF-Deployment 설치 – 클라우드 환경 별 네트워크 정보**
 
-**2.1.    Google의 네트워크 정보 입력 후 “다음” 버튼을 클릭한다.**
+**2.1. Google의 네트워크 정보 입력 후 “다음” 버튼을 클릭한다.**
 
-**2.2.    “추가” 버튼을 클릭하여 네트워크를 추가하여 AZ를 분산 배치할 수 있다.**
+**2.2. “추가” 버튼을 클릭하여 네트워크를 추가하여 AZ를 분산 배치할 수 있다.**
 
 ![](../../../.gitbook/assets/cf_network%20%2812%29.png)
 
@@ -546,11 +546,11 @@ CF Deployment설치하기 위해 플랫폼 설치 자동화 웹 화면에서 “
 * IP 할당 제외 대역: CF Deployment VM을 배치하지 않을 IP 주소 시작/끝 입력
 * IP 할당 대역: CF Deployment VM을 배치할 IP 주소 시작/끝 입력
 
-**3.    CF-Deployment 설치 – Key 생성**
+**3. CF-Deployment 설치 – Key 생성**
 
-**3.1.    Key 생성 정보 입력 후 “Key 생성” 버튼을 클릭한다.**
+**3.1. Key 생성 정보 입력 후 “Key 생성” 버튼을 클릭한다.**
 
-**3.2.    Key 생성 확인 후 “다음” 버튼을 클릭한다.**
+**3.2. Key 생성 확인 후 “다음” 버튼을 클릭한다.**
 
 ![](../../../.gitbook/assets/cf_key%20%2812%29.png)
 
@@ -564,9 +564,9 @@ CF Deployment설치하기 위해 플랫폼 설치 자동화 웹 화면에서 “
 * 부서명: 부서 명 입력
 * Email: 이메일 주소 입력
 
-**4.    CF-Deployment 설치 – 리소스 정보**
+**4. CF-Deployment 설치 – 리소스 정보**
 
-**4.1.    CF-Deployment 설치에 필요한 리소스 정보를 입력 후 “다음” 버튼을 클릭한다.**
+**4.1. CF-Deployment 설치에 필요한 리소스 정보를 입력 후 “다음” 버튼을 클릭한다.**
 
 ![](../../../.gitbook/assets/cf_resource%20%2812%29.png)
 
@@ -577,11 +577,11 @@ CF Deployment설치하기 위해 플랫폼 설치 자동화 웹 화면에서 “
 * Medium Resource Type: Google 환경의 Medium Machine Type
 * Large Resource Type: Google 환경의 Large Machine Type
 
-**5.    CF-Deployment 설치 – 인스턴스 정보**
+**5. CF-Deployment 설치 – 인스턴스 정보**
 
-**5.1.    인스턴스 정보를 입력 후 “다음” 버튼을 클릭한다.**
+**5.1. 인스턴스 정보를 입력 후 “다음” 버튼을 클릭한다.**
 
-**5.2.    인스턴스 수가 늘어나게 되면 해당 수만큼 네트워크 대역이 필요해 네트워크 할당 대역을 늘려줄 필요 가 있다.**
+**5.2. 인스턴스 수가 늘어나게 되면 해당 수만큼 네트워크 대역이 필요해 네트워크 할당 대역을 늘려줄 필요 가 있다.**
 
 ![](../../../.gitbook/assets/cf_instance%20%2812%29.png)
 
@@ -589,9 +589,9 @@ CF Deployment설치하기 위해 플랫폼 설치 자동화 웹 화면에서 “
 
 * 인스턴스 수: VM에 할당할 인스턴스 수
 
-**6.    CF-Deployment 설치 – 설치**
+**6. CF-Deployment 설치 – 설치**
 
-**6.1.    PaaS-TA\(CF-Deployment\)설치를 실행하고 설치 진행 과정에 대한 로그를 확인한다**
+**6.1. PaaS-TA\(CF-Deployment\)설치를 실행하고 설치 진행 과정에 대한 로그를 확인한다**
 
 ![](../../../.gitbook/assets/cf_install%20%2812%29.png)
 
@@ -621,13 +621,13 @@ Manifest를 업로드 하기 위해 플랫폼 설치 자동화 웹 화면에서 
 
 서비스팩을 설치하기 위해 플랫폼 설치 자동화 웹 화면에서 “플랫폼 설치” -&gt; “서비스팩 설치” 메뉴로 이동 후 상단의 “설치” 버튼을 클릭한다.
 
-**1.    서비스팩 설치 – Manifest 등록**
+**1. 서비스팩 설치 – Manifest 등록**
 
 1. 배포에 필요한 Manifest 파일을 선택하고 “설치” 버튼을 클릭 한다
 
 ![](../../../.gitbook/assets/manifest_add%20%2812%29.png)
 
-**2.    서비스팩 설치 – 설치**
+**2. 서비스팩 설치 – 설치**
 
 1. 생성된 배포 Manifest파일 정보를 이용하여 서비스팩 설치를 실행하고 설치 진행 과정에 대한 로그를 확인한다.
 

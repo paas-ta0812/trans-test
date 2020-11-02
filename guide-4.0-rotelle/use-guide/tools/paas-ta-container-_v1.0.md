@@ -205,8 +205,7 @@
 **3.2.4.1.2. Deployment 상세 조회**
 
 * Deployment 상세 페이지는 Details, Events, YAML 탭으로 구성된다.
-
-1. Deployment 목록에서 Deployment 명을 클릭하여 Deployment 상세 페이지로 이동한다.
+* Deployment 목록에서 Deployment 명을 클릭하여 Deployment 상세 페이지로 이동한다.
 
 ![](../../../.gitbook/assets/CAAS-034%20%282%29.png) ![](../../../.gitbook/assets/CAAS-036%20%282%29.png) ![](../../../.gitbook/assets/CAAS-037%20%282%29.png)
 
@@ -261,12 +260,11 @@
 
 * 해당 Secret은 Container 서비스에서 Private Image Repository에 액세스 시 사용된다.
 
-> $ kubectl create secret docker-registry    
->    -n    
->    --docker-server=&lt;REPOSITORY\_URL/PORT&gt;   
->    --docker-username=   
->    --docker-password=   
->
+> $ kubectl create secret docker-registry  
+> -n  
+> --docker-server=&lt;REPOSITORY\_URL/PORT&gt;  
+> --docker-username=  
+> --docker-password=
 >
 > * SECRET명 : Private Image Repository 인증정보를 기반으로 생성 할 Secret명.
 > * NAMESPACE명 : Secret이 생성될 Namespace. \(현재 Namespace와 같을 시 생략 가능\)

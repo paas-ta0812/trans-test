@@ -128,15 +128,15 @@
 
 * 등록 한 AWS 계정 목록을 보여 준다.
 
-  **2.    등록**
+  **2. 등록**
 
 * 실제 AWS 계정을 인프라 관리 대시보드에 등록하는 기능을 수행 한다.
 
-  **3.    삭제**
+  **3. 삭제**
 
 * 인프라 관리 대시보드에 등록 한 AWS 계정을 삭제하는 기능을 수행 한다.
 
-  **4.    계정 관리 화면 이동**
+  **4. 계정 관리 화면 이동**
 
 * 선택 한 인프라 환경의 계정 관리 화면으로 이동 하는 기능을 수행 한다.
 
@@ -150,19 +150,19 @@
 
 * 등록 한 Openstack 계정 목록을 보여 준다.
 
-  **2.    등록**
+  **2. 등록**
 
 * 실제 Openstack 계정을 인프라 관리 대시보드에 등록하는 기능을 수행 한다.
 
-  **3.    수정**
+  **3. 수정**
 
 * 인프라 관리 대시보드에 등록 한 Openstack 계정을 수정하는 기능을 수행 한다.
 
-  **4.    삭제**
+  **4. 삭제**
 
 * 인프라 관리 대시보드에 등록 한 Openstack 계정을 삭제하는 기능을 수행 한다.
 
-  **5.    계정 관리 화면 이동**
+  **5. 계정 관리 화면 이동**
 
 * 선택 한 인프라 환경의 계정 관리 화면으로 이동 하는 기능을 수행 한다.
 
@@ -176,19 +176,19 @@
 
 * 등록 한 Google 계정 목록을 보여 준다.
 
-  **2.    등록**
+  **2. 등록**
 
 * 실제 Google 계정을 인프라 관리 대시보드에 등록하는 기능을 수행 한다.
 
-  **3.    수정**
+  **3. 수정**
 
 * 인프라 관리 대시보드에 등록 한 Google 계정을 수정하는 기능을 수행 한다.
 
-  **4.    삭제**
+  **4. 삭제**
 
 * 인프라 관리 대시보드에 등록 한 Google 계정을 삭제하는 기능을 수행 한다.
 
-  **5.    계정 관리 화면 이동**
+  **5. 계정 관리 화면 이동**
 
 * 선택 한 인프라 환경의 계정 관리 화면으로 이동 하는 기능을 수행 한다.
 
@@ -202,19 +202,19 @@
 
 * 등록 한 vSphere 계정 목록을 보여 준다.
 
-  **2.    등록**
+  **2. 등록**
 
 * 실제 vSphere 계정을 인프라 관리 대시보드에 등록하는 기능을 수행 한다.
 
-  **3.    수정**
+  **3. 수정**
 
 * 인프라 관리 대시보드에 등록 한 vSphere 계정을 수정하는 기능을 수행 한다.
 
-  **4.    삭제**
+  **4. 삭제**
 
 * 인프라 관리 대시보드에 등록 한 vSphere 계정을 삭제하는 기능을 수행 한다.
 
-  **5.    계정 관리 화면 이동**
+  **5. 계정 관리 화면 이동**
 
 * 선택 한 인프라 환경의 계정 관리 화면으로 이동 하는 기능을 수행 한다.
 
@@ -228,11 +228,11 @@
 
 * 등록 한 인프라 계정의 전체 리소스 사용량을 보여 준다.
 
-  **2.    AWS 리소스 사용량**
+  **2. AWS 리소스 사용량**
 
 * 등록 한 AWS 계정의 전체 리소스 사용량을 보여 주고 AWS 리소스 사용량 상세 조회 화면 이동 기능을 수행 한다.
 
-  **3.    Openstack 리소스 사용량**
+  **3. Openstack 리소스 사용량**
 
 * 등록 한 Openstack 계정의 전체 리소스 사용량을 보여 주고 Openstack 리소스 사용량 상세 조회 화면 이동 기능을 수행 한다.
 
@@ -246,23 +246,23 @@
 
 * 선택 한 인프라 환경의 리소스 사용량 조회 화면으로 이동 하는 기능을 제공 한다.
 
-  **2.    AWS Region 선택**
+  **2. AWS Region 선택**
 
 * AWS Region 목록을 보여 주고 선택 할 수 있는 기능을 제공 한다.
 
-  **3.    AWS 인스턴스 사용량**
+  **3. AWS 인스턴스 사용량**
 
 * 등록 한 전체 AWS 계정의 인스턴스 사용량을 보여 준다
 
-  **4.    AWS 네트워크 사용량.**
+  **4. AWS 네트워크 사용량.**
 
 * 등록 한 전체 AWS 계정의 네트워크 사용량을 보여 준다.
 
-  **5.    AWS 볼륨 사용량**
+  **5. AWS 볼륨 사용량**
 
 * 등록 한 전체 AWS 계정의 볼륨 사용량을 보여 준다.
 
-  **6.    AWS 과금 사용량**
+  **6. AWS 과금 사용량**
 
 * 등록 한 전체 AWS 계정의 과금 사용량을 보여 준다.
 
@@ -276,15 +276,15 @@
 
 * 선택 한 인프라 환경의 리소스 사용량 조회 화면으로 이동 하는 기능을 제공 한다.
 
-  **2.    Openstack 인스턴스 사용량**
+  **2. Openstack 인스턴스 사용량**
 
 * 등록 한 전체 Openstack 계정의 인스턴스 사용량을 보여 준다
 
-  **3.    Openstack 네트워크 사용량.**
+  **3. Openstack 네트워크 사용량.**
 
 * 등록 한 전체 Openstack 계정의 네트워크 사용량을 보여 준다.
 
-  **4.    Openstack 볼륨 사용량**
+  **4. Openstack 볼륨 사용량**
 
 * 등록 한 전체 Openstack 계정의 볼륨 사용량을 보여 준다.
 
@@ -298,27 +298,27 @@
 
 * 등록 한 AWS 계정을 기본 AWS 계정으로 선택 할 수 있는 기능을 제공 한다.
 
-  **2.    AWS Security Group 관리**
+  **2. AWS Security Group 관리**
 
 * AWS Security Group 관리 화면으로 이동 하는 기능을 수행 한다.
 
-  **3.    AWS Key Pair 관리**
+  **3. AWS Key Pair 관리**
 
 * AWS Key Pair 관리 화면으로 이동 하는 기능을 수행 한다.
 
-  **4.    AWS Subnet 관리**
+  **4. AWS Subnet 관리**
 
 * AWS Subnet 관리 화면으로 이동 하는 기능을 수행 한다.
 
-  **5.    AWS VPC 관리**
+  **5. AWS VPC 관리**
 
 * AWS VPC 관리 화면으로 이동 하는 기능을 수행 한다.
 
-  **6.    AWS Internet Gateway 관리**
+  **6. AWS Internet Gateway 관리**
 
 * AWS Internet Gateway 관리 화면으로 이동 하는 기능을 수행 한다.
 
-  **7.    AWS Elastic IPs 관리**
+  **7. AWS Elastic IPs 관리**
 
 * AWS Elastic IP 관리 화면으로 이동 하는 기능을 수행 한다.
 
@@ -332,27 +332,27 @@
 
 * 선택 한 AWS 관리 화면으로 이동 하는 기능을 제공 한다.
 
-  **2.    AWS Region 선택**
+  **2. AWS Region 선택**
 
 * AWS Region을 선택 할 수 있는 기능을 제공 한다.
 
-  **3.    AWS 계정 명**
+  **3. AWS 계정 명**
 
 * 기본 AWS 계정을 선택 할 수 있는 기능을 제공 한다.
 
-  **4.    AWS VPC 목록**
+  **4. AWS VPC 목록**
 
 * 실제 AWS에 생성 한 VPC 목록을 보여 준다.
 
-  **5.    생성**
+  **5. 생성**
 
 * AWS VPC를 생성 할 수 있는 기능을 제공 한다.
 
-  **6.    삭제**
+  **6. 삭제**
 
 * AWS VPC를 삭제 할 수 있는 기능을 제공 한다.
 
-  **7.    AWS VPC 상세 목록**
+  **7. AWS VPC 상세 목록**
 
 * 선택 한 AWS VPC에 대한 상세 목록을 보여 준다.
 
@@ -366,27 +366,27 @@
 
 * 선택 한 AWS 관리 화면으로 이동 하는 기능을 제공 한다.
 
-  **2.    AWS Region 선택**
+  **2. AWS Region 선택**
 
 * AWS Region을 선택 할 수 있는 기능을 제공 한다.
 
-  **3.    AWS 계정 명**
+  **3. AWS 계정 명**
 
 * 기본 AWS 계정을 선택 할 수 있는 기능을 제공 한다.
 
-  **4.    AWS Subnet 목록**
+  **4. AWS Subnet 목록**
 
 * 실제 AWS에 생성 한 Subnet 목록을 보여 준다.
 
-  **5.    생성**
+  **5. 생성**
 
 * AWS Subnet를 생성 할 수 있는 기능을 제공 한다.
 
-  **6.    삭제**
+  **6. 삭제**
 
 * AWS Subnet를 삭제 할 수 있는 기능을 제공 한다.
 
-  **7.    AWS Subnet 상세 목록**
+  **7. AWS Subnet 상세 목록**
 
 * 선택 한 AWS Subnet에 대한 상세 목록을 보여 준다.
 
@@ -400,31 +400,31 @@
 
 * 선택 한 AWS 관리 화면으로 이동 하는 기능을 제공 한다.
 
-  **2.    AWS Region 선택**
+  **2. AWS Region 선택**
 
 * AWS Region을 선택 할 수 있는 기능을 제공 한다.
 
-  **3.    AWS 계정 명**
+  **3. AWS 계정 명**
 
 * 기본 AWS 계정을 선택 할 수 있는 기능을 제공 한다.
 
-  **4.    AWS Internet Gateway 목록**
+  **4. AWS Internet Gateway 목록**
 
 * 실제 AWS에 생성 한 Internet Gateway 목록을 보여 준다.
 
-  **5.    생성**
+  **5. 생성**
 
 * AWS Internet Gateway를 생성 할 수 있는 기능을 제공 한다.
 
-  **6.    VPC 연결**
+  **6. VPC 연결**
 
 * AWS Internet Gateway에 VPC를 연결 할 수 있는 기능을 제공 한다.
 
-  **7.    VPC 연결 해제**
+  **7. VPC 연결 해제**
 
 * AWS Internet Gateway에 연결 한 VPC를 연결 해제 할 수 있는 기능을 제공 한다.
 
-  **8.    삭제**
+  **8. 삭제**
 
 * AWS Internet Gateway를 삭제 할 수 있는 기능을 제공 한다.
 
@@ -438,27 +438,27 @@
 
 * 선택 한 AWS 관리 화면으로 이동 하는 기능을 제공 한다.
 
-  **2.    AWS Region 선택**
+  **2. AWS Region 선택**
 
 * AWS Region을 선택 할 수 있는 기능을 제공 한다.
 
-  **3.    AWS 계정 명**
+  **3. AWS 계정 명**
 
 * 기본 AWS 계정을 선택 할 수 있는 기능을 제공 한다.
 
-  **4.    AWS Security Group 목록**
+  **4. AWS Security Group 목록**
 
 * 실제 AWS에 생성 한 Security Group 목록을 보여 준다.
 
-  **5.    생성**
+  **5. 생성**
 
 * AWS Security Group를 생성 할 수 있는 기능을 제공 한다.
 
-  **6.    삭제**
+  **6. 삭제**
 
 * AWS Security Group를 삭제 할 수 있는 기능을 제공 한다.
 
-  **7.    Inbound Rule 상세 보기**
+  **7. Inbound Rule 상세 보기**
 
 * 선택 한 Security Group에 생성 한 Inbound Rule목록을 보여 준다.
 
@@ -472,23 +472,23 @@
 
 * 선택 한 AWS 관리 화면으로 이동 하는 기능을 제공 한다.
 
-  **2.    AWS Region 선택**
+  **2. AWS Region 선택**
 
 * AWS Region을 선택 할 수 있는 기능을 제공 한다.
 
-  **3.    AWS 계정 명**
+  **3. AWS 계정 명**
 
 * 기본 AWS 계정을 선택 할 수 있는 기능을 제공 한다.
 
-  **4.    AWS Elastic IP 목록**
+  **4. AWS Elastic IP 목록**
 
 * 실제 AWS에 할당한 Elastic IP 목록을 보여 준다.
 
-  **5.    할당**
+  **5. 할당**
 
 * AWS Elastic IP를 할당 할 수 있는 기능을 제공 한다.
 
-  **6.    Elastic IP 상세 보기**
+  **6. Elastic IP 상세 보기**
 
 * 선택 한 Elastic IP 상세 정보를 보여 준다.
 
@@ -502,19 +502,19 @@
 
 * 선택 한 AWS 관리 화면으로 이동 하는 기능을 제공 한다.
 
-  **2.    AWS Region 선택**
+  **2. AWS Region 선택**
 
 * AWS Region을 선택 할 수 있는 기능을 제공 한다.
 
-  **3.    AWS 계정 명**
+  **3. AWS 계정 명**
 
 * 기본 AWS 계정을 선택 할 수 있는 기능을 제공 한다.
 
-  **4.    AWS Key Pair 목록**
+  **4. AWS Key Pair 목록**
 
 * 실제 AWS에 생성 한 Key Pair 목록을 보여 준다.
 
-  **5.    생성**
+  **5. 생성**
 
 * AWS Key Pair를 생성 할 수 있는 기능을 제공 한다.
 
@@ -528,23 +528,23 @@
 
 * 등록 한 Openstack 계정을 기본 Openstack 계정으로 선택 할 수 있는 기능을 제공 한다.
 
-  **2.    Openstack Network 관리**
+  **2. Openstack Network 관리**
 
 * Openstack Network 관리 화면으로 이동 하는 기능을 수행 한다.
 
-  **3.    Openstack Router 관리**
+  **3. Openstack Router 관리**
 
 * Openstack Router 관리 화면으로 이동 하는 기능을 수행 한다.
 
-  **4.    Openstack Key Pair 관리**
+  **4. Openstack Key Pair 관리**
 
 * Openstack Key Pair 관리 화면으로 이동 하는 기능을 수행 한다.
 
-  **5.    Openstack Floating IP 관리**
+  **5. Openstack Floating IP 관리**
 
 * Openstack Floating IP 관리 화면으로 이동 하는 기능을 수행 한다.
 
-  **6.    Openstack Security Group 관리**
+  **6. Openstack Security Group 관리**
 
 * Openstack Security Group 관리 화면으로 이동 하는 기능을 수행 한다.
 
@@ -558,27 +558,27 @@
 
 * 선택 한 Openstack 관리 화면으로 이동 하는 기능을 제공 한다.
 
-  **2.    Openstack 계정 명**
+  **2. Openstack 계정 명**
 
 * 기본 Openstack 계정을 선택 할 수 있는 기능을 제공 한다.
 
-  **3.    Openstack Network 목록**
+  **3. Openstack Network 목록**
 
 * 실제 Openstack에 생성 한 Network 목록을 보여 준다.
 
-  **4.    생성**
+  **4. 생성**
 
 * Openstack Network를 생성 할 수 있는 기능을 제공 한다.
 
-  **5.    삭제**
+  **5. 삭제**
 
 * Openstack Network를 삭제 할 수 있는 기능을 제공 한다.
 
-  **6.    서브넷 설정**
+  **6. 서브넷 설정**
 
 * 선택한 Openstack Network에 Subnet을 생성 및 삭제 하는 기능을 제공 한다.
 
-  **7.    Network 상세 보기**
+  **7. Network 상세 보기**
 
 * 선택 한 Openstack Network의 상세 정보를 보여 준다.
 
@@ -592,27 +592,27 @@
 
 * 선택 한 Openstack 관리 화면으로 이동 하는 기능을 제공 한다.
 
-  **2.    Openstack 계정 명**
+  **2. Openstack 계정 명**
 
 * 기본 Openstack 계정을 선택 할 수 있는 기능을 제공 한다.
 
-  **3.    Openstack Router 목록**
+  **3. Openstack Router 목록**
 
 * 실제 Openstack에 생성 한 Router 목록을 보여 준다.
 
-  **4.    생성**
+  **4. 생성**
 
 * Openstack Router를 생성 할 수 있는 기능을 제공 한다.
 
-  **5.    인터페이스**
+  **5. 인터페이스**
 
 * 선택 한 Openstack Router에 인터페이스를 연결/연결 해제 하는 기능을 제공 한다.
 
-  **6.    게이트웨이**
+  **6. 게이트웨이**
 
 * 선택한 Openstack Router에 게이트웨이를 연결/연결해제 하는 기능을 제공 한다.
 
-  **7.    삭제**
+  **7. 삭제**
 
 * 선택 한 Openstack Router를 삭제 하는 기능을 제공 한다.
 
@@ -626,23 +626,23 @@
 
 * 선택 한 Openstack 관리 화면으로 이동 하는 기능을 제공 한다.
 
-  **2.    Openstack 계정 명**
+  **2. Openstack 계정 명**
 
 * 기본 Openstack 계정을 선택 할 수 있는 기능을 제공 한다.
 
-  **3.    Openstack Security Group목록**
+  **3. Openstack Security Group목록**
 
 * 실제 Openstack에 생성 한 Security Group목록을 보여 준다.
 
-  **4.    생성**
+  **4. 생성**
 
 * Openstack Security Group를 생성 할 수 있는 기능을 제공 한다.
 
-  **5.    삭제**
+  **5. 삭제**
 
 * 선택 한 Security Group를 삭제 할 수 있는 기능을 제공 한다.
 
-  **6.    Inbound Rule 정보**
+  **6. Inbound Rule 정보**
 
 * 선택한 Openstack Security Group의 Inbound Rule정보를 보여 준다.
 
@@ -656,15 +656,15 @@
 
 * 선택 한 Openstack 관리 화면으로 이동 하는 기능을 제공 한다.
 
-  **2.    Openstack 계정 명**
+  **2. Openstack 계정 명**
 
 * 기본 Openstack 계정을 선택 할 수 있는 기능을 제공 한다.
 
-  **3.    Openstack Floating IP 목록**
+  **3. Openstack Floating IP 목록**
 
 * 실제 Openstack에 할당 한 Floating IP 목록을 보여 준다.
 
-  **4.    Openstack Floating IP 할당**
+  **4. Openstack Floating IP 할당**
 
 * Openstack Floating IP를 할당 할 수 있는 기능을 제공 한다.
 
@@ -678,15 +678,15 @@
 
 * 선택 한 Openstack 관리 화면으로 이동 하는 기능을 제공 한다.
 
-  **2.    Openstack 계정 명**
+  **2. Openstack 계정 명**
 
 * 기본 Openstack 계정을 선택 할 수 있는 기능을 제공 한다.
 
-  **3.    Openstack Key Pair 목록**
+  **3. Openstack Key Pair 목록**
 
 * 실제 Openstack에 생성 한 Key Pair 목록을 보여 준다.
 
-  **4.    Openstack Key Pair 생성**
+  **4. Openstack Key Pair 생성**
 
 * Openstack Key Pair를 할당 할 수 있는 기능을 제공 한다.
 
@@ -724,17 +724,17 @@
 
 #### 1.    Openstack 계정 등록
 
-**1.1.    Openstack 계정 목록 화면에서 “등록” 버튼을 클릭하고 Openstack 계정 등록 팝업 화면에서 실제 Openstack 계정 정보를 입력 후 “확인” 버튼을 클릭한다.**
+**1.1. Openstack 계정 목록 화면에서 “등록” 버튼을 클릭하고 Openstack 계정 등록 팝업 화면에서 실제 Openstack 계정 정보를 입력 후 “확인” 버튼을 클릭한다.**
 
 ![](../../../.gitbook/assets/OpenstackAccountAdd%20%283%29.png)
 
 #### 2.    Openstack 계정 수정
 
-**2.1.    Openstack 계정 목록 화면에서 Openstack 계정을 선택 하고 “수정” 버튼을 클릭 한다.**
+**2.1. Openstack 계정 목록 화면에서 Openstack 계정을 선택 하고 “수정” 버튼을 클릭 한다.**
 
-**2.2.    Openstack 계정 수정 팝업 화면에서 Openstack 계정 정보를 수정 하고 “확인” 버튼을 클릭 한다.**
+**2.2. Openstack 계정 수정 팝업 화면에서 Openstack 계정 정보를 수정 하고 “확인” 버튼을 클릭 한다.**
 
-**2.3.    플랫폼 관리자는 Openstack 계정 별칭과 버전, Identity, UserName을 변경 할 수 없지만 패스워드나 프로젝트, 도메인을 변경 할 수 있다.**
+**2.3. 플랫폼 관리자는 Openstack 계정 별칭과 버전, Identity, UserName을 변경 할 수 없지만 패스워드나 프로젝트, 도메인을 변경 할 수 있다.**
 
 ![](../../../.gitbook/assets/OpenstackAccountModify%20%284%29.png)
 
@@ -744,17 +744,17 @@
 
 #### 1.    Google 계정 등록
 
-**1.1.    Google 계정 목록 화면에서 “등록” 버튼을 클릭하고 Google 계정 등록 팝업 화면에서 실제 Google 계정 정보를 입력 후 “확인” 버튼을 클릭한다.**
+**1.1. Google 계정 목록 화면에서 “등록” 버튼을 클릭하고 Google 계정 등록 팝업 화면에서 실제 Google 계정 정보를 입력 후 “확인” 버튼을 클릭한다.**
 
 ![](../../../.gitbook/assets/GoogleAccountAdd%20%284%29.png)
 
 #### 2.    Google 계정 수정
 
-**2.1.    Google 계정 목록 화면에서 Google 계정을 선택 하고 “수정” 버튼을 클릭 한다.**
+**2.1. Google 계정 목록 화면에서 Google 계정을 선택 하고 “수정” 버튼을 클릭 한다.**
 
-**2.2.    Google 계정 수정 팝업 화면에서 Google 계정 정보를 수정 하고 “확인” 버튼을 클릭 한다.**
+**2.2. Google 계정 수정 팝업 화면에서 Google 계정 정보를 수정 하고 “확인” 버튼을 클릭 한다.**
 
-**2.3.    플랫폼 관리자는 Google 계정**
+**2.3. 플랫폼 관리자는 Google 계정**
 
 ![](../../../.gitbook/assets/GoogleAccountModify%20%283%29.png)
 
@@ -764,15 +764,15 @@
 
 #### 1.    vSphere 계정 등록
 
-**1.1.    vSphere 계정 목록 화면에서 “등록” 버튼을 클릭하고 vSphere 계정 등록 팝업 화면에서 실제 vSphere 계정 정보를 입력 후 “확인” 버튼을 클릭한다.**
+**1.1. vSphere 계정 목록 화면에서 “등록” 버튼을 클릭하고 vSphere 계정 등록 팝업 화면에서 실제 vSphere 계정 정보를 입력 후 “확인” 버튼을 클릭한다.**
 
 ![](../../../.gitbook/assets/vSphereAccountAdd%20%283%29.png)
 
 #### 2.    vSphere 계정 수정
 
-**2.1.    vSphere 계정 목록 화면에서 vSphere 계정을 선택 하고 “수정” 버튼을 클릭 한다.**
+**2.1. vSphere 계정 목록 화면에서 vSphere 계정을 선택 하고 “수정” 버튼을 클릭 한다.**
 
-**2.2.    vSphere 계정 수정 팝업 화면에서 vSphere 계정 정보를 수정 하고 “확인” 버튼을 클릭 한다.**
+**2.2. vSphere 계정 수정 팝업 화면에서 vSphere 계정 정보를 수정 하고 “확인” 버튼을 클릭 한다.**
 
 ![](../../../.gitbook/assets/vSphereAccountModify%20%283%29.png)
 
@@ -786,7 +786,7 @@
 
 #### 1.    AWS VPC 생성
 
-**1.1.    VPC 목록 화면에서 “생성” 버튼을 클릭하고 VPC 생성 팝업 화면에서 VPC 정보를 입력 후 “확인” 버튼을 클릭한다.**
+**1.1. VPC 목록 화면에서 “생성” 버튼을 클릭하고 VPC 생성 팝업 화면에서 VPC 정보를 입력 후 “확인” 버튼을 클릭한다.**
 
 ![](../../../.gitbook/assets/AwsVpcAdd%20%283%29.png)
 
@@ -796,7 +796,7 @@
 
 #### 1.    AWS Subnet 생성
 
-**1.1.    Subnet 목록 화면에서 “생성” 버튼을 클릭하고 Subnet 생성 팝업 화면에서 Subnet 정보를 입력 후 “확인” 버튼을 클릭한다.**
+**1.1. Subnet 목록 화면에서 “생성” 버튼을 클릭하고 Subnet 생성 팝업 화면에서 Subnet 정보를 입력 후 “확인” 버튼을 클릭한다.**
 
 ![](../../../.gitbook/assets/AwsSubnetAdd%20%283%29.png)
 
@@ -806,15 +806,15 @@
 
 #### 1.    AWS Internet Gateway 생성
 
-**1.1.    Internet Gateway 목록 화면에서 “생성” 버튼을 클릭하고 Internet Gateway 생성 팝업 화면에서 Internet Gateway 정보를 입력 후 “확인” 버튼을 클릭한다.**
+**1.1. Internet Gateway 목록 화면에서 “생성” 버튼을 클릭하고 Internet Gateway 생성 팝업 화면에서 Internet Gateway 정보를 입력 후 “확인” 버튼을 클릭한다.**
 
 ![](../../../.gitbook/assets/AwsInternetGatewayAdd%20%283%29.png)
 
 #### 2.    AWS Internet Gateway에 VPC 연결
 
-**2.1.    Internet Gateway 목록 화면에서 생성 한 Internet Gateway를 선택 한다.**
+**2.1. Internet Gateway 목록 화면에서 생성 한 Internet Gateway를 선택 한다.**
 
-**2.2.    Internet Gateway 목록 화면에서 “VPC 연결” 버튼을 클릭하고 VPC 연결 팝업 화면에서 생성 한 VPC를 선택 한 후 “확인” 버튼을 클릭한다.**
+**2.2. Internet Gateway 목록 화면에서 “VPC 연결” 버튼을 클릭하고 VPC 연결 팝업 화면에서 생성 한 VPC를 선택 한 후 “확인” 버튼을 클릭한다.**
 
 ![](../../../.gitbook/assets/AwsVpcAttach%20%284%29.png)
 
@@ -824,9 +824,9 @@
 
 #### 1.    AWS Security Group 생성
 
-**1.1.    Security Group 목록 화면에서 “생성” 버튼을 클릭하고 Security Group 생성 팝업 화면에서 Security Group 정보와 생성 한 VPC를 선택 및 입력 후 “확인” 버튼을 클릭한다.**
+**1.1. Security Group 목록 화면에서 “생성” 버튼을 클릭하고 Security Group 생성 팝업 화면에서 Security Group 정보와 생성 한 VPC를 선택 및 입력 후 “확인” 버튼을 클릭한다.**
 
-**1.2.    설치 할 PaaS-TA 환경에 맞는 Ingress Rule을 선택 하고 생성 한다.**
+**1.2. 설치 할 PaaS-TA 환경에 맞는 Ingress Rule을 선택 하고 생성 한다.**
 
 ![](../../../.gitbook/assets/AwsSecurityGroupAdd%20%284%29.png)
 
@@ -836,7 +836,7 @@
 
 #### 1.    AWS Elastic IP 할당
 
-**1.1.    Elastic IP 목록 화면에서 “할당” 버튼을 클릭하고 Elastic IP 할당 팝업 화면에서 “확인” 버튼을 클릭 한다.**
+**1.1. Elastic IP 목록 화면에서 “할당” 버튼을 클릭하고 Elastic IP 할당 팝업 화면에서 “확인” 버튼을 클릭 한다.**
 
 ![](../../../.gitbook/assets/AwsElassticIpAdd%20%283%29.png)
 
@@ -846,7 +846,7 @@
 
 #### 1.    AWS Key Pair 생성
 
-**1.1.    Key Pair 목록 화면에서 “생성” 버튼을 클릭하고 Key Pair 생성 팝업 화면에서 Key Pair 명을 입력 한 후 “확인” 버튼을 클릭 한다.**
+**1.1. Key Pair 목록 화면에서 “생성” 버튼을 클릭하고 Key Pair 생성 팝업 화면에서 Key Pair 명을 입력 한 후 “확인” 버튼을 클릭 한다.**
 
 ![](../../../.gitbook/assets/AwsKeyPairAdd%20%284%29.png)
 
@@ -910,15 +910,15 @@ VPC를 생성하면 Main Route Table이 자동으로 생성 된다. PaaS-TA를 �
 
 #### 1.    Openstack Network 생성
 
-**1.1.    Network 목록 화면에서 “생성” 버튼을 클릭하고 Network 생성 팝업 화면에서 Network 정보를 입력 한 후 “확인” 버튼을 클릭 한다.**
+**1.1. Network 목록 화면에서 “생성” 버튼을 클릭하고 Network 생성 팝업 화면에서 Network 정보를 입력 한 후 “확인” 버튼을 클릭 한다.**
 
 ![](../../../.gitbook/assets/OpenstackNetworkAdd%20%284%29.png)
 
 #### 2.    Openstack Subnet 생성
 
-**2.1.    Network 목록 화면에서 Network를 선택 하고 “서브넷 설정” 버튼을 클릭 한다.**
+**2.1. Network 목록 화면에서 Network를 선택 하고 “서브넷 설정” 버튼을 클릭 한다.**
 
-**2.2.    Subnet 설정 팝업 화면에서 Subnet 정보를 입력 한 후 “생성” 버튼을 클릭 한다.**
+**2.2. Subnet 설정 팝업 화면에서 Subnet 정보를 입력 한 후 “생성” 버튼을 클릭 한다.**
 
 ![](../../../.gitbook/assets/OpenstackSubnetAdd%20%283%29.png)
 
@@ -928,23 +928,23 @@ VPC를 생성하면 Main Route Table이 자동으로 생성 된다. PaaS-TA를 �
 
 #### 1.    Openstack Router생성
 
-**1.1.    Router목록 화면에서 “생성” 버튼을 클릭 하고 Router 생성 팝업 화면에서 Router 명을 입력 하고 “확인” 버튼을 클릭 한다.**
+**1.1. Router목록 화면에서 “생성” 버튼을 클릭 하고 Router 생성 팝업 화면에서 Router 명을 입력 하고 “확인” 버튼을 클릭 한다.**
 
 ![](../../../.gitbook/assets/OpenstackRouterAdd%20%283%29.png)
 
 #### 2.    Openstack Router에 인터페이스 연결
 
-**2.1.    Router목록 화면에서 생성한 Router를 선택 하고 “인터페이스” 버튼을 클릭 한다.**
+**2.1. Router목록 화면에서 생성한 Router를 선택 하고 “인터페이스” 버튼을 클릭 한다.**
 
-**2.2.    인터페이스 설정 화면에서 Subnet을 선택하고 인터페이스 설정 정보를 입력 후 “연결” 버튼을 클릭 한다.**
+**2.2. 인터페이스 설정 화면에서 Subnet을 선택하고 인터페이스 설정 정보를 입력 후 “연결” 버튼을 클릭 한다.**
 
 ![](../../../.gitbook/assets/OpenstackInterFaceAttach%20%283%29.png)
 
 #### 3.    Openstack Router에 게이트웨이 연결
 
-**3.1.    Router목록 화면에서 생성한 Router를 선택 하고 “게이트웨이” 버튼을 클릭 한다.**
+**3.1. Router목록 화면에서 생성한 Router를 선택 하고 “게이트웨이” 버튼을 클릭 한다.**
 
-**3.2.    게이트웨이 설정 화면에서 External Network를 선택하고 “연결” 버튼을 클릭 한다.**
+**3.2. 게이트웨이 설정 화면에서 External Network를 선택하고 “연결” 버튼을 클릭 한다.**
 
 ![](../../../.gitbook/assets/OpenstackGatewayAttach%20%283%29.png)
 
@@ -954,9 +954,9 @@ VPC를 생성하면 Main Route Table이 자동으로 생성 된다. PaaS-TA를 �
 
 #### 1.    Openstack Security Group생성
 
-**1.1.    Security Group목록 화면에서 “생성” 버튼을 클릭 하고 Security Group생성 팝업 화면에서 Security Group 정보를 입력 후 “확인” 버튼을 클릭 한다.**
+**1.1. Security Group목록 화면에서 “생성” 버튼을 클릭 하고 Security Group생성 팝업 화면에서 Security Group 정보를 입력 후 “확인” 버튼을 클릭 한다.**
 
-**1.2.    설치 할 PaaS-TA 환경에 맞는 Ingress Rule을 선택 하고 생성 한다.**
+**1.2. 설치 할 PaaS-TA 환경에 맞는 Ingress Rule을 선택 하고 생성 한다.**
 
 ![](../../../.gitbook/assets/OpenstackSecurityGroupAdd%20%284%29.png)
 
@@ -966,7 +966,7 @@ VPC를 생성하면 Main Route Table이 자동으로 생성 된다. PaaS-TA를 �
 
 #### 1.    Openstack Floating IP 할당
 
-**1.1.    Floating IP 목록 화면에서 “할당” 버튼을 클릭 하고 Floating IP 할당 팝업 화면에서 Pool 정보를 선택 후 “확인” 버튼을 클릭 한다.**
+**1.1. Floating IP 목록 화면에서 “할당” 버튼을 클릭 하고 Floating IP 할당 팝업 화면에서 Pool 정보를 선택 후 “확인” 버튼을 클릭 한다.**
 
 ![](../../../.gitbook/assets/OpenstackFloatingIPAdd%20%284%29.png)
 
@@ -976,7 +976,7 @@ VPC를 생성하면 Main Route Table이 자동으로 생성 된다. PaaS-TA를 �
 
 #### 1.    Openstack Key Pair 생성
 
-**1.1.    Key Pair 목록 화면에서 “생성” 버튼을 클릭 하고 Key Pair 생성 팝업 화면에서 Key Pair 명을 입력 후 “확인” 버튼을 클릭 한다.**
+**1.1. Key Pair 목록 화면에서 “생성” 버튼을 클릭 하고 Key Pair 생성 팝업 화면에서 Key Pair 명을 입력 후 “확인” 버튼을 클릭 한다.**
 
 ![](../../../.gitbook/assets/OpenstackKeyPairAdd%20%284%29.png)
 

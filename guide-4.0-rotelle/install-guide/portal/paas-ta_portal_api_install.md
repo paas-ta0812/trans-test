@@ -66,8 +66,7 @@
 ### 2.1. 설치전 준비사항
 
 본 설치 가이드는 Linux 환경에서 설치하는 것을 기준으로 하였다. 서비스팩 설치를 위해서는 먼저 BOSH CLI v2 가 설치 되어 있어야 하고 BOSH 에 로그인이 되어 있어야 한다.  
- BOSH CLI v2 가 설치 되어 있지 않을 경우 먼저 BOSH2.0 설치 가이드 문서를 참고 하여 BOSH CLI v2를 설치를 하고 사용법을 숙지 해야 한다.  
-
+BOSH CLI v2 가 설치 되어 있지 않을 경우 먼저 BOSH2.0 설치 가이드 문서를 참고 하여 BOSH CLI v2를 설치를 하고 사용법을 숙지 해야 한다.
 
 * BOSH2.0 사용자 가이드
 
@@ -81,7 +80,7 @@
 
   ```text
    $ wget -O download.zip http://45.248.73.44/index.php/s/eZNmyXHc62sFL6K/download
-   $ unzip download.zip 
+   $ unzip download.zip
   ```
 
 * PAAS-TA-PORTAL-UI-RELEASE 다운받아 직접 릴리즈 생성및 업로드 하는 방법
@@ -95,198 +94,198 @@
    $ sh start.sh
   ```
 
-1. bosh envs 명령어를 통해 사용할 bosh env를 확인한다.
+* bosh envs 명령어를 통해 사용할 bosh env를 확인한다.
 
-   ```text
-    $ bosh envs
-    URL       Alias  
-    10.0.1.7  micro-bosh  
+  ```text
+   $ bosh envs
+   URL       Alias  
+   10.0.1.7  micro-bosh  
 
-    1 environments
+   1 environments
+
+   Succeeded
+  ```
+
+* bosh runtime-config 확인 및 수정
+
+  > 1. 명령어를 통해 bosh-dns include deployments 에 paasta가 있는지 확인한다.
+
+  $ bosh -e micro-bosh runtime-config Using environment '10.0.50.90' as client 'admin'
+
+  addons:
+
+  * include:
+
+    deployments:
+
+    * paasta
+
+      stemcell:
+
+    * os: ubuntu-trusty
+    * os: ubuntu-xenial
+
+      jobs:
+
+      * name: bosh-dns
+
+        properties:
+
+        api:
+
+        client:
+
+        tls: "\(\(/dns\_api\_client\_tls\)\)"
+
+        server:
+
+        tls: "\(\(/dns\_api\_server\_tls\)\)"
+
+        cache:
+
+        enabled: true
+
+        health:
+
+        client:
+
+        tls: "\(\(/dns\_healthcheck\_client\_tls\)\)"
+
+        enabled: true
+
+        server:
+
+        tls: "\(\(/dns\_healthcheck\_server\_tls\)\)"
+
+        release: bosh-dns
+
+        name: bosh-dns
+
+  * include:
+
+    stemcell:
+
+    * os: windows2012R2
+    * os: windows2016
+    * os: windows1803
+
+      jobs:
+
+      * name: bosh-dns-windows
+
+        properties:
+
+        api:
+
+        client:
+
+        tls: "\(\(/dns\_api\_client\_tls\)\)"
+
+        server:
+
+        tls: "\(\(/dns\_api\_server\_tls\)\)"
+
+        cache:
+
+        enabled: true
+
+        health:
+
+        client:
+
+        tls: "\(\(/dns\_healthcheck\_client\_tls\)\)"
+
+        enabled: true
+
+        server:
+
+        tls: "\(\(/dns\_healthcheck\_server\_tls\)\)"
+
+        release: bosh-dns
+
+        name: bosh-dns-windows
+
+        releases:
+
+  * name: bosh-dns
+
+    sha1: d1aadbda5d60c44dec4a429cda872cf64f6d8d0b
+
+    url: [https://bosh.io/d/github.com/cloudfoundry/bosh-dns-release?v=1.10.0](https://bosh.io/d/github.com/cloudfoundry/bosh-dns-release?v=1.10.0)
+
+    version: 1.10.0
+
+    variables:
+
+  * name: "/dns\_healthcheck\_tls\_ca"
+
+    options:
+
+    common\_name: dns-healthcheck-tls-ca
+
+    is\_ca: true
+
+    type: certificate
+
+  * name: "/dns\_healthcheck\_server\_tls"
+
+    options:
+
+    ca: "/dns\_healthcheck\_tls\_ca"
+
+    common\_name: health.bosh-dns
+
+    extended\_key\_usage:
+
+    * server\_auth
+
+      type: certificate
+
+  * name: "/dns\_healthcheck\_client\_tls"
+
+    options:
+
+    ca: "/dns\_healthcheck\_tls\_ca"
+
+    common\_name: health.bosh-dns
+
+    extended\_key\_usage:
+
+    * client\_auth
+
+      type: certificate
+
+  * name: "/dns\_api\_tls\_ca"
+
+    options:
+
+    common\_name: dns-api-tls-ca
+
+    is\_ca: true
+
+    type: certificate
+
+  * name: "/dns\_api\_server\_tls"
+
+    options:
+
+    ca: "/dns\_api\_tls\_ca"
+
+    common\_name: api.bosh-dns
+
+    extended\_key\_usage:
+
+    * server\_auth
+
+      type: certificate
+
+  * name: "/dns\_api\_client\_tls" options: ca: "/dns\_api\_tls\_ca" common\_name: api.bosh-dns extended\_key\_usage:
+
+    * client\_auth
+
+      type: certificate
 
     Succeeded
-   ```
-
-2. bosh runtime-config 확인 및 수정
-
-   > 1. 명령어를 통해 bosh-dns include deployments 에 paasta가 있는지 확인한다.
-
-   $ bosh -e micro-bosh runtime-config Using environment '10.0.50.90' as client 'admin'
-
-   addons:
-
-   * include:
-
-       deployments:
-
-     * paasta
-
-       stemcell:
-
-     * os: ubuntu-trusty
-     * os: ubuntu-xenial
-
-       jobs:
-
-       * name: bosh-dns
-
-         properties:
-
-         api:
-
-         client:
-
-           tls: "\(\(/dns\_api\_client\_tls\)\)"
-
-         server:
-
-           tls: "\(\(/dns\_api\_server\_tls\)\)"
-
-         cache:
-
-         enabled: true
-
-         health:
-
-         client:
-
-           tls: "\(\(/dns\_healthcheck\_client\_tls\)\)"
-
-         enabled: true
-
-         server:
-
-           tls: "\(\(/dns\_healthcheck\_server\_tls\)\)"
-
-         release: bosh-dns
-
-         name: bosh-dns
-
-   * include:
-
-       stemcell:
-
-     * os: windows2012R2
-     * os: windows2016
-     * os: windows1803
-
-       jobs:
-
-       * name: bosh-dns-windows
-
-         properties:
-
-         api:
-
-         client:
-
-           tls: "\(\(/dns\_api\_client\_tls\)\)"
-
-         server:
-
-           tls: "\(\(/dns\_api\_server\_tls\)\)"
-
-         cache:
-
-         enabled: true
-
-         health:
-
-         client:
-
-           tls: "\(\(/dns\_healthcheck\_client\_tls\)\)"
-
-         enabled: true
-
-         server:
-
-           tls: "\(\(/dns\_healthcheck\_server\_tls\)\)"
-
-         release: bosh-dns
-
-         name: bosh-dns-windows
-
-         releases:
-
-   * name: bosh-dns
-
-     sha1: d1aadbda5d60c44dec4a429cda872cf64f6d8d0b
-
-     url: [https://bosh.io/d/github.com/cloudfoundry/bosh-dns-release?v=1.10.0](https://bosh.io/d/github.com/cloudfoundry/bosh-dns-release?v=1.10.0)
-
-     version: 1.10.0
-
-     variables:
-
-   * name: "/dns\_healthcheck\_tls\_ca"
-
-     options:
-
-       common\_name: dns-healthcheck-tls-ca
-
-       is\_ca: true
-
-     type: certificate
-
-   * name: "/dns\_healthcheck\_server\_tls"
-
-     options:
-
-       ca: "/dns\_healthcheck\_tls\_ca"
-
-       common\_name: health.bosh-dns
-
-       extended\_key\_usage:
-
-     * server\_auth
-
-       type: certificate
-
-   * name: "/dns\_healthcheck\_client\_tls"
-
-     options:
-
-       ca: "/dns\_healthcheck\_tls\_ca"
-
-       common\_name: health.bosh-dns
-
-       extended\_key\_usage:
-
-     * client\_auth
-
-       type: certificate
-
-   * name: "/dns\_api\_tls\_ca"
-
-     options:
-
-       common\_name: dns-api-tls-ca
-
-       is\_ca: true
-
-     type: certificate
-
-   * name: "/dns\_api\_server\_tls"
-
-     options:
-
-       ca: "/dns\_api\_tls\_ca"
-
-       common\_name: api.bosh-dns
-
-       extended\_key\_usage:
-
-     * server\_auth
-
-       type: certificate
-
-   * name: "/dns\_api\_client\_tls" options: ca: "/dns\_api\_tls\_ca" common\_name: api.bosh-dns extended\_key\_usage:
-
-     * client\_auth
-
-       type: certificate
-
-     Succeeded
 
 > 1. bosh-dns include deployments에 paasta가 없다면 ~/workspace/paasta-4.6/deployment/bosh-deployment/runtime-configs 의 dns.yml 을 열어서 paasta를 추가해야한다.
 
@@ -1114,7 +1113,7 @@ deployment 파일에서 사용하는 network, vm\_type 등은 cloud config 를 �
 >
 > ## !/bin/bash
 >
-> bosh -d paasta-portal-api deploy paasta-portal-bosh2.0.yml  -o use-public-network-vsphere.yml  -v releases\_name="paasta-portal-api-release" -v stemcell\_os="ubuntu-xenial" -v stemcell\_version="315.36" -v stemcell\_alias="default" -v vm\_type\_tiny="portal\_tiny" -v vm\_type\_small="portal\_small" -v vm\_type\_medium="portal\_medium" -v internal\_networks\_name=service\_private  -v external\_networks\_name=service\_public  -v mariadb\_disk\_type="10GB" -v mariadb\_port="3306" -v mariadb\_user\_password="c1oudc0w" -v binary\_storage\_disk\_type="10GB" -v binary\_storage\_username="paasta-portal" -v binary\_storage\_password="password" -v binary\_storage\_tenantname="paasta-portal" -v binary\_storage\_email="email@email" -v haproxy\_public\_ip="115.68.46.179" -v cf\_db\_ips="10.30.50.4" -v cf\_db\_port="5524" -v cc\_db\_id="cloud\_controller" -v cc\_db\_password="cc\_admin" -v uaa\_db\_id="uaa" -v uaa\_db\_password="uaa\_admin" -v cf\_uaa\_url="[https://uaa.115.68.46.178.xip.io"\](https://uaa.115.68.46.178.xip.io"\) -v cf\_uaa\_logouturl="logout.do" -v cf\_api\_url="[https://api.115.68.46.178.xip.io"\](https://api.115.68.46.178.xip.io"\) -v cf\_admin\_password="admin" -v cf\_uaa\_admin\_client\_secret="password"  -v paas\_ta\_web\_user\_url="[http://portal-web-user.115.68.46.180.xip.io"\](http://portal-web-user.115.68.46.180.xip.io"\) -v abacus\_url="[http://abacus.255.255.255.255"\](http://abacus.255.255.255.255"\) -v monitoring\_api\_url="[http://monitoring.255.255.255.255"\](http://monitoring.255.255.255.255"\) -v mail\_smtp\_host="smtp.gmail.com" -v mail\_smtp\_port="465" -v mail\_smtp\_username="PaaS-TA" -v mail\_smtp\_password="password" -v mail\_smtp\_useremail="email@email.com" -v mail\_smtp\_properties\_auth="true" -v mail\_smtp\_properties\_starttls\_enable="true" -v mail\_smtp\_properties\_starttls\_required="true" -v mail\_smtp\_properties\_subject="PaaS-TA User Potal" -v infra\_admin=false
+> bosh -d paasta-portal-api deploy paasta-portal-bosh2.0.yml -o use-public-network-vsphere.yml -v releases\_name="paasta-portal-api-release" -v stemcell\_os="ubuntu-xenial" -v stemcell\_version="315.36" -v stemcell\_alias="default" -v vm\_type\_tiny="portal\_tiny" -v vm\_type\_small="portal\_small" -v vm\_type\_medium="portal\_medium" -v internal\_networks\_name=service\_private -v external\_networks\_name=service\_public -v mariadb\_disk\_type="10GB" -v mariadb\_port="3306" -v mariadb\_user\_password="c1oudc0w" -v binary\_storage\_disk\_type="10GB" -v binary\_storage\_username="paasta-portal" -v binary\_storage\_password="password" -v binary\_storage\_tenantname="paasta-portal" -v binary\_storage\_email="email@email" -v haproxy\_public\_ip="115.68.46.179" -v cf\_db\_ips="10.30.50.4" -v cf\_db\_port="5524" -v cc\_db\_id="cloud\_controller" -v cc\_db\_password="cc\_admin" -v uaa\_db\_id="uaa" -v uaa\_db\_password="uaa\_admin" -v cf\_uaa\_url="\[[https://uaa.115.68.46.178.xip.io"\]\(https://uaa.115.68.46.178.xip.io"\](https://uaa.115.68.46.178.xip.io"]%28https://uaa.115.68.46.178.xip.io"\)\) -v cf\_uaa\_logouturl="logout.do" -v cf\_api\_url="\[[https://api.115.68.46.178.xip.io"\]\(https://api.115.68.46.178.xip.io"\](https://api.115.68.46.178.xip.io"]%28https://api.115.68.46.178.xip.io"\)\) -v cf\_admin\_password="admin" -v cf\_uaa\_admin\_client\_secret="password" -v paas\_ta\_web\_user\_url="\[[http://portal-web-user.115.68.46.180.xip.io"\]\(http://portal-web-user.115.68.46.180.xip.io"\](http://portal-web-user.115.68.46.180.xip.io"]%28http://portal-web-user.115.68.46.180.xip.io"\)\) -v abacus\_url="\[[http://abacus.255.255.255.255"\]\(http://abacus.255.255.255.255"\](http://abacus.255.255.255.255"]%28http://abacus.255.255.255.255"\)\) -v monitoring\_api\_url="\[[http://monitoring.255.255.255.255"\]\(http://monitoring.255.255.255.255"\](http://monitoring.255.255.255.255"]%28http://monitoring.255.255.255.255"\)\) -v mail\_smtp\_host="smtp.gmail.com" -v mail\_smtp\_port="465" -v mail\_smtp\_username="PaaS-TA" -v mail\_smtp\_password="password" -v mail\_smtp\_useremail="email@email.com" -v mail\_smtp\_properties\_auth="true" -v mail\_smtp\_properties\_starttls\_enable="true" -v mail\_smtp\_properties\_starttls\_required="true" -v mail\_smtp\_properties\_subject="PaaS-TA User Potal" -v infra\_admin=false
 
 ```text
 > release_version : 릴리즈 버전을 입력한다. $bosh releases 명령문으로 확인가능
@@ -2025,11 +2024,11 @@ Feature user\_org\_creation Enabled.
 
 1. uaac client add portalclient –s “portalclient Secret”
 
-   > --redirect\_uri "사용자포탈 Url, 사용자포탈 Url/callback" $ uaac client add portalclient -s xxxxx --redirect\_uri "[http://portal-web-user.xxxx.xip.io](http://portal-web-user.xxxx.xip.io), [http://portal-web-user.xxxx.xip.io/callback](http://portal-web-user.xxxx.xip.io/callback)"  --scope "cloud\_controller\_service\_permissions.read , openid , cloud\_controller.read , cloud\_controller.write , cloud\_controller.admin"  --authorized\_grant\_types "authorization\_code , client\_credentials , refresh\_token"  --authorities="uaa.resource"  --autoapprove="openid , cloud\_controller\_service\_permissions.read"
+   > --redirect\_uri "사용자포탈 Url, 사용자포탈 Url/callback" $ uaac client add portalclient -s xxxxx --redirect\_uri "[http://portal-web-user.xxxx.xip.io](http://portal-web-user.xxxx.xip.io), [http://portal-web-user.xxxx.xip.io/callback](http://portal-web-user.xxxx.xip.io/callback)" --scope "cloud\_controller\_service\_permissions.read , openid , cloud\_controller.read , cloud\_controller.write , cloud\_controller.admin" --authorized\_grant\_types "authorization\_code , client\_credentials , refresh\_token" --authorities="uaa.resource" --autoapprove="openid , cloud\_controller\_service\_permissions.read"
    >
    > ![](../../../.gitbook/assets/Paas-TA-Portal_28%20%284%29.jpg)
 
-2. uaac portalclient가 url이 잘못 등록되어있다면 해당 화면과 같이 redirect오류가 발생한다. 
+2. uaac portalclient가 url이 잘못 등록되어있다면 해당 화면과 같이 redirect오류가 발생한다.
 3. uaac client update를 통해 url을 수정해야한다.
 
    > $ uaac target $ uaac token client get Client ID: admin Client secret: **\***
@@ -2129,7 +2128,7 @@ Paas-TA Portal 각각 Instance의 log를 확인 할 수 있다. 1. 로그를 확
    To run a command as administrator (user "root"), use "sudo <command>".
    See "man sudo_root" for details.
 
-   paas-ta-portal-api/48fa0c5a-52eb-4ae8-a7b9-91275615318c:~$ 
+   paas-ta-portal-api/48fa0c5a-52eb-4ae8-a7b9-91275615318c:~$
 ```
 
 1. 로그파일이 있는 폴더로 이동한다.
@@ -2218,7 +2217,7 @@ Paas-TA Portal 설치 후에 관리자 포탈에서 빌드팩, 서비스팩을 �
 
 **PaaS-TA 에서 제공하고있는 모니터링을 미리 설치를 한 후에 진행해야 한다.**
 
-1. Paas-TA Portal 설치전 2.3. PaaS-TA Portal Deployment 배포의 deploy-{Iaas}.sh 설정단계에서 
+1. Paas-TA Portal 설치전 2.3. PaaS-TA Portal Deployment 배포의 deploy-{Iaas}.sh 설정단계에서
 
    monitoring\_api\_url= 모니터링 url, portal\_webuser\_monitoring = true로 적용한 후 배포를 하면 정상적으로
 

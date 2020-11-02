@@ -95,15 +95,15 @@ BOSH는 클라우드 환경에 서비스를 배포하고 소프트웨어 릴리�
 2. “인프라 환경 관리” -&gt; AWS 관리 화면으로 이동한다.
 3. 아래는 AWS 관리 화면에서 실제 PaaS-TA 설치에 필요한 AWS 리소스의 환경이다.
 
-|  인프라 환경 |  메뉴 |
+| 인프라 환경 | 메뉴 |
 | :--- | :--- |
-|  AWS 리소스 관리 |  VPC 관리 |
-|  Subnet 관리 |  |
-|  Security Group 관리 |  |
-|  Elastic IP 관리 |  |
-|  Key Pair 관리 |  |
-|  NAT Gateway 관리 |  |
-|  Route Table 관리 |  |
+| AWS 리소스 관리 | VPC 관리 |
+| Subnet 관리 |  |
+| Security Group 관리 |  |
+| Elastic IP 관리 |  |
+| Key Pair 관리 |  |
+| NAT Gateway 관리 |  |
+| Route Table 관리 |  |
 
 ![](../../../.gitbook/assets/aws_infra_dashboard%20%282%29.png)
 
@@ -297,13 +297,13 @@ BOSH는 클라우드 환경에 서비스를 배포하고 소프트웨어 릴리�
 2. “인프라 환경 관리” -&gt; Openstack 관리 화면으로 이동한다.
 3. 아래는 Opensack 관리 화면에서 실제 PaaS-TA 설치에 필요한 Openstack 리소스의 환경이다.
 
-|  인프라 환경 |  메뉴 |
+| 인프라 환경 | 메뉴 |
 | :--- | :--- |
-|  Openstack 리소스 관리 |  Network 관리 |
-|  Router 관리 |  |
-|  Key Pair 관리 |  |
-|  Floating IP 관리 |  |
-|  Security Group 관리 |  |
+| Openstack 리소스 관리 | Network 관리 |
+| Router 관리 |  |
+| Key Pair 관리 |  |
+| Floating IP 관리 |  |
+| Security Group 관리 |  |
 
 ![](../../../.gitbook/assets/openstack_infra_dashboard%20%284%29.png)
 
@@ -426,15 +426,15 @@ BOSH는 클라우드 환경에 서비스를 배포하고 소프트웨어 릴리�
 
 | BOSH 릴리즈 | CPI 릴리즈 | BPM | 스템셀 |
 | :--- | :--- | :--- | :--- |
-| bosh/267.8.0 |  bosh-aws-cpi/72  bosh-openstack-cpi/39 | bpm/0.9.0 |  bosh-aws-xen-hvm-ubuntu-trusty-go\_agent/3586.24  bosh-openstack-kvm-ubuntu-trusty-go\_agent/3586.24 |
-| bosh/268.2.0 |  bosh-aws-cpi/72  bosh-openstack/39 |  bpm/0.12.3 |  bosh-aws-xen-hvm-ubuntu-xenial-go\_agent/97.28  bosh-openstack-kvm-ubuntu-xenial-go\_agent/97.28 |
-| bosh/270.2.0 |  bosh-aws-cpi/75  bosh-openstack-cpi/43 | bpm/1.1.0 |  bosh-aws-xen-hvm-ubuntu-xenial-go\_agent/315.64  bosh-openstack-kvm-ubuntu-xenial-go\_agent/315.64 |
+| bosh/267.8.0 | bosh-aws-cpi/72  bosh-openstack-cpi/39 | bpm/0.9.0 | bosh-aws-xen-hvm-ubuntu-trusty-go\_agent/3586.24  bosh-openstack-kvm-ubuntu-trusty-go\_agent/3586.24 |
+| bosh/268.2.0 | bosh-aws-cpi/72  bosh-openstack/39 | bpm/0.12.3 | bosh-aws-xen-hvm-ubuntu-xenial-go\_agent/97.28  bosh-openstack-kvm-ubuntu-xenial-go\_agent/97.28 |
+| bosh/270.2.0 | bosh-aws-cpi/75  bosh-openstack-cpi/43 | bpm/1.1.0 | bosh-aws-xen-hvm-ubuntu-xenial-go\_agent/315.64  bosh-openstack-kvm-ubuntu-xenial-go\_agent/315.64 |
 
 플랫폼 설치 자동화를 통해 배포 가능한 CF-Deployment 버전은 아래와 같으며, 아래의 릴리즈 버전으로 다운로드&업로드 및 설치한다.
 
 | 릴리즈 버전 | 스템셀 |
 | :--- | :--- |
-| cf-deployment/2.7.0 |  bosh-aws-xen-hvm-ubuntu-trusty-go\_agent/3586.25  bosh-openstack-kvm-ubuntu-trusty-go\_agent/3586.25 |
+| cf-deployment/2.7.0 | bosh-aws-xen-hvm-ubuntu-trusty-go\_agent/3586.25  bosh-openstack-kvm-ubuntu-trusty-go\_agent/3586.25 |
 | cf-deployment/3.2.0 | bosh-aws-xen-hvm-ubuntu-trusty-go\_agent/3586.27  bosh-openstack-kvm-ubuntu-trusty-go\_agent/3586.27 |
 | cf-deployment/4.0.0 | bosh-aws-xen-hvm-ubuntu-trusty-go\_agent/3586.40  bosh-openstack-kvm-ubuntu-trusty-go\_agent/3586.40 |
 | cf-deployment/5.0.0 | bosh-aws-xen-hvm-ubuntu-xenial-go\_agent/97.18  bosh-openstack-kvm-ubuntu-xenial-go\_agent/97.18 |
@@ -459,7 +459,7 @@ BOSH는 클라우드 환경에 서비스를 배포하고 소프트웨어 릴리�
 
 환경 설정 관리 화면 이동 컨테이너를 클릭하여 플랫폼 설치에 필요한 각 계정 정보를 등록한다.
 
-**1.    AWS 환경 설정 등록**
+**1. AWS 환경 설정 등록**
 
 1. AWS 환경 설정 관리 화면에서는 “등록” 버튼을 클릭한다.
 2. AWS 환경 설정 등록 팝업 화면에서 플랫폼 설치에 필요한 인프라 환경 설정 정보를 입력하고 “확인” 버튼을 클릭한다.
@@ -476,7 +476,7 @@ BOSH는 클라우드 환경에 서비스를 배포하고 소프트웨어 릴리�
 * Keypair Name: Keypair 명
 * Private Key File: 개인 키 파일 업로드 정보\(Keypair의 Private Key\)
 
-**2.    Openstack 환경 설정 등록**
+**2. Openstack 환경 설정 등록**
 
 1. Openstack 환경 설정 관리 화면에서는 “등록” 버튼을 클릭한다.
 2. Openstack 환경 설정 등록 팝업 화면에서 플랫폼 설치에 필요한 인프라 환경 설정 정보를 입력하고 “확인” 버튼을 클릭한다.
@@ -499,8 +499,8 @@ BOSH는 클라우드 환경에 서비스를 배포하고 소프트웨어 릴리�
 
 | 인프라 환경 | 참조 사이트 |
 | :--- | :--- |
-| AWS | https://bosh.io/stemcells/bosh-aws-xen-hvm-ubuntu-xenial-go\_agent |
-| Openstack | https://bosh.io/stemcells/bosh-openstack-kvm-ubuntu-xenial-go\_agent |
+| AWS | [https://bosh.io/stemcells/bosh-aws-xen-hvm-ubuntu-xenial-go\_agent](https://bosh.io/stemcells/bosh-aws-xen-hvm-ubuntu-xenial-go_agent) |
+| Openstack | [https://bosh.io/stemcells/bosh-openstack-kvm-ubuntu-xenial-go\_agent](https://bosh.io/stemcells/bosh-openstack-kvm-ubuntu-xenial-go_agent) |
 
 **본 가이드에서는 버전 Xenial 315.64를 다운로드 하였다.**
 
@@ -532,8 +532,8 @@ BOOTSTRAP을 설치하기 위해서는 BOSH 릴리즈, BOSH CPI릴리즈, OS-CON
 
 | 인프라 환경 | 참조 사이트 |
 | :--- | :--- |
-| AWS | https://bosh.io/releases/github.com/cloudfoundry/bosh-aws-cpi-release?all=1 |
-| Openstack | https://bosh.io/releases/github.com/cloudfoundry/bosh-openstack-cpi-release?all=1 |
+| AWS | [https://bosh.io/releases/github.com/cloudfoundry/bosh-aws-cpi-release?all=1](https://bosh.io/releases/github.com/cloudfoundry/bosh-aws-cpi-release?all=1) |
+| Openstack | [https://bosh.io/releases/github.com/cloudfoundry/bosh-openstack-cpi-release?all=1](https://bosh.io/releases/github.com/cloudfoundry/bosh-openstack-cpi-release?all=1) |
 
 ![](../../../.gitbook/assets/boshcpi_release_add%20%283%29.png)
 

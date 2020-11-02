@@ -44,16 +44,15 @@
 
 ### 1.4 참고 자료
 
-> [http://bosh.io/docs](http://bosh.io/docs)   
->  [http://docs.cloudfoundry.org/](http://docs.cloudfoundry.org/)
+> [http://bosh.io/docs](http://bosh.io/docs)  
+> [http://docs.cloudfoundry.org/](http://docs.cloudfoundry.org/)
 
 ## 2. 배포 파이프라인 서비스팩 설치
 
 ### 2.1 설치 전 준비사항
 
 본 설치 가이드는 Linux 환경에서 설치하는 것을 기준으로 하였다. 서비스팩 설치를 위해서는 먼저 BOSH CLI v2 가 설치 되어 있어야 하고 BOSH 에 로그인이 되어 있어야 한다.  
- BOSH CLI v2 가 설치 되어 있지 않을 경우 먼저 BOSH2.0 설치 가이드 문서를 참고 하여 BOSH CLI v2를 설치를 하고 사용법을 숙지 해야 한다.  
-
+BOSH CLI v2 가 설치 되어 있지 않을 경우 먼저 BOSH2.0 설치 가이드 문서를 참고 하여 BOSH CLI v2를 설치를 하고 사용법을 숙지 해야 한다.
 
 * BOSH2.0 사용자 가이드
 
@@ -1848,7 +1847,7 @@ Successfully fetched token via client credentials grant. Target: [https://uaa.11
   --autoapprove="openid , cloud_controller_service_permissions.read"`
 ```
 
-$ uaac client add pipeclient -s clientsecret --redirect\_uri "[http://115.68.47.175:8084](http://115.68.47.175:8084) [http://115.68.47.175:8084/dashboard](http://115.68.47.175:8084/dashboard)"  --scope "cloud\_controller\_service\_permissions.read , openid , cloud\_controller.read , cloud\_controller.write , cloud\_controller.admin"  --authorized\_grant\_types "authorization\_code , client\_credentials , refresh\_token"  --authorities="uaa.resource"  --autoapprove="openid , cloud\_controller\_service\_permissions.read"
+$ uaac client add pipeclient -s clientsecret --redirect\_uri "[http://115.68.47.175:8084](http://115.68.47.175:8084) [http://115.68.47.175:8084/dashboard](http://115.68.47.175:8084/dashboard)" --scope "cloud\_controller\_service\_permissions.read , openid , cloud\_controller.read , cloud\_controller.write , cloud\_controller.admin" --authorized\_grant\_types "authorization\_code , client\_credentials , refresh\_token" --authorities="uaa.resource" --autoapprove="openid , cloud\_controller\_service\_permissions.read"
 
 \`\`\`
 

@@ -1,5 +1,7 @@
 # Table of Contents
 
+## Table of Contents
+
 1. [문서 개요](on-demand_deployment_guide.md#1)
    * [1.1. 목적](on-demand_deployment_guide.md#11)
    * [1.2. 범위](on-demand_deployment_guide.md#12)
@@ -18,25 +20,25 @@
    * [4.4. On-Demand 릴리즈 개발가이드](on-demand_deployment_guide.md#44)
    * [4.5. On-Demand Deployment 개발가이드](on-demand_deployment_guide.md#45)
 
-## 1. 문서 개요
+### 1. 문서 개요
 
-### 1.1. 목적
+#### 1.1. 목적
 
 본 문서\(개발가이드\_온디멘드\)는 개방형 클라우드 플랫폼 프로젝트의 온디멘드 서비스 개발 표준을 가이드하는 문서로써, 온디멘드 서비스 아키텍처부터 테스트 까지의 내용을 포함하고 있다.
 
 본 가이드 문서를 통해 온디멘드 서비스에 대한 이해도를 높여, 온디멘드 서비스 개발의 효율성과 유지보수성을 향상시키고자 한다. 또한 제시된 표준에 따라 개발된 온디멘드 서비스는 개방형 클라우드 플랫폼에서의 기능성\(Functionality\)과 통합성\(Integrability\)를 보장한다.
 
-### 1.2. 범위
+#### 1.2. 범위
 
 본 문서의 범위는 개방형 클라우드 플랫폼 프로젝트와 관련된 온디멘드 서비스 개발에 대한 내용으로 한정하며, 기타 오픈소스 도입의 경우 예외를 둔다.
 
-### 1.3. 참고자료
+#### 1.3. 참고자료
 
-## 2. 온디멘드 서비스 개요
+### 2. 온디멘드 서비스 개요
 
 온디멘드 서비스 브로커는 자바 스프링 프레임워크를 사용하여 개발한다. 온디멘드는 사용자가 서비스 요청시 공급자가 서비스를 생산해 제공하기 때문에 무분별한 자원 낭비를 방지한다. 현재 온디멘드 서비스는 데이케이트 형식으로만 제공한다. 본 장에서는 사용되는 용어들을 정의하고, 온디멘드 아키텍처를 설명한다.
 
-### 2.1. 온디멘드 서비스 아키텍쳐 및 프로세스
+#### 2.1. 온디멘드 서비스 아키텍쳐 및 프로세스
 
 > ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Deployment-Guide/images/On-Demand/1.png)
 
@@ -57,32 +59,32 @@
 
 사용자가 서비스 신청을 하면 서비스를 구동하기위한 VM생성을 진행한다. 진행중 서비스는 준비상태로 전환되며 VM이 생성완료되고 난 후 해당 서비스는 완료상태로 전환되며 사용자에게 서비스를 제공한다.
 
-### 2.2. 용어 정의
+#### 2.2. 용어 정의
 
 아키텍처 설명에 앞서, 본 문서에서 사용하는 몇가지 용어들을 정리하면 다음과 같다.
 
-* **온디멘드\(On-Demand\)**: '요구만 있으면 \(언제든지\)'~ 즉, 
+* **온디멘드\(On-Demand\)**: '요구만 있으면 \(언제든지\)'~ 즉,
 
-  공급 중심이 아니라 수요가 모든 것을 결정하는 시스템이나 
+  공급 중심이 아니라 수요가 모든 것을 결정하는 시스템이나
 
   전략 등을 총칭한다.
 
 * **어플리케이션\(application\)**: 개방형 클라우드 플랫폼에서 어플리케이션은 배포의 단위이다. 즉, 소스코드 또는 패키징된 형태\(예를 들면, .war\)의 파일과 배포 시 사용할 부가정보\(meta\)들을 정의한 파일의 조합을 의미한다.
 * **서비스\(Service\)**: 서비스는 Service Broker API 라고 불리우는 cloud controller 클라이언트 API를 구현하여 개방형 클라우드 플랫폼에서 사용된다. Services API는 독립적인 cloud controller API의 버전이다. 이는 플랫폼에서 외부 application을 이용 가능하게 한다.
 
-## 3. 온디멘드 서비스 브로커 API
+### 3. 온디멘드 서비스 브로커 API
 
 개방형 클라우드 플랫폼 Service API는 Cloud Controller와 Service Broker 사이의 규약을 정의한다. Broker는 HTTP \(or HTTPS\) endpoints URI 형식으로 구현된다. 하나 이상의 Service가 하나의 Broker 에 의해 제공 될 수 있고, 로드 밸런싱과 수평 확장성이 가능하게 제공 될 수 있다.
 
-#### 3.1. Service Architecture
+**3.1. Service Architecture**
 
 > ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Deployment-Guide/images/On-Demand/3.png) Services 는 Service Broker API 라고 불리우는 cloud controller 클라이언트 API를 구현하여 개방형 클라우드 플랫폼에서 사용된다. Services API는 독립적인 cloud controller API의 버전이다. 이는 플랫폼에서 외부 application을 이용 가능하게 한다. \(database, message queue, rest endpoint , etc\)
 
-#### 3.2. Service Broker API Architecture
+**3.2. Service Broker API Architecture**
 
 > ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Deployment-Guide/images/On-Demand/4.png) 개방형 클라우드 플랫폼 Service API는 Cloud Controller 와 Service Broker 사이의 규약 \(catalog, provision, deprovision, update provision plan, bind, unbind\)이고 Service Broker 는 RESTful API 로 구현하고 Cloud Controller 에 등록한다.
 
-#### 3.3. Pivotal\(Cloud Foundry\) Marketplace Model
+**3.3. Pivotal\(Cloud Foundry\) Marketplace Model**
 
 > ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Deployment-Guide/images/On-Demand/5.png) AppDirect: 클라우드 서비스 marketplace 및 관리 솔루션의 선두 업체이고 많은 글로벌 회사의 marketplace를 구축하였다. \(삼성, Cloud Foundry, ETC\) AppDirect는 Cloud Foundry 서비스 중개\(brokerage\) 기능과 부가 서비스를 제공한다.
 
@@ -90,9 +92,9 @@ Service Provider 및 Cloud Foundry 통합에 관련 설명
 
 > ![](https://github.com/jhuhm13579/trans-test/tree/c3fa60c3f2804eba4cf4bb19f90449a85a66a625/Deployment-Guide/images/On-Demand/6.png)
 >
-> ## 4. 온디멘드 서비스 브로커 API 개발 가이드
+> ### 4. 온디멘드 서비스 브로커 API 개발 가이드
 
-#### 4.1. 개발 가이드
+**4.1. 개발 가이드**
 
 서비스의 구현 방법은 서비스 제공자\(Provider\) 와 개발자\(developer\)의 몫이다. 개방형 클라우드 플랫폼은 서비스 제공자가 6가지의 Service Broker API를 구현해야 한다. 이때 2.4 Pivotal Marketplace Model를 이용해서 AppDirect 에서 제공중인 서비스 제공자와 협의 하여 AppDirect 의 중개 기능을 이용해서 제공할수도 있다. 또한 Broker 는 별도의 애플리케이션으로 구현하든지 기존 서비스에 필요한 HTTP endpoint를 추가함으로써 구현 될 수 있다.
 
@@ -165,7 +167,7 @@ instance:
 
 1. Bosh Api Setting
 
-   1.1.   BoshDirector
+   1.1. BoshDirector
 
    Bosh Director에 로그인 및 토큰을 받아 저장 및 Bosh API 접근가능한 오브젝트를 생성한다.
 
@@ -194,7 +196,7 @@ OAuth2AccessToken
 
    2.1 VMInstance
 
-    Bosh에 배포된 VMInstance 정보를 가져온다.
+   Bosh에 배포된 VMInstance 정보를 가져온다.
 
 **parameter**
 
@@ -331,7 +333,7 @@ Get bosh_url + "/tasks/" + task_id + "/output?type=debug"
 **Response**
 
 ```text
-String 
+String
 ```
 
 **CreateInstance**
@@ -1236,179 +1238,197 @@ BOSH Deploymentmanifest 는 components 요소 및 배포의 속성을 정의한Y
 ```text
 On-Demand-Redis property.yml(예시)
 ```
-#!/bin/bash
 
----
-### On-Demand Bosh Deployment Name Setting ###
-deployment_name: on-demand-service-broker                       #On-Demand Deployment Name
+## !/bin/bash
 
-### Main Stemcells Setting ###
-stemcell_os: ubuntu-xenial                                      # Deployment Main Stemcell OS
-stemcell_version: latest                                       # Main Stemcell Version
-stemcell_alias: default                                         # Main Stemcell Alias
+#### On-Demand Bosh Deployment Name Setting \#\#\#
 
-### On-Demand Release Deployment Setting ### 
-releases_name : on-demand-redis-release                               # On-Demand Release Name
-internal_networks_name : default                        # Some Network From Your 'bosh cloud-config(cc)'
-mariadb_disk_type : 2GB                                        # MariaDB Disk Type 'bosh cloud-config(cc)'
-broker_port : 8080                                              # On-Demand Broker Server Port
-bosh_client_admin_id: admin                                     # Bosh Client Admin ID
-bosh_client_admin_secret: bosh_clinet_password                  # Bosh Client Admin Secret 'echo ${BOSH_CLIENT_SECRET}'
-bosh_url: https://xx.xx.xx.xxx                                  # Bosh URL 'bosh env'
-bosh_director_port: 25555                                       # Bosh API Port
-bosh_oauth_port: 8443                                           # Bosh Oauth Port
+deployment\_name: on-demand-service-broker \#On-Demand Deployment Name
 
-cloudfoundry_url: xx.xxx.xx.xxx.xip.io                          # CloudFoundry URL
-cloudfoundry_sslSkipValidation: true                            # CloudFoundry Login SSL Validation
-cloudfoundry_admin_id: admin                                    # CloudFoundry Admin ID
-cloudfoundry_admin_password: admin                         # CloudFoundry Admin Password
+#### Main Stemcells Setting \#\#\#
 
-### On-Demand Service Property(Changes are possible) ###
-mariadb_port: 3306                                              # MariaDB Server Port
-mariadb_user_password: DB_password                              # MariaDB Root Password
+stemcell\_os: ubuntu-xenial \# Deployment Main Stemcell OS stemcell\_version: latest \# Main Stemcell Version stemcell\_alias: default \# Main Stemcell Alias
 
-### On-Demand Dedicated Service Instance Properties ###         #서비스에 적용시킬 프로퍼티 추가 기입
+#### On-Demand Release Deployment Setting \#\#\#
 
-on_demand_service_instance_name: redis                          # On-Demand Service Instance Name
-service_password: service_password
-service_port: 6379
+releases\_name : on-demand-redis-release \# On-Demand Release Name internal\_networks\_name : default \# Some Network From Your 'bosh cloud-config\(cc\)' mariadb\_disk\_type : 2GB \# MariaDB Disk Type 'bosh cloud-config\(cc\)' broker\_port : 8080 \# On-Demand Broker Server Port bosh\_client\_admin\_id: admin \# Bosh Client Admin ID bosh\_client\_admin\_secret: bosh\_clinet\_password \# Bosh Client Admin Secret 'echo ${BOSH\_CLIENT\_SECRET}' bosh\_url: [https://xx.xx.xx.xxx](https://xx.xx.xx.xxx) \# Bosh URL 'bosh env' bosh\_director\_port: 25555 \# Bosh API Port bosh\_oauth\_port: 8443 \# Bosh Oauth Port
 
-```
+cloudfoundry\_url: xx.xxx.xx.xxx.xip.io \# CloudFoundry URL cloudfoundry\_sslSkipValidation: true \# CloudFoundry Login SSL Validation cloudfoundry\_admin\_id: admin \# CloudFoundry Admin ID cloudfoundry\_admin\_password: admin \# CloudFoundry Admin Password
 
+#### On-Demand Service Property\(Changes are possible\) \#\#\#
+
+mariadb\_port: 3306 \# MariaDB Server Port mariadb\_user\_password: DB\_password \# MariaDB Root Password
+
+#### On-Demand Dedicated Service Instance Properties \#\#\#         \#서비스에 적용시킬 프로퍼티 추가 기입
+
+on\_demand\_service\_instance\_name: redis \# On-Demand Service Instance Name service\_password: service\_password service\_port: 6379
+
+```text
 On-Demand-Redis paasta_on_demand_service_broker(예시)
 ```
----
-name: "((deployment_name))"        #서비스 배포이름(필수) bosh deployments 로 확인 가능한 이름
+
+name: "\(\(deployment\_name\)\)" \#서비스 배포이름\(필수\) bosh deployments 로 확인 가능한 이름
 
 stemcells:
-- alias: "((stemcell_alias))"
-  os: "((stemcell_os))"
-  version: "((stemcell_version))"
+
+* alias: "\(\(stemcell\_alias\)\)"
+
+  os: "\(\(stemcell\_os\)\)"
+
+  version: "\(\(stemcell\_version\)\)"
 
 addons:
-- name: bpm
+
+* name: bpm
+
   jobs:
-  - name: bpm
+
+  * name: bpm
+
     release: bpm
 
 variables:
-- name: redis-password
+
+* name: redis-password
+
   type: password
 
 releases:
-- name: bpm
+
+* name: bpm
+
   sha1: f2bd126b17b3591160f501d88d79ccf0aba1ae54
-  url: git+https://github.com/cloudfoundry-incubator/bpm-release
+
+  url: git+[https://github.com/cloudfoundry-incubator/bpm-release](https://github.com/cloudfoundry-incubator/bpm-release)
+
   version: 1.0.3
-- name: "((releases_name))"                  # 서비스 릴리즈 이름(필수) bosh releases로 확인 가능
-  version: "1.0"                                             # 서비스 릴리즈 버전(필수):latest 시 업로드된 서비스 릴리즈 최신버전
 
-update:
-  canaries: 1                                               # canary 인스턴스 수(필수)
-  canary_watch_time: 5000-120000                            # canary 인스턴스가 수행하기 위한 대기 시간(필수)
-  update_watch_time: 5000-120000                            # non-canary 인스턴스가 수행하기 위한 대기 시간(필수)
-  max_in_flight: 1                                          # non-canary 인스턴스가 병렬로 update 하는 최대 개수(필수)
-  serial: false
+* name: "\(\(releases\_name\)\)"                  \# 서비스 릴리즈 이름\(필수\) bosh releases로 확인 가능
 
-instance_groups:
-########## INFRA ##########
-- name: mariadb
+  version: "1.0"                                             \# 서비스 릴리즈 버전\(필수\):latest 시 업로드된 서비스 릴리즈 최신버전
+
+update: canaries: 1 \# canary 인스턴스 수\(필수\) canary\_watch\_time: 5000-120000 \# canary 인스턴스가 수행하기 위한 대기 시간\(필수\) update\_watch\_time: 5000-120000 \# non-canary 인스턴스가 수행하기 위한 대기 시간\(필수\) max\_in\_flight: 1 \# non-canary 인스턴스가 병렬로 update 하는 최대 개수\(필수\) serial: false
+
+instance\_groups:
+
+**\#\#\#\# INFRA \#\#\#\#\#\#\#\#\#\#**
+
+* name: mariadb
+
   azs:
-  - z5
-  instances: 1
-  vm_type: medium 
-  stemcell: "((stemcell_alias))"
-  persistent_disk_type: "((mariadb_disk_type))"
-  networks:
-  - name: "((internal_networks_name))"
-  jobs:
-  - name: mariadb
-    release: "((releases_name))"
-  syslog_aggregator: null
 
-######## BROKER ########
+  * z5
 
-- name: paas-ta-on-demand-broker
+    instances: 1
+
+    vm\_type: medium 
+
+    stemcell: "\(\(stemcell\_alias\)\)"
+
+    persistent\_disk\_type: "\(\(mariadb\_disk\_type\)\)"
+
+    networks:
+
+  * name: "\(\(internal\_networks\_name\)\)"
+
+    jobs:
+
+  * name: mariadb
+
+    release: "\(\(releases\_name\)\)"
+
+    syslog\_aggregator: null
+
+**\#\# BROKER \#\#\#\#\#\#\#\#**
+
+* name: paas-ta-on-demand-broker
+
   azs:
-  - z5
-  instances: 1
-  vm_type: service_medium
-  stemcell: "((stemcell_alias))"
-  networks:
-  - name: "((internal_networks_name))"
-  jobs:
-  - name: paas-ta-on-demand-broker
-    release: "((releases_name))"
-  syslog_aggregator: null
-- name: redis
+
+  * z5
+
+    instances: 1
+
+    vm\_type: service\_medium
+
+    stemcell: "\(\(stemcell\_alias\)\)"
+
+    networks:
+
+  * name: "\(\(internal\_networks\_name\)\)"
+
+    jobs:
+
+  * name: paas-ta-on-demand-broker
+
+    release: "\(\(releases\_name\)\)"
+
+    syslog\_aggregator: null
+
+* name: redis
+
   azs: 
-  - z5
-  instances: 0
-  vm_type: medium
-  stemcell: "((stemcell_alias))"
-  persistent_disk: 1024
-  networks:
-  - name: "((internal_networks_name))"
-  jobs:
-  - name: redis
-    release: "((releases_name))"
-- name: sanity-tests
+
+  * z5
+
+    instances: 0
+
+    vm\_type: medium
+
+    stemcell: "\(\(stemcell\_alias\)\)"
+
+    persistent\_disk: 1024
+
+    networks:
+
+  * name: "\(\(internal\_networks\_name\)\)"
+
+    jobs:
+
+  * name: redis
+
+    release: "\(\(releases\_name\)\)"
+
+* name: sanity-tests
+
   azs:
-  - z5
-  instances: 1
-  lifecycle: errand
-  vm_type: medium
-  stemcell: "((stemcell_alias))"
-  networks: 
-  - name: "((internal_networks_name))"
-  jobs:
-  - name: sanity-tests
-    release: "((releases_name))"
 
-######### COMMON PROPERTIES ##########
-properties:
-  broker:
-    server:
-      port: "((broker_port))"
-    datasource:
-      password: "((mariadb_user_password))"
-    service_instance:
-      guid: "((service_instance_guid))"
-      name: "((service_instance_name))"
-      bullet:
-        name: "((service_instance_bullet_name))"
-        desc: "((service_instance_bullet_desc))"
-      plan: 
-        id: "((service_instance_plan_guid))"
-        name: "((service_instance_plan_name))"
-        desc: "((service_instance_plan_desc))"
-      org_limitation: "((service_instance_org_limitation))"
-      space_limitation: "((service_instance_space_limitation))"
-    bosh:
-      client_id: "((bosh_client_admin_id))"
-      client_secret: "((bosh_client_admin_secret))"
-      url: ((bosh_url)):((bosh_director_port))
-      oauth_url: ((bosh_url)):((bosh_oauth_port))
-      deployment_name: "((deployment_name))"
-      instance_name: "((on_demand_service_instance_name))"
-    cloudfoundry:
-      url: "((cloudfoundry_url))"
-      sslSkipValidation: "((cloudfoundry_sslSkipValidation))"
-      admin:
-        id: "((cloudfoundry_admin_id))"
-        password: "((cloudfoundry_admin_password))"
-  mariadb:                                                # MARIA DB SERVER 설정 정보
-    port: "((mariadb_port))"                                            # MARIA DB PORT 번호
-    admin_user:
-      password: "((mariadb_user_password))"                             # MARIA DB ROOT 계정 비밀번호
-    host_names:
-    - mariadb0
-######### SERVICE PROPERTIES #################
+  * z5
+
+    instances: 1
+
+    lifecycle: errand
+
+    vm\_type: medium
+
+    stemcell: "\(\(stemcell\_alias\)\)"
+
+    networks: 
+
+  * name: "\(\(internal\_networks\_name\)\)"
+
+    jobs:
+
+  * name: sanity-tests
+
+    release: "\(\(releases\_name\)\)"
+
+**\#\#\# COMMON PROPERTIES \#\#\#\#\#\#\#\#\#\#**
+
+properties: broker: server: port: "\(\(broker\_port\)\)" datasource: password: "\(\(mariadb\_user\_password\)\)" service\_instance: guid: "\(\(service\_instance\_guid\)\)" name: "\(\(service\_instance\_name\)\)" bullet: name: "\(\(service\_instance\_bullet\_name\)\)" desc: "\(\(service\_instance\_bullet\_desc\)\)" plan: id: "\(\(service\_instance\_plan\_guid\)\)" name: "\(\(service\_instance\_plan\_name\)\)" desc: "\(\(service\_instance\_plan\_desc\)\)" org\_limitation: "\(\(service\_instance\_org\_limitation\)\)" space\_limitation: "\(\(service\_instance\_space\_limitation\)\)" bosh: client\_id: "\(\(bosh\_client\_admin\_id\)\)" client\_secret: "\(\(bosh\_client\_admin\_secret\)\)" url: \(\(bosh\_url\)\):\(\(bosh\_director\_port\)\) oauth\_url: \(\(bosh\_url\)\):\(\(bosh\_oauth\_port\)\) deployment\_name: "\(\(deployment\_name\)\)" instance\_name: "\(\(on\_demand\_service\_instance\_name\)\)" cloudfoundry: url: "\(\(cloudfoundry\_url\)\)" sslSkipValidation: "\(\(cloudfoundry\_sslSkipValidation\)\)" admin: id: "\(\(cloudfoundry\_admin\_id\)\)" password: "\(\(cloudfoundry\_admin\_password\)\)" mariadb: \# MARIA DB SERVER 설정 정보 port: "\(\(mariadb\_port\)\)" \# MARIA DB PORT 번호 admin\_user: password: "\(\(mariadb\_user\_password\)\)" \# MARIA DB ROOT 계정 비밀번호 host\_names:
+
+* mariadb0
+
+  **\#\#\# SERVICE PROPERTIES \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#**
+
   service:
-    password: "((service_password))"
-    port: "((service_port))"
 
-```
+  password: "\(\(service\_password\)\)"
+
+  port: "\(\(service\_port\)\)"
+
+```text
+
 ```
 
 1. 서비스 배포 성공후 브로커 등록 및 서비스 신청시 해당 서비스 instance 생성 확인, 생성 완료시 On-Demand-Service 설치 완료

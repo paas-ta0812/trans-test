@@ -88,7 +88,7 @@ PaaS-TA 4.6는 BOSH2를 기반으로 설치된다. BOSH2를 사용하여 BOSH를
 ### 3.2.  PaaS-TA release 파일 다운로드
 
 * [설치 파일 다운로드](https://paas-ta.kr/download/package)
-* 파스타 다운로드 URL에서 \[PaaS-TA 설치 릴리즈\] 파일을 다운로드해 ${HOME}/workspace/paasta-4.6/release 이하 디렉터리에 압축을 푼다. 
+* 파스타 다운로드 URL에서 \[PaaS-TA 설치 릴리즈\] 파일을 다운로드해 ${HOME}/workspace/paasta-4.6/release 이하 디렉터리에 압축을 푼다.
 
   압출을 풀면 아래 그림과 같이 ${HOME}/workspace/paasta-4.6/release/paasta 이하 디렉터리가 생성되며 릴리즈 파일\(tgz\)이 존재한다.
 
@@ -492,11 +492,11 @@ PaaS-TA Deploy 시, 설치 Option을 추가해야 한다. 설치 Option에 대�
 
 > 설치 Option
 
-|  -e | BOSH Director name |
+| -e | BOSH Director name |
 | :--- | :--- |
-|  -d | Deployment name \(PaaS-TA는 deployment name이 paasta이다.\) |
-|  -o | PaaS-TA 설치 시 사용하는 Option 파일로 IaaS 별 속성, Haproxy 사용 여부, Database 설정 기능을 기본으로 제공한다. |
-|  -v | PaaS-TA 설치 시 사용되는 yml 파일 또는 Option 파일에 변숫값을 설정할 경우 사용한다. Option 파일 속성에 따라 필수 또는 선택 항목으로 나뉜다. |
+| -d | Deployment name \(PaaS-TA는 deployment name이 paasta이다.\) |
+| -o | PaaS-TA 설치 시 사용하는 Option 파일로 IaaS 별 속성, Haproxy 사용 여부, Database 설정 기능을 기본으로 제공한다. |
+| -v | PaaS-TA 설치 시 사용되는 yml 파일 또는 Option 파일에 변숫값을 설정할 경우 사용한다. Option 파일 속성에 따라 필수 또는 선택 항목으로 나뉜다. |
 
 ### 3.7.   PaaS-TA Deploy Shell Scripts
 

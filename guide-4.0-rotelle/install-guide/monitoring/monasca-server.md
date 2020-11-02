@@ -41,15 +41,13 @@
 * Monasca Server를 설치하기 위해서는 Bare Metal 서버 또는 Openstack 에서 생성한 Instance\(Ubuntu 기준, Flavor - x1.large 이상\)가 준비되어 있어야 한다.
 * Openstack Cross-tenant 설정이 되어 있어야 한다.
 
-  
-  Reference : Cross-Project\(Tenant\) 사용자 추가 및 권한 부여 \(openstack 기준\)
+Reference : Cross-Project\(Tenant\) 사용자 추가 및 권한 부여 \(openstack 기준\)
 
 * Monasca Server 설치에 필요한 프로그램 리스트 및 버전은 아래 사항을 참조한다.
 * Monasca Server 를 설치하기에 필요한 프로그램을 사전에 설치한다.
 * 설치 환경은 Ubuntu 14.04 기준으로 작성하였다.
 
-※ 설치 프로그램 리스트 및 버전 참조 \(순서\)  
-
+※ 설치 프로그램 리스트 및 버전 참조 \(순서\)
 
 * MariaDB \(10.2.x\) \([https://mariadb.org/](https://mariadb.org/)\) : Alarm 설정 및 관련 정보 관리 
 * Apache Zookeeper \(3.3.2\) \([https://zookeeper.apache.org/](https://zookeeper.apache.org/)\) : 분산 코디네이터
@@ -59,35 +57,32 @@
 * ElasticSearch \(5.x\) \([https://www.elastic.co/kr/](https://www.elastic.co/kr/)\) : 시스템 로그 정보 관리
 * Monasca Persister \(1.6.0\) \([https://github.com/openstack/monasca-persister](https://github.com/openstack/monasca-persister)\)
 
-   : Monasca API를 통해 전달된 시스템 메트릭스 정보를 influxDB에 저장/관리
+  : Monasca API를 통해 전달된 시스템 메트릭스 정보를 influxDB에 저장/관리
 
 * Monasca Thresh \(1.4.0\) \([https://github.com/openstack/monasca-thresh](https://github.com/openstack/monasca-thresh)\)
 
-   : Monasca API를 통해 전달된 시스템 메트릭스를 실시간 분석하여 Alarm 처리
+  : Monasca API를 통해 전달된 시스템 메트릭스를 실시간 분석하여 Alarm 처리
 
 * Monasca Notification \(1.6.0\) \([https://github.com/openstack/monasca-notification](https://github.com/openstack/monasca-notification)\)
 
-   : Monasca Thresh 를 통해 발생된 Alarm 정보를 관리자에게 전송
+  : Monasca Thresh 를 통해 발생된 Alarm 정보를 관리자에게 전송
 
 * Monasca API \(2.0.0\) \([https://github.com/openstack/monasca-api](https://github.com/openstack/monasca-api)\)
 
-   : Monasca Agent를 통해 수집된 시스템 메트릭스 정보를 전송받아 처리하는 API 서버
+  : Monasca Agent를 통해 수집된 시스템 메트릭스 정보를 전송받아 처리하는 API 서버
 
-※ 설치 전 사전에 설치되어 있어야 하는 프로그램  
-
+※ 설치 전 사전에 설치되어 있어야 하는 프로그램
 
 * install git
 
   ```text
-    
     sudo apt-get update
-    sudo apt-get install -y git      
+    sudo apt-get install -y git
   ```
 
 * install jdk & python
 
   ```text
-         
     sudo add-apt-repository ppa:openjdk-r/ppa
     sudo apt-get update
     sudo apt-get install openjdk-8-jdk python-pip python-dev
@@ -97,7 +92,6 @@
 * install Maven
 
   ```text
-
     sudo apt-get install maven
   ```
 
@@ -106,14 +100,12 @@
 * MariaDB public key 가져오기
 
   ```text
-       
     $ sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db
   ```
 
 * MariaDB repository 정보 등록
 
   ```text
-
     $ sudo vi /etc/apt/sources.list.d/mariadb.list
     deb [arch=amd64,i386] http://mirror.jmu.edu/pub/mariadb/repo/10.2/ubuntu trusty main
     deb-src http://mirror.jmu.edu/pub/mariadb/repo/10.2/ubuntu trusty main
@@ -122,7 +114,6 @@
 * MariaDB 설치
 
   ```text
-  
     $ sudo apt-get update
     $ sudo apt-get install mariadb-server
   ```
@@ -132,7 +123,6 @@
 * MariaDB 설치 완료 확인 ![](../../../.gitbook/assets/3.3%20%282%29.png)
 
 ```text
-
     $ mysql -u root –p"패스워드"
 ```
 
@@ -142,9 +132,8 @@
 
 * Monasca Database 확인\(mon DB\)
 
-  ```
-  
-  $ mysql –u root –p"패스워드" 
+  ```text
+  $ mysql –u root –p"패스워드"
   ```
 
 “mon” 데이터베이스의 존재 여부를 확인한다.
@@ -154,22 +143,19 @@
 * Apache zookeeper 다운로드 및 디렉토리 이동
 
   ```text
-    
     $ sudo apt-get install -y zookeeper zookeeperd zookeeper-bin
   ```
 
 * Apache zookeeper 사용자 생성
 
   ```text
-  
     $ sudo useradd zookeeper -U -r
   ```
 
 * 확인
 
-  ```
-  
-  $ ps -ef |grep zookeeper 
+  ```text
+  $ ps -ef |grep zookeeper
   ```
 
 ## 5.    Apache Kafka 설치
@@ -177,14 +163,12 @@
 * Apache kafka 다운로드
 
   ```text
-    
     $ wget http://apache.mirrors.tds.net/kafka/2.1.0/kafka_2.12-2.1.0.tgz
   ```
 
 * 압축해제 및 서비스 디렉토리 변경 \(Optional\)
 
   ```text
-
     $ tar zxf kafka_2.12-2.1.0.tgz
     $ mv kafka_2.12-2.1.0 kafka
     $ sudo mv kafka /opt/
@@ -193,14 +177,12 @@
 * 서비스 링크 생성
 
   ```text
-    
     $ sudo ln -s /opt/kafka/config /etc/kafka
   ```
 
 * Apache kafka 서비스 시작 스크립트 생성
 
 ```text
-    
     $ sudo vi /etc/init/kafka.conf
     ---
     description "Kafka"
@@ -226,7 +208,6 @@
 * kafka 서비스 설정
 
 ```text
-    
     $ vi /etc/kafka/server.properties
     ---
     # Hostname the broker will bind to. If not set, the server will bind to all interfaces
@@ -248,7 +229,6 @@
 * apache kafka 사용자 및 필요한 디렉토리 설정
 
 ```text
-
     $ sudo useradd kafka -U -r
     $ sudo mkdir /var/kafka
     $ sudo mkdir /opt/kafka/logs
@@ -259,14 +239,12 @@
 * apache kafka 서비스 시작
 
   ```text
-    
     $ sudo service kafka start
   ```
 
 * 확인
 
   ```text
-
     $ sudo tail -10f /var/log/upstart/kafka.log
 
     --- 아래와 같이 정상적인 로그가 보인다면 성공 ---
@@ -284,24 +262,21 @@
     [2017-08-07 06:22:30,328] INFO New leader is 0 (kafka.server.ZookeeperLeaderElector$LeaderChangeListener)
   ```
 
-   Hostname 이슈 발생시
+  Hostname 이슈 발생시
 
   ```text
-    
     Error: Exception thrown by the agent : java.net.MalformedURLException: Local host name unknown: java.net.UnknownHostException: monasca-server: monasca-server: Name or service not known
   ```
 
 =&gt; /etc/hosts 파일에 아래와 같이 정보 등록
 
 ```text
-  
-    127.0.0.1 localhost “hostname 정보” local Local    
+    127.0.0.1 localhost “hostname 정보” local Local
 ```
 
 * kafka topic 생성
 
   ```text
-    
     $ /opt/kafka/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 32 --topic metrics
     $ /opt/kafka/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 6 --topic events
     $ /opt/kafka/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 6 --topic alarm-state-transitions
@@ -311,8 +286,8 @@
 
 * 생성된 topic 리스트 확인
 
-  ```
-   $ /opt/kafka/bin/kafka-topics.sh --list --zookeeper localhost:2181 
+  ```text
+   $ /opt/kafka/bin/kafka-topics.sh --list --zookeeper localhost:2181
   ```
 
 ## 6.    Apache Storm 설치
@@ -320,14 +295,12 @@
 * Apache storm 다운로드
 
   ```text
-    
     $ wget http://apache.mirrors.tds.net/storm/apache-storm-1.1.2/apache-storm-1.1.2.tar.gz
   ```
 
 * 압축해제 및 서비스 디렉토리 변경 \(Optional\)
 
   ```text
-
     $ tar zxf apache-storm-1.1.2.tar.gz
     $ mv apache-storm-1.1.2 storm
     $ sudo mv storm /opt/
@@ -336,7 +309,6 @@
 * Apache storm supervisor 서비스 시작 스크립트 생성
 
   ```text
-    
     $ sudo vi /etc/init/storm-supervisor.conf
     ---
     # Startup script for Storm Supervisor
@@ -359,7 +331,6 @@
 * Apache storm nimbus 서비스 시작 스크립트 생성
 
   ```text
-
     $ sudo vi /etc/init/storm-nimbus.conf
     ---
     # Startup script for Storm Nimbus
@@ -382,7 +353,6 @@
 * apache storm 설정 파일 수정
 
   ```text
-
     $ sudo vi /opt/storm/conf/storm.yaml
     # 아래 사항을 추가한다.
     ---
@@ -439,7 +409,6 @@
 * apache storm 사용자 및 필요한 디렉토리 설정
 
   ```text
-
     $ sudo useradd storm -U -r    
     $ sudo mkdir /var/storm
     $ sudo mkdir /opt/storm/logs
@@ -450,7 +419,6 @@
 * apache storm 서비스 시작
 
   ```text
-
     $ sudo service storm-nimbus start
     $ sudo service storm-supervisor start
   ```
@@ -458,7 +426,6 @@
 * 확인
 
   ```text
-
     $ sudo tail -5f /var/log/upstart/storm-nimbus.log
     --- 아래와 같이 정상적인 로그가 보인다면 성공 ---
 
@@ -467,7 +434,7 @@
     $ sudo tail -5f /var/log/upstart/storm-supervisor.log
     --- 아래와 같이 정상적인 로그가 보인다면 성공 ---
 
-    Running: java -server -Ddaemon.name=supervisor -Dstorm.options= -Dstorm.home=/opt/storm -Dstorm.log.dir=/opt/storm/logs -Djava.library.path=/usr/local/lib:/opt/local/lib:/usr/lib -Dstorm.conf.file= -cp /opt/storm/lib/minlog-1.3.0.jar:/opt/storm/lib/servlet-api-2.5.jar:/opt/storm/lib/storm-rename-hack-1.0.0.jar:/opt/storm/lib/log4j-core-2.1.jar:/opt/storm/lib/asm-5.0.3.jar:/opt/storm/lib/storm-core-1.0.0.jar:/opt/storm/lib/log4j-api-2.1.jar:/opt/storm/lib/kryo-3.0.3.jar:/opt/storm/lib/slf4j-api-1.7.7.jar:/opt/storm/lib/clojure-1.7.0.jar:/opt/storm/lib/log4j-over-slf4j-1.6.6.jar:/opt/storm/lib/log4j-slf4j-impl-2.1.jar:/opt/storm/lib/disruptor-3.3.2.jar:/opt/storm/lib/reflectasm-1.10.1.jar:/opt/storm/lib/objenesis-2.1.jar:/opt/storm/conf -Xmx1024m -Dlogfile.name=supervisor.log -DLog4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector -Dlog4j.configurationFile=/opt/storm/log4j2/cluster.xml org.apache.storm.daemon.supervisor    
+    Running: java -server -Ddaemon.name=supervisor -Dstorm.options= -Dstorm.home=/opt/storm -Dstorm.log.dir=/opt/storm/logs -Djava.library.path=/usr/local/lib:/opt/local/lib:/usr/lib -Dstorm.conf.file= -cp /opt/storm/lib/minlog-1.3.0.jar:/opt/storm/lib/servlet-api-2.5.jar:/opt/storm/lib/storm-rename-hack-1.0.0.jar:/opt/storm/lib/log4j-core-2.1.jar:/opt/storm/lib/asm-5.0.3.jar:/opt/storm/lib/storm-core-1.0.0.jar:/opt/storm/lib/log4j-api-2.1.jar:/opt/storm/lib/kryo-3.0.3.jar:/opt/storm/lib/slf4j-api-1.7.7.jar:/opt/storm/lib/clojure-1.7.0.jar:/opt/storm/lib/log4j-over-slf4j-1.6.6.jar:/opt/storm/lib/log4j-slf4j-impl-2.1.jar:/opt/storm/lib/disruptor-3.3.2.jar:/opt/storm/lib/reflectasm-1.10.1.jar:/opt/storm/lib/objenesis-2.1.jar:/opt/storm/conf -Xmx1024m -Dlogfile.name=supervisor.log -DLog4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector -Dlog4j.configurationFile=/opt/storm/log4j2/cluster.xml org.apache.storm.daemon.supervisor
   ```
 
 ## 7.    InfluxDB 설치
@@ -475,7 +442,6 @@
 * influxDB repository 등록
 
   ```text
-
     $ sudo apt-get update
 
     $ curl -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add -
@@ -486,7 +452,6 @@
 * influxDB 및 관련 dependencies 설치
 
   ```text
-  
     $ sudo apt-get update
     $ sudo apt-get install -y influxdb
     $ sudo apt-get install -y apt-transport-https
@@ -495,13 +460,12 @@
 * influxDB 서비스 시작
 
   ```text
-
     $  sudo service influxdb start
   ```
 
 * 메트릭스 관련 데이터베이스 생성 및 정책 등록
 
-   $ influx Connected to [http://localhost:8086](http://localhost:8086) version 1.3.1 InfluxDB shell version: 1.3.1
+  $ influx Connected to [http://localhost:8086](http://localhost:8086) version 1.3.1 InfluxDB shell version: 1.3.1
 
   > CREATE DATABASE mon CREATE USER monasca WITH PASSWORD 'password' CREATE RETENTION POLICY persister\_all ON mon DURATION 90d REPLICATION 1 DEFAULT quit
 
@@ -512,7 +476,6 @@
 * 확인
 
   ```text
-
     $  influx -username monasca -password “password”
     Connected to http://localhost:8086 version 1.3.1
     InfluxDB shell version: 1.3.1
@@ -529,7 +492,6 @@
 * monasca persister 설치
 
   ```text
-  
     $ sudo pip install --upgrade pbr
     $ sudo pip install influxdb
     $ sudo pip install git+https://git.openstack.org/openstack/monasca-persister@1.6.0#egg=monasca-persister
@@ -538,7 +500,6 @@
 * persister 사용자 정보 및 디렉토리 등록
 
   ```text
-   
     $ sudo groupadd --system monasca
     $ sudo useradd --system --gid monasca monasca
     $ sudo mkdir -p /var/lib/monasca-persister
@@ -552,7 +513,6 @@
 * configuration 파일 생성
 
   ```text
-  
     $ sudo vi /etc/monasca/persister.conf
     ---
     [DEFAULT]
@@ -619,7 +579,6 @@
 * monasca persister 시작 스크립트 작성
 
   ```text
-
     $ sudo vi /etc/init/monasca-persister.conf
     ---
     # Startup script for the Monasca Persister
@@ -638,15 +597,13 @@
 * monasca persister 시작
 
   ```text
-
     $ sudo service monasca-persister start
   ```
 
 * 확인
 
-  ```
-  
-  $ ps -ef |grep monasca-persister 
+  ```text
+  $ ps -ef |grep monasca-persister
   ```
 
 ## 9.    Monasca Common 설치
@@ -654,7 +611,6 @@
 * monasca common 다운로드
 
   ```text
-    
     $ git clone -b 2.0.0 https://github.com/openstack/monasca-common
     $ cd monasca-common
   ```
@@ -662,7 +618,6 @@
 * monasca common 오픈소스 compile and package
 
   ```text
-        
     $ cd java
     $ mvn clean install
   ```
@@ -670,7 +625,6 @@
 * 확인
 
   ```text
-
     # maven repository에 monasca-common-1.2.1-SNAPSHOPT 이 생성된 것을 확인한다.
   ```
 
@@ -679,7 +633,6 @@
 * monasca thresh 다운로드
 
   ```text
-    
     $ git clone -b 1.4.0 https://github.com/openstack/monasca-thresh
     $ cd monasca-thresh
   ```
@@ -687,32 +640,30 @@
 * monasca thresh 오픈소스 compile and package
 
   ```text
-
     $ ./run_maven.sh 1.2.1-SNAPSHOT clean package
   ```
 
 * 생성된 monasca thresh package 압축해제 및 configuration 파일 수정
 
-  
-  $ cd target
+$ cd target
 
-  **생성된 monasca-thres package 파일명에 생성일자가 있어 압축해제 명령어가 실행되지 않는다.**
+**생성된 monasca-thres package 파일명에 생성일자가 있어 압축해제 명령어가 실행되지 않는다.**
 
-  **생성된 package 명을 monasca-thresh-2.1.1-SNAPSHOT.tar.gz 로 변경한다.**
+**생성된 package 명을 monasca-thresh-2.1.1-SNAPSHOT.tar.gz 로 변경한다.**
 
-  $ mv monasca-thresh-2.1.1-SNAPSHOT-2017-xx-xxT00:20:08-5c1fd5-tar.tar.gz monasca-thresh-2.1.1-SNAPSHOT.tar.gz
+$ mv monasca-thresh-2.1.1-SNAPSHOT-2017-xx-xxT00:20:08-5c1fd5-tar.tar.gz monasca-thresh-2.1.1-SNAPSHOT.tar.gz
 
-  $ tar xvzf monasca-thresh-2.1.1-SNAPSHOT.tar.gz
+$ tar xvzf monasca-thresh-2.1.1-SNAPSHOT.tar.gz
 
-  **압축해제된 디렉토리도 위와 같이 변경한다.**
+**압축해제된 디렉토리도 위와 같이 변경한다.**
 
-  $ mv monasca-thresh-2.1.1-SNAPSHOT-2017-xx-xxT00:20:08-5c1fd5 monasca-thresh-2.1.1-SNAPSHOT $ cd monasca-thresh-2.1.1-SNAPSHOT $ cd examples $ mv thresh-config.yml-sample thresh-config.yml
+$ mv monasca-thresh-2.1.1-SNAPSHOT-2017-xx-xxT00:20:08-5c1fd5 monasca-thresh-2.1.1-SNAPSHOT $ cd monasca-thresh-2.1.1-SNAPSHOT $ cd examples $ mv thresh-config.yml-sample thresh-config.yml
 
-  **$ vi thresh-config.yml**
+**$ vi thresh-config.yml**
 
-  metricSpoutThreads: 2 metricSpoutTasks: 2
+metricSpoutThreads: 2 metricSpoutTasks: 2
 
-  statsdConfig: host: localhost port: 8125 prefix: monasca.storm. dimensions: !!map service : monitoring component : storm
+statsdConfig: host: localhost port: 8125 prefix: monasca.storm. dimensions: !!map service : monitoring component : storm
 
 ```text
 metricSpoutConfig:
@@ -822,7 +773,6 @@ database:
 * monasca thresh configuration 및 package 파일 이동
 
   ```text
-
     $ sudo mv thresh-config.yml /etc/monasca/
     $ cd ..
     $ mv monasca-thresh.jar /etc/monasca/
@@ -831,7 +781,6 @@ database:
 * monasca thresh 서비스 시작 스크립트 생성
 
   ```text
-                  
     $ sudo vi /etc/init.d/monasca-thresh
     ---
     #!/bin/bash
@@ -906,15 +855,14 @@ database:
 * monasca thresh 서비스 시작
 
   ```text
-
     $ sudo chmod +x /etc/init.d/monasca-thresh
     $ sudo service monasca-thresh start
   ```
 
 * 확인
 
-  ```
-   $ ps -ef |grep thresh 
+  ```text
+   $ ps -ef |grep thresh
   ```
 
 ## 11.    Monasca Notification 설치
@@ -922,7 +870,6 @@ database:
 * monasca notification 및 dependencies 설치
 
   ```text
-
     $ sudo pip install git+https://github.com/openstack/monasca-notification@1.9.0
     $ sudo apt-get install sendmail
   ```
@@ -930,7 +877,6 @@ database:
 * monasca notificatioin 설정 파일 생성
 
   ```text
-
     $ sudo vi /etc/monasca/notification.yaml
     ---
     kafka:
@@ -1028,7 +974,6 @@ database:
 * monasca notification 시작 스크립트 생성
 
   ```text
-   
     $ sudo vi /etc/init/monasca-notification.conf
     ---
     # Startup script for the monasca_notification
@@ -1047,7 +992,6 @@ database:
 * monasca notification 로그 디렉토리 생성
 
   ```text
-   
     $ sudo mkdir -p /var/log/monasca/notification
     $ sudo chown -R monasca. /var/log/monasca/notification
   ```
@@ -1055,14 +999,13 @@ database:
 * monasca notification 서비스 가동
 
   ```text
-
     $ sudo service monasca-notification start
   ```
 
 * 확인
 
-  ```
-   $ ps -ef |grep notification 
+  ```text
+   $ ps -ef |grep notification
   ```
 
 ## 12.    Monasca API 설치
@@ -1070,7 +1013,6 @@ database:
 * monasca api 다운로드
 
   ```text
-   
     $ git clone -b 2.0.0 https://github.com/openstack/monasca-api
     $ cd monasca-api
   ```
@@ -1078,7 +1020,6 @@ database:
 * run\_maven.sh 파일 수정
 
   ```text
-    
     ---
     #!/bin/bash
     set -x
@@ -1144,7 +1085,6 @@ database:
 * common/build\_common.sh 파일 수정
 
   ```text
-    
     ---
     #!/bin/sh
     set -x
@@ -1181,14 +1121,12 @@ database:
 * monasca api 소스 compile & package
 
   ```text
-
     $ ./run_maven.sh 1.2.1-SNAPSHOT clean package
   ```
 
 * monasca api package 파일 압축 해제 및 configuration 파일 수정
 
   ```text
-    
     $ cd target
     $ tar xvzf monasca-api-1.2.1-SNAPSHOT-tar.tar.gz
     $ cd monasca-api-1.2.1-SNAPSHOT/
@@ -1345,13 +1283,12 @@ database:
           host: localhost
           port: 514
           facility: local0
-          threshold: ALL        
+          threshold: ALL
   ```
 
 * monasca api package 파일 및 configuration 파일 이동 \(optional\)
 
   ```text
-
     # 다음 단계 monasca api 서비스 시작 스크립트에서 참조하는 monasca-api.jar 및 api-config.yml 파일의 위치를 관리하기 손쉬운 곳으로 이동시킨다.
 
     $ mv ~/where-at-monasca-api-directory/target/monasca-api-1.2.1-SNAPSHOT/monasca-api.jar ~/monasca-api/
@@ -1361,7 +1298,6 @@ database:
 * monasca api 서비스 시작 스크립트 생성
 
   ```text
-    
     $ sudo vi /etc/init/monasca-api.conf
     ---
     # Startup script for the monasca_api
@@ -1379,15 +1315,13 @@ database:
 * monasca api 서비스 시작
 
   ```text
-    
     $ sudo service monasca-api start
   ```
 
 * 확인
 
-  ```
-  
-  $ netstat -an |grep LISTEN 
+  ```text
+  $ netstat -an |grep LISTEN
   ```
 
 ## 13.    Elasticsearch 관련 프로그램 설치
@@ -1397,7 +1331,6 @@ database:
 * dependencies 설치
 
   ```text
-           
     $ sudo apt-get update
     $ sudo apt-get install -y python-software-properties software-properties-common
   ```
@@ -1405,7 +1338,6 @@ database:
 * Elasticsearch repository 등록
 
   ```text
-  
     $ wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
     $ echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list
   ```
@@ -1413,7 +1345,6 @@ database:
 * Elasticsearch 설치
 
   ```text
-
     $ sudo apt-get update
     $ sudo apt-get install -y elasticsearch
   ```
@@ -1421,14 +1352,12 @@ database:
 * 사용자 그룹 추가 - Elasticsearch
 
   ```text
-
     $ sudo usermod -a -G elasticsearch “사용자 계정”
   ```
 
 * Elasticsearch configuration 파일 수정
 
   ```text
-
     $ cd /etc/elasticsearch && sudo vi elasticsearch.yml
     ---
     ...
@@ -1446,7 +1375,6 @@ database:
 * Elasticsearch service 파일 수정
 
   ```text
-
     $ sudo vi /usr/lib/systemd/system/elasticsearch.service
     ---
     ...
@@ -1460,7 +1388,6 @@ database:
 * Elasticsearch default 파일 수정
 
   ```text
-
     $ sudo vi /etc/default/elasticsearch
     ---
     ...
@@ -1476,7 +1403,6 @@ database:
 * Elasticsearch 서비스 시작
 
   ```text
-
     $ sudo service elasticsearch start
   ```
 
@@ -1485,39 +1411,34 @@ database:
 Elasticserarch 서버 가동 여부
 
 ```text
-    
     $ netstat -plntu
 ```
 
- !\[\]\(images/Monasca/13.1.1.png\) mlockall 정보가 “enabled” 되었는지 확인
+!\[\]\(images/Monasca/13.1.1.png\) mlockall 정보가 “enabled” 되었는지 확인
 
 ```text
-
     $ curl -XGET 'localhost:9200/_nodes?filter_path=**.mlockall&pretty'
 ```
 
- !\[\]\(images/Monasca/13.1.2.png\) \# 13.2. logstash 설치 - logstash 설치
+!\[\]\(images/Monasca/13.1.2.png\) \# 13.2. logstash 설치 - logstash 설치
 
 ```text
-    
     $ sudo apt-get install -y logstash
 ```
 
 * /etc/hosts 파일 수정
 
   ```text
-    
     $ sudo vi /etc/hosts
     ---
     “private network ip”  “hostname”
 
-    ex) 10.244.2.22  installation-guide-server    
+    ex) 10.244.2.22  installation-guide-server
   ```
 
 * SSL certificate 파일 생성
 
   ```text
-
     $ cd /etc/logstash
     $ sudo openssl req -subj /CN=”hostaname” -x509 -days 3650 -batch -nodes -newkey rsa:4096 -keyout logstash.key -out logstash.crt
   ```
@@ -1525,7 +1446,6 @@ Elasticserarch 서버 가동 여부
 * filebeat-input.conf 파일 생성
 
   ```text
-
     $ cd /etc/logstash
 
     $ sudo vi conf.d/filebeat-input.conf
@@ -1544,7 +1464,6 @@ Elasticserarch 서버 가동 여부
 * syslog-filter.conf 파일 생성
 
   ```text
-
     $ cd /etc/logstash
     $ sudo vi conf.d/syslog-filter.conf
     ---
@@ -1565,7 +1484,6 @@ Elasticserarch 서버 가동 여부
 * output-elasticsearch.conf 파일 생성
 
   ```text
-    
     $ cd /etc/logstash
     $ sudo vi conf.d/output-elasticsearch.conf
     ---
@@ -1576,27 +1494,24 @@ Elasticserarch 서버 가동 여부
         index => "%{[@metadata][beat]}-%{+YYYY.MM.dd}"
         document_type => "%{[@metadata][type]}"
       }
-    }    
+    }
   ```
 
 * logstash 서비스 시작 파일 생성
 
   ```text
-
     $ sudo service logstash start
   ```
 
 * 확인
 
 ```text
-    
     $ netstat -an |grep LISTEN
 ```
 
- !\[\]\(images/Monasca/13.2.png\) \# 14. Reference : Cross-Project\(Tenant\) 사용자 추가 및 권한 부여 Openstack 기반으로 생성된 모든 Project\(Tenant\)의 정보를 하나의 계정으로 수집 및 조회하기 위해서는 Cross-Tenant 사용자를 생성하여, 각각의 Project\(Tenant\)마다 조회할 수 있도록 멤버로 등록한다. Openstack Cli를 이용하여 Cross-Tenant 사용자를 생성한 후, Openstack Horizon 화면으로 통해 각각의 프로젝트 사용자 정보에 생성한 Cross-Tenant 사용자 및 권한을 부여한다. 1. Cross-Tenant 사용자 생성
+!\[\]\(images/Monasca/13.2.png\) \# 14. Reference : Cross-Project\(Tenant\) 사용자 추가 및 권한 부여 Openstack 기반으로 생성된 모든 Project\(Tenant\)의 정보를 하나의 계정으로 수집 및 조회하기 위해서는 Cross-Tenant 사용자를 생성하여, 각각의 Project\(Tenant\)마다 조회할 수 있도록 멤버로 등록한다. Openstack Cli를 이용하여 Cross-Tenant 사용자를 생성한 후, Openstack Horizon 화면으로 통해 각각의 프로젝트 사용자 정보에 생성한 Cross-Tenant 사용자 및 권한을 부여한다. 1. Cross-Tenant 사용자 생성
 
 ```text
-    
     $ openstack user create --domain default --password-prompt monasca-agent
     $ openstack role create monitoring-delegate
 ```

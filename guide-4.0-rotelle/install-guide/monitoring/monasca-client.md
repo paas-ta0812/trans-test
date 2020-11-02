@@ -67,14 +67,12 @@
 ### 2.1.    dependencies 설치
 
 ```text
-
     $ sudo apt-get install python-pip
 ```
 
 ### 2.2.    monasca agent 설치
 
 ```text
-
     $ export LC_ALL="en_US.UTF-8"
     $ export LC_CTYPE="en_US.UTF-8"
     $ sudo pip install monasca-agent==2.7.0
@@ -83,7 +81,6 @@
 ### 2.3.    설치확인
 
 ```text
-
     $  sudo pip list |grep monasca-agent
 ```
 
@@ -92,7 +89,6 @@
 Openstack 기반으로 생성된 모든 Project\(Tenant\)의 정보를 하나의 계정으로 수집 및 조회하기 위해서는 Cross-Tenant 사용자를 생성하여, 각각의 Project\(Tenant\)마다 조회할 수 있도록 멤버로 등록한다. Openstack Cli를 이용하여 Cross-Tenant 사용자를 생성한 후, Openstack Horizon 화면으로 통해 각각의 프로젝트 사용자 정보에 생성한 Cross-Tenant 사용자 및 권한을 부여한다. 1. Cross-Tenant 사용자 생성
 
 ```text
-
     $ openstack user create --domain default --password-prompt monasca-agent
     $ openstack role create monitoring-delegate
 ```
@@ -114,7 +110,6 @@ Openstack 기반으로 생성된 모든 Project\(Tenant\)의 정보를 하나의
 #### 2.4.1.    Controller Node의 경우
 
 ```text
-
     $ sudo monasca-setup \
       --username “cross-tenant user id” \
       --password “cross-tenant user password” \
@@ -127,13 +122,12 @@ Openstack 기반으로 생성된 모든 Project\(Tenant\)의 정보를 하나의
       --check_frequency '15'  \
       --log_level 'DEBUG'  \
     --insecure true \
-    --system_only 
+    --system_only
 ```
 
 #### 2.4.2.    Compute Node의 경우 \(System 정보 수집과 VM 정보 수집 setup\)
 
 ```text
-
     $ sudo monasca-setup \
       --username “cross-tenant user id” \
       --password “cross-tenant user password” \
@@ -154,7 +148,6 @@ Openstack 기반으로 생성된 모든 Project\(Tenant\)의 정보를 하나의
 ### 2.5.    monasca agent configuration 파일 수정.
 
 ```text
-
     $ sudo vi /etc/monasca/agent/agent.yml
     Api:
       amplifier: 0
@@ -199,7 +192,6 @@ Openstack 기반으로 생성된 모든 Project\(Tenant\)의 정보를 하나의
 #### 2.6.1.    /etc/monasca/agent/conf.d/cpu.yaml
 
 ```text
-
     init_config: null
     instances:
     - built_by: System
@@ -210,7 +202,6 @@ Openstack 기반으로 생성된 모든 Project\(Tenant\)의 정보를 하나의
 #### 2.6.2.    /etc/monasca/agent/conf.d/disk.yaml
 
 ```text
-
     init_config: null
     instances:
     - built_by: System
@@ -224,7 +215,6 @@ Openstack 기반으로 생성된 모든 Project\(Tenant\)의 정보를 하나의
 #### 2.6.3.    /etc/monasca/agent/conf.d/libvirt.yaml \(Compute Node에 한함\)
 
 ```text
-
     init_config:
       alive_only: false
       auth_url: http://controller:35357
@@ -253,7 +243,6 @@ Openstack 기반으로 생성된 모든 Project\(Tenant\)의 정보를 하나의
 #### 2.6.4.    /etc/monasca/agent/conf.d/process.yaml\(Controller Node 한함\)
 
 ```text
-
 init_config: null
 instances:
 - built_by: MonAgent
@@ -349,7 +338,6 @@ instances:
 #### 2.6.5.    /etc/monasca/agent/conf.d/process.yaml\(Compute Node 한함\)
 
 ```text
-
 init_config: null
 instances:
 - built_by: MonAgent
@@ -430,21 +418,19 @@ instances:
   exact_match: false
   name: qemu-system-x86 
   search_string:
-  - qemu-system-x86 
+  - qemu-system-x86
 ```
 
 ### 2.7.    monasca agent 서비스 재시작.
 
 ```text
-
     $ sudo service monasca-agent restart
 ```
 
 * 서비스 등록이 되지 않을경우  
-   /etc/systemd/system/monasca-agent.service
+  /etc/systemd/system/monasca-agent.service
 
   ```text
-
     [Unit]
     Description=Monasca Agent
     [Service]
@@ -459,7 +445,6 @@ instances:
   ```
 
   ```text
-    
     $cd /etc/systemd/system/multi-user.target.wants
     sudo ln –s /etc/systemd/system/monasca-agent.service ./monasca-agent.service
   ```
@@ -467,7 +452,6 @@ instances:
 * cf-mon os user 자동 등록되지 않을경우 사용자 수동 등록
 
   ```text
-
     $ sudo useradd mon-agent
   ```
 
@@ -480,7 +464,6 @@ instances:
 /etc/systemd/system/monasca-agent.service
 
 ```text
-    
     [Unit]
     Description=Monasca Agent
     [Service]
@@ -495,7 +478,6 @@ instances:
 ```
 
 ```text
-    
     $cd /etc/systemd/system/multi-user.target.wants
     sudo ln –s /etc/systemd/system/monasca-agent.service /etc/systemd/system/monasca-agent.service
 ```
@@ -503,14 +485,12 @@ instances:
 ### 2.10. Agent 사용자 mon-agent 사용자 자동 등록 되지 않는경우
 
 ```text
-
     $ sudo useradd mon-agent
 ```
 
 ### 2.11.  Compute Node VM메트릭 정보가 수집 되지 않는경우
 
 ```text
-
     $ cd /
     $ sudo chmod 757 /run
 ```
@@ -522,7 +502,6 @@ Openstack Compute Node에서 발생한는 Log정보를 수집하기 위해서는
 ### 3.1.    filebeat repository 등록
 
 ```text
-
     $ echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee -a     /etc/apt/sources.list.d/elastic-5.x.list
     $ sudo apt-get update
 ```
@@ -530,14 +509,12 @@ Openstack Compute Node에서 발생한는 Log정보를 수집하기 위해서는
 ### 3.2.    filebeat 설치
 
 ```text
-
     $ sudo apt-get install -y filebeat
 ```
 
 ### 3.3.    filebeat configuration 파일 수정
 
 ```text
-
     $ sudo vi /etc/filebeat/filebeat.yml
     ---
     ...
@@ -567,14 +544,12 @@ Openstack Compute Node에서 발생한는 Log정보를 수집하기 위해서는
 ### 3.4.    Elasticsearch-Logstash Certificate 파일을 Client 환경에 복사한다.
 
 ```text
-
     $ sudo scp ubuntu@”elasticsearch server ip”:/etc/logstash/logstash.crt /etc/filebeat/
 ```
 
 ### 3.5.    /etc/host 파일에 Elasticsearch Server 정보를 등록한다.
 
 ```text
-
     $ sudo vi /etc/hosts
     ---
     “elasticsearch server ip”    “hostname”
@@ -585,13 +560,12 @@ Openstack Compute Node에서 발생한는 Log정보를 수집하기 위해서는
 ### 3.6.    filebeat 서비스를 재가동한다.
 
 ```text
-
     $ sudo service filebeat restart
 ```
 
 ### 3.7.    확인.
 
-```
- $ ps -ef |grep filebeat 
+```text
+ $ ps -ef |grep filebeat
 ```
 

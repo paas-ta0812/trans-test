@@ -89,10 +89,9 @@ paasta-4.3는 bosh2를 기반으로 설치된다. Bosh2를 사용하여 Bosh생�
 #### 3.2.    PaaS-TA Release 파일 다운로드
 
 * [설치 파일 다운로드 받기](http://45.248.73.44/index.php/s/GjXJ6DLz5iSG5tt)
+* 파스타 다운로드 URL에서 \[PaaS-TA 설치 릴리즈\] 파일을 다운로드 받아 ~/workspace/paasta-4.3/release 이하 디렉토리에 압축을 푼다.
 
-1. 파스타 다운로드 URL에서 \[PaaS-TA 설치 릴리즈\] 파일을 다운로드 받아 ~/workspace/paasta-4.3/release 이하 디렉토리에 압축을 푼다. 
-
-   압출을 풀면 아래 그림과 같이 ~/workspace/paasta-4.3/release/paasta 이하 디렉토리가 생성되며 이하에 릴리즈 파일\(tgz\)이 존재한다.
+  압출을 풀면 아래 그림과 같이 ~/workspace/paasta-4.3/release/paasta 이하 디렉토리가 생성되며 이하에 릴리즈 파일\(tgz\)이 존재한다.
 
 ![](../.gitbook/assets/paasta-release%20%286%29.png)
 
@@ -446,7 +445,7 @@ $ chmod 755 *.sh
 설치 shell 파일은 각 iaas별로 존재하며 bosh 설치 시 명령어는 deploy 로 시작한다. Shell 이 아닌 bosh command로 실행이 가능하며 설치하는 IaaS 환경에 따라 Option들이 달라진다.
 
 deploy 명령어 예시  
- \(paasta deploy는 [3.5 paasta deploy shell](paas_ta_paas-ta_install_guide-v4.3.md#20) 참조\)
+\(paasta deploy는 [3.5 paasta deploy shell](paas_ta_paas-ta_install_guide-v4.3.md#20) 참조\)
 
 ```text
 $ bosh –e {director_name} –d paasta deploy {deploy.yml}
@@ -456,7 +455,7 @@ $ bosh –e {director_name} –d paasta deploy {deploy.yml}
 
 설치 option
 
-|  -e | BOSH Director name |
+| -e | BOSH Director name |
 | :--- | :--- |
 | -d | Deployment name \(paasta 는 deployment name paasta\) |
 | -o | Paasta 설치시 사용하는 option 파일로 아래 기능을 기본으로 제공한다.\(iaas별속성, haproxy 사용여부 , database 선정 \) |
