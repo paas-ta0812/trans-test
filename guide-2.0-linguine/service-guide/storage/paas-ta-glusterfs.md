@@ -1,22 +1,5 @@
 # PaaS-TA GlusterFS 서비스팩 설치 가이드
 
-### Table of Contents
-
-1. [문서 개요](paas-ta-glusterfs.md#1)
-   * [1.1. 목적](paas-ta-glusterfs.md#2)
-   * [1.2. 범위](paas-ta-glusterfs.md#3)
-   * [1.3. 시스템 구성도](paas-ta-glusterfs.md#4)
-   * [1.4. 참고자료](paas-ta-glusterfs.md#5)
-2. [GlusterFS 서비스팩 설치](paas-ta-glusterfs.md#6)
-   * [2.1. 설치전 준비사항](paas-ta-glusterfs.md#7)
-   * [2.2. GlusterFS 서비스 릴리즈 업로드](paas-ta-glusterfs.md#8)
-   * [2.3. GlusterFS 서비스 Deployment 파일 수정 및 배포](paas-ta-glusterfs.md#9)
-   * [2.4. GlusterFS 서비스 브로커 등록](paas-ta-glusterfs.md#10)
-3. [GlusterFS 연동 Sample App 설명](paas-ta-glusterfs.md#11)
-   * [3.1. Sample App 구조](paas-ta-glusterfs.md#12)
-   * [3.2. PaaS-TA에서 서비스 신청](paas-ta-glusterfs.md#13)
-   * [3.3. Sample App에 서비스 바인드 신청 및 App 확인](paas-ta-glusterfs.md#14)
-
 ## 1. 문서 개요
 
 #### 1.1. 목적
